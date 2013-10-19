@@ -14,7 +14,7 @@ def main():
   w.resize(800, 600)
   w.setWindowTitle('CS3141 PDF Editor')
   gfx = QtGui.QGraphicsScene(w)
-  doc = initPDFMiner('/home/tucker/Downloads/Cminus.pdf')
+  doc = initPDFMiner('Cminus.pdf')
   drawPages(gfx, doc)
   gfxview = QtGui.QGraphicsView(gfx, w)
   gfxview.setBackgroundBrush(QtGui.QBrush(QtCore.Qt.cyan))
