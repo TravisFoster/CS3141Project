@@ -4,8 +4,7 @@ import sys
 from pdfminer.pdfparser import PDFParser, PDFDocument
 from pdfminer.pdfinterp import PDFResourceManager, PDFPageInterpreter
 from pdfminer.pdfdevice import PDFDevice
-from pdfminer.layout import LAParams
-from pdfminer.layout import LTTextBox
+from pdfminer.layout import LAParams, LTTextBox, LTChar
 from pdfminer.converter import PDFPageAggregator
 from PyQt4 import QtCore, QtGui
 
@@ -15,8 +14,8 @@ def main():
   w.resize(800, 600)
   w.setWindowTitle('CS3141 PDF Editor')
   gfx = QtGui.QGraphicsScene(w)
-  (fonts, pages) = initPDFMiner('Cminus.pdf')
-  drawPages(gfx, fonts, pages)
+  pages = initPDFMiner('Cminus.pdf')
+  drawPages(gfx, pages)
   gfxview = QtGui.QGraphicsView(gfx, w)
   gfxview.setBackgroundBrush(QtGui.QBrush(QtCore.Qt.cyan))
   gfxview.centerOn(0, 0)
@@ -40,9 +39,8 @@ def initPDFMiner(fname):
   pages = []
   for page in doc.get_pages():
     inter.process_page(page)
-    pages.append(dev.get_result())
-  fonts = insertFonts(inter.fontmap)
-  return (fonts, pages)
+    pages.append((dev.get_result(), insertFonts(inter.fontmap)))
+  return pages
 
 def insertFonts(fmap):
   fonts = {}
@@ -53,30 +51,56 @@ def insertFonts(fmap):
     fonts[fmap[font].fontname] = fams[0]
   return fonts
 
-def drawPages(gfx, fonts, pages):
+def drawPages(gfx, pages):
   top = 0
   b = QtGui.QBrush(QtCore.Qt.white)
   p = QtGui.QPen(QtGui.QBrush(QtCore.Qt.black), 1)
   p.setCosmetic(True)
-  for page in pages:
+  for (page, fonts) in pages:
     gfx.addRect(0, top, page.width, page.height, p, b)
     for obj in page._objs:
       if obj.is_empty():
         continue
-      y = top + page.height - obj.y1
       if isinstance(obj, LTTextBox):
-        k = obj._objs[0]._objs[0]
-        try:
-          font = QtGui.QFont(fonts[k.fontname], k.size)
-        except KeyError:
-          font = QtGui.QFont()
-          font.setPointSizeF(k.size)
-        txt = gfx.addText(obj.get_text(), font)
-        txt.setDefaultTextColor(QtCore.Qt.black)
-        txt.setPos(obj.x0, y)
+        for line in obj._objs:
+          y = top + page.height - line.y1
+          txt = gfx.addText('')
+          txt.setHtml(buildText(line, fonts))
+          txt.setDefaultTextColor(QtCore.Qt.black)
+          txt.setPos(line.x0, y)
       else:
+        y = top + page.height - obj.y1
         gfx.addRect(obj.x0, y, obj.width, obj.height, p, b)
-    top += page.height + 20
+    top += page.height
+
+def buildText(textbox, fonts):
+  text = []
+  font = None
+  size = None
+  for glyph in textbox._objs:
+    if len(glyph._text) <= 0:
+      continue
+    if isinstance(glyph, LTChar):
+      if glyph.fontname != font or glyph.size != size:
+        if len(text) != 0:
+          text.append(u'</span>')
+        text.append(u'<span style="font:')
+        text.append(u' ' + unicode(glyph.size*0.7) + u'px')
+        text.append(u" '" + unicode(fonts[glyph.fontname]) + u"'")
+        text.append(u';">')
+        font = glyph.fontname
+        size = glyph.size
+      text.append(unicode(glyph._text))
+    else:
+      if glyph._text == u'\n':
+        text.append(u'<br />')
+      elif glyph._text == u' ':
+        text.append(u'&nbsp;')
+      else:
+        text.append(unicode(glyph._text))
+  if len(text) != 0:
+    text.append(u'</span>')
+  return unicode().join(text)
 
 if __name__ == '__main__':
   main()
