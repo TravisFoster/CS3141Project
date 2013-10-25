@@ -1,5 +1,6 @@
 #!/usr/bin/python2
 
+import re
 import sys
 from pdfminer.pdfparser import PDFParser, PDFDocument
 from pdfminer.pdfinterp import PDFResourceManager, PDFPageInterpreter
@@ -45,9 +46,15 @@ def initPDFMiner(fname):
 def insertFonts(fmap):
   fonts = {}
   for font in fmap:
-    data = fmap[font].fontfile.data
-    idx = QtGui.QFontDatabase.addApplicationFontFromData(data)
-    fams = QtGui.QFontDatabase.applicationFontFamilies(idx)
+    try:
+      data = fmap[font].fontfile.data
+      data = QByteArray(len(data), data)
+      idx = QtGui.QFontDatabase.addApplicationFontFromData(data)
+      if idx < 0:
+        print('Error: Font "' + fmap[font].fontname + '" invalid.')
+      fams = QtGui.QFontDatabase.applicationFontFamilies(idx)
+    except:
+      fams = [fmap[font].fontname]
     fonts[fmap[font].fontname] = fams[0]
   return fonts
 
@@ -77,7 +84,11 @@ def buildText(textbox, fonts):
   text = []
   font = None
   size = None
+  cidex = re.compile(r'\(cid:(.*)\)')
   for glyph in textbox._objs:
+    rex = cidex.match(glyph._text)
+    if rex != None:
+      glyph._text = u':&lt;' + unicode(int(rex.group(1))) + u'&gt;:'
     if len(glyph._text) <= 0:
       continue
     if isinstance(glyph, LTChar):
@@ -85,7 +96,7 @@ def buildText(textbox, fonts):
         if len(text) != 0:
           text.append(u'</span>')
         text.append(u'<span style="font:')
-        text.append(u' ' + unicode(glyph.size*0.7) + u'px')
+        text.append(u' ' + unicode(int(glyph.size)) + u'px')
         text.append(u" '" + unicode(fonts[glyph.fontname]) + u"'")
         text.append(u';">')
         font = glyph.fontname
