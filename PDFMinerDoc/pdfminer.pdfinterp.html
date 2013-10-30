@@ -1,0 +1,642 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module pdfminer.pdfinterp</title>
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong><a href="pdfminer.html"><font color="#ffffff">pdfminer</font></a>.pdfinterp</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:/usr/lib/python2.7/site-packages/pdfminer/pdfinterp.py">/usr/lib/python2.7/site-packages/pdfminer/pdfinterp.py</a></font></td></tr></table>
+    <p></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#aa55cc">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="re.html">re</a><br>
+</td><td width="25%" valign=top><a href="sys.html">sys</a><br>
+</td><td width="25%" valign=top></td><td width="25%" valign=top></td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ee77aa">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Classes</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl>
+<dt><font face="helvetica, arial"><a href="__builtin__.html#object">__builtin__.object</a>
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="pdfminer.pdfinterp.html#PDFGraphicState">PDFGraphicState</a>
+</font></dt><dt><font face="helvetica, arial"><a href="pdfminer.pdfinterp.html#PDFPageInterpreter">PDFPageInterpreter</a>
+</font></dt><dt><font face="helvetica, arial"><a href="pdfminer.pdfinterp.html#PDFResourceManager">PDFResourceManager</a>
+</font></dt><dt><font face="helvetica, arial"><a href="pdfminer.pdfinterp.html#PDFTextState">PDFTextState</a>
+</font></dt></dl>
+</dd>
+<dt><font face="helvetica, arial"><a href="pdfminer.pdftypes.html#PDFException">pdfminer.pdftypes.PDFException</a>(<a href="pdfminer.psparser.html#PSException">pdfminer.psparser.PSException</a>)
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="pdfminer.pdfinterp.html#PDFInterpreterError">PDFInterpreterError</a>
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="pdfminer.pdfinterp.html#PDFTextExtractionNotAllowed">PDFTextExtractionNotAllowed</a>
+</font></dt></dl>
+</dd>
+<dt><font face="helvetica, arial"><a href="pdfminer.pdfinterp.html#PDFResourceError">PDFResourceError</a>
+</font></dt></dl>
+</dd>
+<dt><font face="helvetica, arial"><a href="pdfminer.psparser.html#PSStackParser">pdfminer.psparser.PSStackParser</a>(<a href="pdfminer.psparser.html#PSBaseParser">pdfminer.psparser.PSBaseParser</a>)
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="pdfminer.pdfinterp.html#PDFContentParser">PDFContentParser</a>
+</font></dt></dl>
+</dd>
+</dl>
+ <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="PDFContentParser">class <strong>PDFContentParser</strong></a>(<a href="pdfminer.psparser.html#PSStackParser">pdfminer.psparser.PSStackParser</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>##&nbsp;&nbsp;<a href="#PDFContentParser">PDFContentParser</a><br>
+##<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="pdfminer.pdfinterp.html#PDFContentParser">PDFContentParser</a></dd>
+<dd><a href="pdfminer.psparser.html#PSStackParser">pdfminer.psparser.PSStackParser</a></dd>
+<dd><a href="pdfminer.psparser.html#PSBaseParser">pdfminer.psparser.PSBaseParser</a></dd>
+<dd><a href="__builtin__.html#object">__builtin__.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="PDFContentParser-__init__"><strong>__init__</strong></a>(self, streams)</dt></dl>
+
+<dl><dt><a name="PDFContentParser-do_keyword"><strong>do_keyword</strong></a>(self, pos, token)</dt></dl>
+
+<dl><dt><a name="PDFContentParser-fillbuf"><strong>fillbuf</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="PDFContentParser-fillfp"><strong>fillfp</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="PDFContentParser-flush"><strong>flush</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="PDFContentParser-get_inline_data"><strong>get_inline_data</strong></a>(self, pos, target<font color="#909090">='EI'</font>)</dt></dl>
+
+<dl><dt><a name="PDFContentParser-seek"><strong>seek</strong></a>(self, pos)</dt></dl>
+
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>KEYWORD_BI</strong> = BI</dl>
+
+<dl><dt><strong>KEYWORD_EI</strong> = EI</dl>
+
+<dl><dt><strong>KEYWORD_ID</strong> = ID</dl>
+
+<hr>
+Methods inherited from <a href="pdfminer.psparser.html#PSStackParser">pdfminer.psparser.PSStackParser</a>:<br>
+<dl><dt><a name="PDFContentParser-add_results"><strong>add_results</strong></a>(self, *objs)</dt></dl>
+
+<dl><dt><a name="PDFContentParser-end_type"><strong>end_type</strong></a>(self, type)</dt></dl>
+
+<dl><dt><a name="PDFContentParser-nextobject"><strong>nextobject</strong></a>(self)</dt><dd><tt>Yields&nbsp;a&nbsp;list&nbsp;of&nbsp;objects.<br>
+&nbsp;<br>
+Returns&nbsp;keywords,&nbsp;literals,&nbsp;strings,&nbsp;numbers,&nbsp;arrays&nbsp;and&nbsp;dictionaries.<br>
+Arrays&nbsp;and&nbsp;dictionaries&nbsp;are&nbsp;represented&nbsp;as&nbsp;Python&nbsp;lists&nbsp;and&nbsp;dictionaries.</tt></dd></dl>
+
+<dl><dt><a name="PDFContentParser-pop"><strong>pop</strong></a>(self, n)</dt></dl>
+
+<dl><dt><a name="PDFContentParser-popall"><strong>popall</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="PDFContentParser-push"><strong>push</strong></a>(self, *objs)</dt></dl>
+
+<dl><dt><a name="PDFContentParser-reset"><strong>reset</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="PDFContentParser-start_type"><strong>start_type</strong></a>(self, pos, type)</dt></dl>
+
+<hr>
+Methods inherited from <a href="pdfminer.psparser.html#PSBaseParser">pdfminer.psparser.PSBaseParser</a>:<br>
+<dl><dt><a name="PDFContentParser-__repr__"><strong>__repr__</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="PDFContentParser-close"><strong>close</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="PDFContentParser-nextline"><strong>nextline</strong></a>(self)</dt><dd><tt>Fetches&nbsp;a&nbsp;next&nbsp;line&nbsp;that&nbsp;ends&nbsp;either&nbsp;with&nbsp;\r&nbsp;or&nbsp;\n.</tt></dd></dl>
+
+<dl><dt><a name="PDFContentParser-nexttoken"><strong>nexttoken</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="PDFContentParser-poll"><strong>poll</strong></a>(self, pos<font color="#909090">=None</font>, n<font color="#909090">=80</font>)</dt></dl>
+
+<dl><dt><a name="PDFContentParser-revreadlines"><strong>revreadlines</strong></a>(self)</dt><dd><tt>Fetches&nbsp;a&nbsp;next&nbsp;line&nbsp;backword.<br>
+&nbsp;<br>
+This&nbsp;is&nbsp;used&nbsp;to&nbsp;locate&nbsp;the&nbsp;trailers&nbsp;at&nbsp;the&nbsp;end&nbsp;of&nbsp;a&nbsp;file.</tt></dd></dl>
+
+<dl><dt><a name="PDFContentParser-tell"><strong>tell</strong></a>(self)</dt></dl>
+
+<hr>
+Data descriptors inherited from <a href="pdfminer.psparser.html#PSBaseParser">pdfminer.psparser.PSBaseParser</a>:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<hr>
+Data and other attributes inherited from <a href="pdfminer.psparser.html#PSBaseParser">pdfminer.psparser.PSBaseParser</a>:<br>
+<dl><dt><strong>BUFSIZ</strong> = 4096</dl>
+
+<dl><dt><strong>debug</strong> = 0</dl>
+
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="PDFGraphicState">class <strong>PDFGraphicState</strong></a>(<a href="__builtin__.html#object">__builtin__.object</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>##&nbsp;&nbsp;<a href="#PDFGraphicState">PDFGraphicState</a><br>
+##<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="PDFGraphicState-__init__"><strong>__init__</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="PDFGraphicState-__repr__"><strong>__repr__</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="PDFGraphicState-copy"><strong>copy</strong></a>(self)</dt></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="PDFInterpreterError">class <strong>PDFInterpreterError</strong></a>(<a href="pdfminer.pdftypes.html#PDFException">pdfminer.pdftypes.PDFException</a>)</font></td></tr>
+    
+<tr><td bgcolor="#ffc8d8"><tt>&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="pdfminer.pdfinterp.html#PDFInterpreterError">PDFInterpreterError</a></dd>
+<dd><a href="pdfminer.pdftypes.html#PDFException">pdfminer.pdftypes.PDFException</a></dd>
+<dd><a href="pdfminer.psparser.html#PSException">pdfminer.psparser.PSException</a></dd>
+<dd><a href="exceptions.html#Exception">exceptions.Exception</a></dd>
+<dd><a href="exceptions.html#BaseException">exceptions.BaseException</a></dd>
+<dd><a href="__builtin__.html#object">__builtin__.object</a></dd>
+</dl>
+<hr>
+Data descriptors inherited from <a href="pdfminer.psparser.html#PSException">pdfminer.psparser.PSException</a>:<br>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<hr>
+Methods inherited from <a href="exceptions.html#Exception">exceptions.Exception</a>:<br>
+<dl><dt><a name="PDFInterpreterError-__init__"><strong>__init__</strong></a>(...)</dt><dd><tt>x.<a href="#PDFInterpreterError-__init__">__init__</a>(...)&nbsp;initializes&nbsp;x;&nbsp;see&nbsp;help(type(x))&nbsp;for&nbsp;signature</tt></dd></dl>
+
+<hr>
+Data and other attributes inherited from <a href="exceptions.html#Exception">exceptions.Exception</a>:<br>
+<dl><dt><strong>__new__</strong> = &lt;built-in method __new__ of type object&gt;<dd><tt>T.<a href="#PDFInterpreterError-__new__">__new__</a>(S,&nbsp;...)&nbsp;-&gt;&nbsp;a&nbsp;new&nbsp;<a href="__builtin__.html#object">object</a>&nbsp;with&nbsp;type&nbsp;S,&nbsp;a&nbsp;subtype&nbsp;of&nbsp;T</tt></dl>
+
+<hr>
+Methods inherited from <a href="exceptions.html#BaseException">exceptions.BaseException</a>:<br>
+<dl><dt><a name="PDFInterpreterError-__delattr__"><strong>__delattr__</strong></a>(...)</dt><dd><tt>x.<a href="#PDFInterpreterError-__delattr__">__delattr__</a>('name')&nbsp;&lt;==&gt;&nbsp;del&nbsp;x.name</tt></dd></dl>
+
+<dl><dt><a name="PDFInterpreterError-__getattribute__"><strong>__getattribute__</strong></a>(...)</dt><dd><tt>x.<a href="#PDFInterpreterError-__getattribute__">__getattribute__</a>('name')&nbsp;&lt;==&gt;&nbsp;x.name</tt></dd></dl>
+
+<dl><dt><a name="PDFInterpreterError-__getitem__"><strong>__getitem__</strong></a>(...)</dt><dd><tt>x.<a href="#PDFInterpreterError-__getitem__">__getitem__</a>(y)&nbsp;&lt;==&gt;&nbsp;x[y]</tt></dd></dl>
+
+<dl><dt><a name="PDFInterpreterError-__getslice__"><strong>__getslice__</strong></a>(...)</dt><dd><tt>x.<a href="#PDFInterpreterError-__getslice__">__getslice__</a>(i,&nbsp;j)&nbsp;&lt;==&gt;&nbsp;x[i:j]<br>
+&nbsp;<br>
+Use&nbsp;of&nbsp;negative&nbsp;indices&nbsp;is&nbsp;not&nbsp;supported.</tt></dd></dl>
+
+<dl><dt><a name="PDFInterpreterError-__reduce__"><strong>__reduce__</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="PDFInterpreterError-__repr__"><strong>__repr__</strong></a>(...)</dt><dd><tt>x.<a href="#PDFInterpreterError-__repr__">__repr__</a>()&nbsp;&lt;==&gt;&nbsp;repr(x)</tt></dd></dl>
+
+<dl><dt><a name="PDFInterpreterError-__setattr__"><strong>__setattr__</strong></a>(...)</dt><dd><tt>x.<a href="#PDFInterpreterError-__setattr__">__setattr__</a>('name',&nbsp;value)&nbsp;&lt;==&gt;&nbsp;x.name&nbsp;=&nbsp;value</tt></dd></dl>
+
+<dl><dt><a name="PDFInterpreterError-__setstate__"><strong>__setstate__</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="PDFInterpreterError-__str__"><strong>__str__</strong></a>(...)</dt><dd><tt>x.<a href="#PDFInterpreterError-__str__">__str__</a>()&nbsp;&lt;==&gt;&nbsp;str(x)</tt></dd></dl>
+
+<dl><dt><a name="PDFInterpreterError-__unicode__"><strong>__unicode__</strong></a>(...)</dt></dl>
+
+<hr>
+Data descriptors inherited from <a href="exceptions.html#BaseException">exceptions.BaseException</a>:<br>
+<dl><dt><strong>__dict__</strong></dt>
+</dl>
+<dl><dt><strong>args</strong></dt>
+</dl>
+<dl><dt><strong>message</strong></dt>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="PDFPageInterpreter">class <strong>PDFPageInterpreter</strong></a>(<a href="__builtin__.html#object">__builtin__.object</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>##&nbsp;&nbsp;Interpreter<br>
+##<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="PDFPageInterpreter-__init__"><strong>__init__</strong></a>(self, rsrcmgr, device)</dt></dl>
+
+<dl><dt><a name="PDFPageInterpreter-do_B"><strong>do_B</strong></a>(self)</dt><dd><tt>#&nbsp;fill-and-stroke</tt></dd></dl>
+
+<dl><dt><a name="PDFPageInterpreter-do_BDC"><strong>do_BDC</strong></a>(self, tag, props)</dt></dl>
+
+<dl><dt><a name="PDFPageInterpreter-do_BI"><strong>do_BI</strong></a>(self)</dt><dd><tt>#&nbsp;inline&nbsp;image</tt></dd></dl>
+
+<dl><dt><a name="PDFPageInterpreter-do_BMC"><strong>do_BMC</strong></a>(self, tag)</dt></dl>
+
+<dl><dt><a name="PDFPageInterpreter-do_BT"><strong>do_BT</strong></a>(self)</dt><dd><tt>#&nbsp;begin-text</tt></dd></dl>
+
+<dl><dt><a name="PDFPageInterpreter-do_BX"><strong>do_BX</strong></a>(self)</dt><dd><tt>#&nbsp;begin-compat</tt></dd></dl>
+
+<dl><dt><a name="PDFPageInterpreter-do_B_a"><strong>do_B_a</strong></a>(self)</dt><dd><tt>#&nbsp;fill-and-stroke-even-odd</tt></dd></dl>
+
+<dl><dt><a name="PDFPageInterpreter-do_CS"><strong>do_CS</strong></a>(self, name)</dt><dd><tt>#&nbsp;setcolorspace-stroking</tt></dd></dl>
+
+<dl><dt><a name="PDFPageInterpreter-do_DP"><strong>do_DP</strong></a>(self, tag, props)</dt></dl>
+
+<dl><dt><a name="PDFPageInterpreter-do_Do"><strong>do_Do</strong></a>(self, xobjid)</dt><dd><tt>#&nbsp;invoke&nbsp;an&nbsp;XObject</tt></dd></dl>
+
+<dl><dt><a name="PDFPageInterpreter-do_EI"><strong>do_EI</strong></a>(self, obj)</dt></dl>
+
+<dl><dt><a name="PDFPageInterpreter-do_EMC"><strong>do_EMC</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="PDFPageInterpreter-do_ET"><strong>do_ET</strong></a>(self)</dt><dd><tt>#&nbsp;end-text</tt></dd></dl>
+
+<dl><dt><a name="PDFPageInterpreter-do_EX"><strong>do_EX</strong></a>(self)</dt><dd><tt>#&nbsp;end-compat</tt></dd></dl>
+
+<dl><dt><a name="PDFPageInterpreter-do_F"><strong>do_F</strong></a> = <a href="#PDFPageInterpreter-do_f">do_f</a>(self)</dt></dl>
+
+<dl><dt><a name="PDFPageInterpreter-do_G"><strong>do_G</strong></a>(self, gray)</dt><dd><tt>#&nbsp;setgray-stroking</tt></dd></dl>
+
+<dl><dt><a name="PDFPageInterpreter-do_ID"><strong>do_ID</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="PDFPageInterpreter-do_J"><strong>do_J</strong></a>(self, linecap)</dt><dd><tt>#&nbsp;setlinecap</tt></dd></dl>
+
+<dl><dt><a name="PDFPageInterpreter-do_K"><strong>do_K</strong></a>(self, c, m, y, k)</dt><dd><tt>#&nbsp;setcmyk-stroking</tt></dd></dl>
+
+<dl><dt><a name="PDFPageInterpreter-do_M"><strong>do_M</strong></a>(self, miterlimit)</dt><dd><tt>#&nbsp;setmiterlimit</tt></dd></dl>
+
+<dl><dt><a name="PDFPageInterpreter-do_MP"><strong>do_MP</strong></a>(self, tag)</dt><dd><tt>#&nbsp;marked&nbsp;content&nbsp;operators</tt></dd></dl>
+
+<dl><dt><a name="PDFPageInterpreter-do_Q"><strong>do_Q</strong></a>(self)</dt><dd><tt>#&nbsp;grestore</tt></dd></dl>
+
+<dl><dt><a name="PDFPageInterpreter-do_RG"><strong>do_RG</strong></a>(self, r, g, b)</dt><dd><tt>#&nbsp;setrgb-stroking</tt></dd></dl>
+
+<dl><dt><a name="PDFPageInterpreter-do_S"><strong>do_S</strong></a>(self)</dt><dd><tt>#&nbsp;stroke</tt></dd></dl>
+
+<dl><dt><a name="PDFPageInterpreter-do_SC"><strong>do_SC</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="PDFPageInterpreter-do_SCN"><strong>do_SCN</strong></a>(self)</dt><dd><tt>#&nbsp;setcolor</tt></dd></dl>
+
+<dl><dt><a name="PDFPageInterpreter-do_TD"><strong>do_TD</strong></a>(self, tx, ty)</dt><dd><tt>#&nbsp;text-move</tt></dd></dl>
+
+<dl><dt><a name="PDFPageInterpreter-do_TJ"><strong>do_TJ</strong></a>(self, seq)</dt><dd><tt>#&nbsp;show-pos</tt></dd></dl>
+
+<dl><dt><a name="PDFPageInterpreter-do_TL"><strong>do_TL</strong></a>(self, leading)</dt><dd><tt>#&nbsp;setleading</tt></dd></dl>
+
+<dl><dt><a name="PDFPageInterpreter-do_T_a"><strong>do_T_a</strong></a>(self)</dt><dd><tt>#&nbsp;nextline</tt></dd></dl>
+
+<dl><dt><a name="PDFPageInterpreter-do_Tc"><strong>do_Tc</strong></a>(self, space)</dt><dd><tt>#&nbsp;setcharspace</tt></dd></dl>
+
+<dl><dt><a name="PDFPageInterpreter-do_Td"><strong>do_Td</strong></a>(self, tx, ty)</dt><dd><tt>#&nbsp;text-move</tt></dd></dl>
+
+<dl><dt><a name="PDFPageInterpreter-do_Tf"><strong>do_Tf</strong></a>(self, fontid, fontsize)</dt><dd><tt>#&nbsp;selectfont</tt></dd></dl>
+
+<dl><dt><a name="PDFPageInterpreter-do_Tj"><strong>do_Tj</strong></a>(self, s)</dt><dd><tt>#&nbsp;show</tt></dd></dl>
+
+<dl><dt><a name="PDFPageInterpreter-do_Tm"><strong>do_Tm</strong></a>(self, a, b, c, d, e, f)</dt><dd><tt>#&nbsp;textmatrix</tt></dd></dl>
+
+<dl><dt><a name="PDFPageInterpreter-do_Tr"><strong>do_Tr</strong></a>(self, render)</dt><dd><tt>#&nbsp;setrendering</tt></dd></dl>
+
+<dl><dt><a name="PDFPageInterpreter-do_Ts"><strong>do_Ts</strong></a>(self, rise)</dt><dd><tt>#&nbsp;settextrise</tt></dd></dl>
+
+<dl><dt><a name="PDFPageInterpreter-do_Tw"><strong>do_Tw</strong></a>(self, space)</dt><dd><tt>#&nbsp;setwordspace</tt></dd></dl>
+
+<dl><dt><a name="PDFPageInterpreter-do_Tz"><strong>do_Tz</strong></a>(self, scale)</dt><dd><tt>#&nbsp;textscale</tt></dd></dl>
+
+<dl><dt><a name="PDFPageInterpreter-do_W"><strong>do_W</strong></a>(self)</dt><dd><tt>#&nbsp;clip</tt></dd></dl>
+
+<dl><dt><a name="PDFPageInterpreter-do_W_a"><strong>do_W_a</strong></a>(self)</dt><dd><tt>#&nbsp;clip-even-odd</tt></dd></dl>
+
+<dl><dt><a name="PDFPageInterpreter-do__q"><strong>do__q</strong></a>(self, s)</dt><dd><tt>#&nbsp;quote</tt></dd></dl>
+
+<dl><dt><a name="PDFPageInterpreter-do__w"><strong>do__w</strong></a>(self, aw, ac, s)</dt><dd><tt>#&nbsp;doublequote</tt></dd></dl>
+
+<dl><dt><a name="PDFPageInterpreter-do_b"><strong>do_b</strong></a>(self)</dt><dd><tt>#&nbsp;close-fill-and-stroke</tt></dd></dl>
+
+<dl><dt><a name="PDFPageInterpreter-do_b_a"><strong>do_b_a</strong></a>(self)</dt><dd><tt>#&nbsp;close-fill-and-stroke-even-odd</tt></dd></dl>
+
+<dl><dt><a name="PDFPageInterpreter-do_c"><strong>do_c</strong></a>(self, x1, y1, x2, y2, x3, y3)</dt><dd><tt>#&nbsp;curveto</tt></dd></dl>
+
+<dl><dt><a name="PDFPageInterpreter-do_cm"><strong>do_cm</strong></a>(self, a1, b1, c1, d1, e1, f1)</dt><dd><tt>#&nbsp;concat-matrix</tt></dd></dl>
+
+<dl><dt><a name="PDFPageInterpreter-do_cs"><strong>do_cs</strong></a>(self, name)</dt><dd><tt>#&nbsp;setcolorspace-non-strokine</tt></dd></dl>
+
+<dl><dt><a name="PDFPageInterpreter-do_d"><strong>do_d</strong></a>(self, dash, phase)</dt><dd><tt>#&nbsp;setdash</tt></dd></dl>
+
+<dl><dt><a name="PDFPageInterpreter-do_f"><strong>do_f</strong></a>(self)</dt><dd><tt>#&nbsp;fill</tt></dd></dl>
+
+<dl><dt><a name="PDFPageInterpreter-do_f_a"><strong>do_f_a</strong></a>(self)</dt><dd><tt>#&nbsp;fill-even-odd</tt></dd></dl>
+
+<dl><dt><a name="PDFPageInterpreter-do_g"><strong>do_g</strong></a>(self, gray)</dt><dd><tt>#&nbsp;setgray-non-stroking</tt></dd></dl>
+
+<dl><dt><a name="PDFPageInterpreter-do_gs"><strong>do_gs</strong></a>(self, name)</dt><dd><tt>#&nbsp;load-gstate</tt></dd></dl>
+
+<dl><dt><a name="PDFPageInterpreter-do_h"><strong>do_h</strong></a>(self)</dt><dd><tt>#&nbsp;closepath</tt></dd></dl>
+
+<dl><dt><a name="PDFPageInterpreter-do_i"><strong>do_i</strong></a>(self, flatness)</dt><dd><tt>#&nbsp;setflatness</tt></dd></dl>
+
+<dl><dt><a name="PDFPageInterpreter-do_j"><strong>do_j</strong></a>(self, linejoin)</dt><dd><tt>#&nbsp;setlinejoin</tt></dd></dl>
+
+<dl><dt><a name="PDFPageInterpreter-do_k"><strong>do_k</strong></a>(self, c, m, y, k)</dt><dd><tt>#&nbsp;setcmyk-non-stroking</tt></dd></dl>
+
+<dl><dt><a name="PDFPageInterpreter-do_l"><strong>do_l</strong></a>(self, x, y)</dt><dd><tt>#&nbsp;lineto</tt></dd></dl>
+
+<dl><dt><a name="PDFPageInterpreter-do_m"><strong>do_m</strong></a>(self, x, y)</dt><dd><tt>#&nbsp;moveto</tt></dd></dl>
+
+<dl><dt><a name="PDFPageInterpreter-do_n"><strong>do_n</strong></a>(self)</dt><dd><tt>#&nbsp;close-only</tt></dd></dl>
+
+<dl><dt><a name="PDFPageInterpreter-do_q"><strong>do_q</strong></a>(self)</dt><dd><tt>#&nbsp;gsave</tt></dd></dl>
+
+<dl><dt><a name="PDFPageInterpreter-do_re"><strong>do_re</strong></a>(self, x, y, w, h)</dt><dd><tt>#&nbsp;rectangle</tt></dd></dl>
+
+<dl><dt><a name="PDFPageInterpreter-do_rg"><strong>do_rg</strong></a>(self, r, g, b)</dt><dd><tt>#&nbsp;setrgb-non-stroking</tt></dd></dl>
+
+<dl><dt><a name="PDFPageInterpreter-do_ri"><strong>do_ri</strong></a>(self, intent)</dt><dd><tt>#&nbsp;setintent</tt></dd></dl>
+
+<dl><dt><a name="PDFPageInterpreter-do_s"><strong>do_s</strong></a>(self)</dt><dd><tt>#&nbsp;close-and-stroke</tt></dd></dl>
+
+<dl><dt><a name="PDFPageInterpreter-do_sc"><strong>do_sc</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="PDFPageInterpreter-do_scn"><strong>do_scn</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="PDFPageInterpreter-do_sh"><strong>do_sh</strong></a>(self, name)</dt><dd><tt>#&nbsp;sharing-name</tt></dd></dl>
+
+<dl><dt><a name="PDFPageInterpreter-do_v"><strong>do_v</strong></a>(self, x2, y2, x3, y3)</dt><dd><tt>#&nbsp;urveto</tt></dd></dl>
+
+<dl><dt><a name="PDFPageInterpreter-do_w"><strong>do_w</strong></a>(self, linewidth)</dt><dd><tt>#&nbsp;setlinewidth</tt></dd></dl>
+
+<dl><dt><a name="PDFPageInterpreter-do_y"><strong>do_y</strong></a>(self, x1, y1, x3, y3)</dt><dd><tt>#&nbsp;rveto</tt></dd></dl>
+
+<dl><dt><a name="PDFPageInterpreter-dup"><strong>dup</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="PDFPageInterpreter-execute"><strong>execute</strong></a>(self, streams)</dt></dl>
+
+<dl><dt><a name="PDFPageInterpreter-get_current_state"><strong>get_current_state</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="PDFPageInterpreter-init_resources"><strong>init_resources</strong></a>(self, resources)</dt><dd><tt>#&nbsp;<a href="#PDFPageInterpreter-init_resources">init_resources</a>(resources):<br>
+#&nbsp;&nbsp;&nbsp;Prepare&nbsp;the&nbsp;fonts&nbsp;and&nbsp;XObjects&nbsp;listed&nbsp;in&nbsp;the&nbsp;Resource&nbsp;attribute.</tt></dd></dl>
+
+<dl><dt><a name="PDFPageInterpreter-init_state"><strong>init_state</strong></a>(self, ctm)</dt><dd><tt>#&nbsp;<a href="#PDFPageInterpreter-init_state">init_state</a>(ctm)<br>
+#&nbsp;&nbsp;&nbsp;Initialize&nbsp;the&nbsp;text&nbsp;and&nbsp;graphic&nbsp;states&nbsp;for&nbsp;rendering&nbsp;a&nbsp;page.</tt></dd></dl>
+
+<dl><dt><a name="PDFPageInterpreter-pop"><strong>pop</strong></a>(self, n)</dt></dl>
+
+<dl><dt><a name="PDFPageInterpreter-process_page"><strong>process_page</strong></a>(self, page)</dt></dl>
+
+<dl><dt><a name="PDFPageInterpreter-push"><strong>push</strong></a>(self, obj)</dt></dl>
+
+<dl><dt><a name="PDFPageInterpreter-render_contents"><strong>render_contents</strong></a>(self, resources, streams, ctm<font color="#909090">=(1, 0, 0, 1, 0, 0)</font>)</dt><dd><tt>#&nbsp;<a href="#PDFPageInterpreter-render_contents">render_contents</a>(resources,&nbsp;streams,&nbsp;ctm)<br>
+#&nbsp;&nbsp;&nbsp;Render&nbsp;the&nbsp;content&nbsp;streams.<br>
+#&nbsp;&nbsp;&nbsp;This&nbsp;method&nbsp;may&nbsp;be&nbsp;called&nbsp;recursively.</tt></dd></dl>
+
+<dl><dt><a name="PDFPageInterpreter-set_current_state"><strong>set_current_state</strong></a>(self, state)</dt></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>debug</strong> = 0</dl>
+
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="PDFResourceError">class <strong>PDFResourceError</strong></a>(<a href="pdfminer.pdftypes.html#PDFException">pdfminer.pdftypes.PDFException</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>##&nbsp;&nbsp;Exceptions<br>
+##<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="pdfminer.pdfinterp.html#PDFResourceError">PDFResourceError</a></dd>
+<dd><a href="pdfminer.pdftypes.html#PDFException">pdfminer.pdftypes.PDFException</a></dd>
+<dd><a href="pdfminer.psparser.html#PSException">pdfminer.psparser.PSException</a></dd>
+<dd><a href="exceptions.html#Exception">exceptions.Exception</a></dd>
+<dd><a href="exceptions.html#BaseException">exceptions.BaseException</a></dd>
+<dd><a href="__builtin__.html#object">__builtin__.object</a></dd>
+</dl>
+<hr>
+Data descriptors inherited from <a href="pdfminer.psparser.html#PSException">pdfminer.psparser.PSException</a>:<br>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<hr>
+Methods inherited from <a href="exceptions.html#Exception">exceptions.Exception</a>:<br>
+<dl><dt><a name="PDFResourceError-__init__"><strong>__init__</strong></a>(...)</dt><dd><tt>x.<a href="#PDFResourceError-__init__">__init__</a>(...)&nbsp;initializes&nbsp;x;&nbsp;see&nbsp;help(type(x))&nbsp;for&nbsp;signature</tt></dd></dl>
+
+<hr>
+Data and other attributes inherited from <a href="exceptions.html#Exception">exceptions.Exception</a>:<br>
+<dl><dt><strong>__new__</strong> = &lt;built-in method __new__ of type object&gt;<dd><tt>T.<a href="#PDFResourceError-__new__">__new__</a>(S,&nbsp;...)&nbsp;-&gt;&nbsp;a&nbsp;new&nbsp;<a href="__builtin__.html#object">object</a>&nbsp;with&nbsp;type&nbsp;S,&nbsp;a&nbsp;subtype&nbsp;of&nbsp;T</tt></dl>
+
+<hr>
+Methods inherited from <a href="exceptions.html#BaseException">exceptions.BaseException</a>:<br>
+<dl><dt><a name="PDFResourceError-__delattr__"><strong>__delattr__</strong></a>(...)</dt><dd><tt>x.<a href="#PDFResourceError-__delattr__">__delattr__</a>('name')&nbsp;&lt;==&gt;&nbsp;del&nbsp;x.name</tt></dd></dl>
+
+<dl><dt><a name="PDFResourceError-__getattribute__"><strong>__getattribute__</strong></a>(...)</dt><dd><tt>x.<a href="#PDFResourceError-__getattribute__">__getattribute__</a>('name')&nbsp;&lt;==&gt;&nbsp;x.name</tt></dd></dl>
+
+<dl><dt><a name="PDFResourceError-__getitem__"><strong>__getitem__</strong></a>(...)</dt><dd><tt>x.<a href="#PDFResourceError-__getitem__">__getitem__</a>(y)&nbsp;&lt;==&gt;&nbsp;x[y]</tt></dd></dl>
+
+<dl><dt><a name="PDFResourceError-__getslice__"><strong>__getslice__</strong></a>(...)</dt><dd><tt>x.<a href="#PDFResourceError-__getslice__">__getslice__</a>(i,&nbsp;j)&nbsp;&lt;==&gt;&nbsp;x[i:j]<br>
+&nbsp;<br>
+Use&nbsp;of&nbsp;negative&nbsp;indices&nbsp;is&nbsp;not&nbsp;supported.</tt></dd></dl>
+
+<dl><dt><a name="PDFResourceError-__reduce__"><strong>__reduce__</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="PDFResourceError-__repr__"><strong>__repr__</strong></a>(...)</dt><dd><tt>x.<a href="#PDFResourceError-__repr__">__repr__</a>()&nbsp;&lt;==&gt;&nbsp;repr(x)</tt></dd></dl>
+
+<dl><dt><a name="PDFResourceError-__setattr__"><strong>__setattr__</strong></a>(...)</dt><dd><tt>x.<a href="#PDFResourceError-__setattr__">__setattr__</a>('name',&nbsp;value)&nbsp;&lt;==&gt;&nbsp;x.name&nbsp;=&nbsp;value</tt></dd></dl>
+
+<dl><dt><a name="PDFResourceError-__setstate__"><strong>__setstate__</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="PDFResourceError-__str__"><strong>__str__</strong></a>(...)</dt><dd><tt>x.<a href="#PDFResourceError-__str__">__str__</a>()&nbsp;&lt;==&gt;&nbsp;str(x)</tt></dd></dl>
+
+<dl><dt><a name="PDFResourceError-__unicode__"><strong>__unicode__</strong></a>(...)</dt></dl>
+
+<hr>
+Data descriptors inherited from <a href="exceptions.html#BaseException">exceptions.BaseException</a>:<br>
+<dl><dt><strong>__dict__</strong></dt>
+</dl>
+<dl><dt><strong>args</strong></dt>
+</dl>
+<dl><dt><strong>message</strong></dt>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="PDFResourceManager">class <strong>PDFResourceManager</strong></a>(<a href="__builtin__.html#object">__builtin__.object</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>Repository&nbsp;of&nbsp;shared&nbsp;resources.<br>
+&nbsp;<br>
+ResourceManager&nbsp;facilitates&nbsp;reuse&nbsp;of&nbsp;shared&nbsp;resources<br>
+such&nbsp;as&nbsp;fonts&nbsp;and&nbsp;images&nbsp;so&nbsp;that&nbsp;large&nbsp;objects&nbsp;are&nbsp;not<br>
+allocated&nbsp;multiple&nbsp;times.<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="PDFResourceManager-__init__"><strong>__init__</strong></a>(self, caching<font color="#909090">=True</font>)</dt></dl>
+
+<dl><dt><a name="PDFResourceManager-get_cmap"><strong>get_cmap</strong></a>(self, cmapname, strict<font color="#909090">=False</font>)</dt></dl>
+
+<dl><dt><a name="PDFResourceManager-get_font"><strong>get_font</strong></a>(self, objid, spec)</dt></dl>
+
+<dl><dt><a name="PDFResourceManager-get_procset"><strong>get_procset</strong></a>(self, procs)</dt></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>debug</strong> = 0</dl>
+
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="PDFTextExtractionNotAllowed">class <strong>PDFTextExtractionNotAllowed</strong></a>(<a href="pdfminer.pdfinterp.html#PDFInterpreterError">PDFInterpreterError</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>##&nbsp;&nbsp;process_pdf<br>
+##<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="pdfminer.pdfinterp.html#PDFTextExtractionNotAllowed">PDFTextExtractionNotAllowed</a></dd>
+<dd><a href="pdfminer.pdfinterp.html#PDFInterpreterError">PDFInterpreterError</a></dd>
+<dd><a href="pdfminer.pdftypes.html#PDFException">pdfminer.pdftypes.PDFException</a></dd>
+<dd><a href="pdfminer.psparser.html#PSException">pdfminer.psparser.PSException</a></dd>
+<dd><a href="exceptions.html#Exception">exceptions.Exception</a></dd>
+<dd><a href="exceptions.html#BaseException">exceptions.BaseException</a></dd>
+<dd><a href="__builtin__.html#object">__builtin__.object</a></dd>
+</dl>
+<hr>
+Data descriptors inherited from <a href="pdfminer.psparser.html#PSException">pdfminer.psparser.PSException</a>:<br>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<hr>
+Methods inherited from <a href="exceptions.html#Exception">exceptions.Exception</a>:<br>
+<dl><dt><a name="PDFTextExtractionNotAllowed-__init__"><strong>__init__</strong></a>(...)</dt><dd><tt>x.<a href="#PDFTextExtractionNotAllowed-__init__">__init__</a>(...)&nbsp;initializes&nbsp;x;&nbsp;see&nbsp;help(type(x))&nbsp;for&nbsp;signature</tt></dd></dl>
+
+<hr>
+Data and other attributes inherited from <a href="exceptions.html#Exception">exceptions.Exception</a>:<br>
+<dl><dt><strong>__new__</strong> = &lt;built-in method __new__ of type object&gt;<dd><tt>T.<a href="#PDFTextExtractionNotAllowed-__new__">__new__</a>(S,&nbsp;...)&nbsp;-&gt;&nbsp;a&nbsp;new&nbsp;<a href="__builtin__.html#object">object</a>&nbsp;with&nbsp;type&nbsp;S,&nbsp;a&nbsp;subtype&nbsp;of&nbsp;T</tt></dl>
+
+<hr>
+Methods inherited from <a href="exceptions.html#BaseException">exceptions.BaseException</a>:<br>
+<dl><dt><a name="PDFTextExtractionNotAllowed-__delattr__"><strong>__delattr__</strong></a>(...)</dt><dd><tt>x.<a href="#PDFTextExtractionNotAllowed-__delattr__">__delattr__</a>('name')&nbsp;&lt;==&gt;&nbsp;del&nbsp;x.name</tt></dd></dl>
+
+<dl><dt><a name="PDFTextExtractionNotAllowed-__getattribute__"><strong>__getattribute__</strong></a>(...)</dt><dd><tt>x.<a href="#PDFTextExtractionNotAllowed-__getattribute__">__getattribute__</a>('name')&nbsp;&lt;==&gt;&nbsp;x.name</tt></dd></dl>
+
+<dl><dt><a name="PDFTextExtractionNotAllowed-__getitem__"><strong>__getitem__</strong></a>(...)</dt><dd><tt>x.<a href="#PDFTextExtractionNotAllowed-__getitem__">__getitem__</a>(y)&nbsp;&lt;==&gt;&nbsp;x[y]</tt></dd></dl>
+
+<dl><dt><a name="PDFTextExtractionNotAllowed-__getslice__"><strong>__getslice__</strong></a>(...)</dt><dd><tt>x.<a href="#PDFTextExtractionNotAllowed-__getslice__">__getslice__</a>(i,&nbsp;j)&nbsp;&lt;==&gt;&nbsp;x[i:j]<br>
+&nbsp;<br>
+Use&nbsp;of&nbsp;negative&nbsp;indices&nbsp;is&nbsp;not&nbsp;supported.</tt></dd></dl>
+
+<dl><dt><a name="PDFTextExtractionNotAllowed-__reduce__"><strong>__reduce__</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="PDFTextExtractionNotAllowed-__repr__"><strong>__repr__</strong></a>(...)</dt><dd><tt>x.<a href="#PDFTextExtractionNotAllowed-__repr__">__repr__</a>()&nbsp;&lt;==&gt;&nbsp;repr(x)</tt></dd></dl>
+
+<dl><dt><a name="PDFTextExtractionNotAllowed-__setattr__"><strong>__setattr__</strong></a>(...)</dt><dd><tt>x.<a href="#PDFTextExtractionNotAllowed-__setattr__">__setattr__</a>('name',&nbsp;value)&nbsp;&lt;==&gt;&nbsp;x.name&nbsp;=&nbsp;value</tt></dd></dl>
+
+<dl><dt><a name="PDFTextExtractionNotAllowed-__setstate__"><strong>__setstate__</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="PDFTextExtractionNotAllowed-__str__"><strong>__str__</strong></a>(...)</dt><dd><tt>x.<a href="#PDFTextExtractionNotAllowed-__str__">__str__</a>()&nbsp;&lt;==&gt;&nbsp;str(x)</tt></dd></dl>
+
+<dl><dt><a name="PDFTextExtractionNotAllowed-__unicode__"><strong>__unicode__</strong></a>(...)</dt></dl>
+
+<hr>
+Data descriptors inherited from <a href="exceptions.html#BaseException">exceptions.BaseException</a>:<br>
+<dl><dt><strong>__dict__</strong></dt>
+</dl>
+<dl><dt><strong>args</strong></dt>
+</dl>
+<dl><dt><strong>message</strong></dt>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="PDFTextState">class <strong>PDFTextState</strong></a>(<a href="__builtin__.html#object">__builtin__.object</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>##&nbsp;&nbsp;<a href="#PDFTextState">PDFTextState</a><br>
+##<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="PDFTextState-__init__"><strong>__init__</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="PDFTextState-__repr__"><strong>__repr__</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="PDFTextState-copy"><strong>copy</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="PDFTextState-reset"><strong>reset</strong></a>(self)</dt></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#eeaa77">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Functions</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#eeaa77"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt><a name="-StringIO"><strong>StringIO</strong></a>(...)</dt><dd><tt><a href="#-StringIO">StringIO</a>([s])&nbsp;--&nbsp;Return&nbsp;a&nbsp;StringIO-like&nbsp;stream&nbsp;for&nbsp;reading&nbsp;or&nbsp;writing</tt></dd></dl>
+ <dl><dt><a name="-process_pdf"><strong>process_pdf</strong></a>(rsrcmgr, device, fp, pagenos<font color="#909090">=None</font>, maxpages<font color="#909090">=0</font>, password<font color="#909090">=''</font>, caching<font color="#909090">=True</font>, check_extractable<font color="#909090">=True</font>)</dt></dl>
+</td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#55aa55">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Data</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#55aa55"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><strong>LITERAL_DEVICE_CMYK</strong> = /DeviceCMYK<br>
+<strong>LITERAL_DEVICE_GRAY</strong> = /DeviceGray<br>
+<strong>LITERAL_DEVICE_RGB</strong> = /DeviceRGB<br>
+<strong>LITERAL_FONT</strong> = /Font<br>
+<strong>LITERAL_FORM</strong> = /Form<br>
+<strong>LITERAL_IMAGE</strong> = /Image<br>
+<strong>LITERAL_PDF</strong> = /PDF<br>
+<strong>LITERAL_TEXT</strong> = /Text<br>
+<strong>MATRIX_IDENTITY</strong> = (1, 0, 0, 1, 0, 0)<br>
+<strong>PREDEFINED_COLORSPACE</strong> = {'CalGray': &lt;PDFColorSpace: CalGray, ncomponents=1&gt;, 'CalRGB': &lt;PDFColorSpace: CalRGB, ncomponents=3&gt;, 'DeviceCMYK': &lt;PDFColorSpace: DeviceCMYK, ncomponents=4&gt;, 'DeviceGray': &lt;PDFColorSpace: DeviceGray, ncomponents=1&gt;, 'DeviceRGB': &lt;PDFColorSpace: DeviceRGB, ncomponents=3&gt;, 'Indexed': &lt;PDFColorSpace: Indexed, ncomponents=1&gt;, 'Lab': &lt;PDFColorSpace: Lab, ncomponents=3&gt;, 'Pattern': &lt;PDFColorSpace: Pattern, ncomponents=1&gt;, 'Separation': &lt;PDFColorSpace: Separation, ncomponents=1&gt;}<br>
+<strong>STRICT</strong> = 0</td></tr></table>
+</body></html>

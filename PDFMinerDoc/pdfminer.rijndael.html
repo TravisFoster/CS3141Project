@@ -1,0 +1,132 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module pdfminer.rijndael</title>
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong><a href="pdfminer.html"><font color="#ffffff">pdfminer</font></a>.rijndael</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:/usr/lib/python2.7/site-packages/pdfminer/rijndael.py">/usr/lib/python2.7/site-packages/pdfminer/rijndael.py</a></font></td></tr></table>
+    <p><tt>Python&nbsp;implementation&nbsp;of&nbsp;Rijndael&nbsp;encryption&nbsp;algorithm.<br>
+&nbsp;<br>
+This&nbsp;code&nbsp;is&nbsp;in&nbsp;the&nbsp;public&nbsp;domain.<br>
+&nbsp;<br>
+This&nbsp;code&nbsp;is&nbsp;based&nbsp;on&nbsp;a&nbsp;public&nbsp;domain&nbsp;C&nbsp;implementation<br>
+by&nbsp;Philip&nbsp;J.&nbsp;Erdelsky:<br>
+&nbsp;&nbsp;<a href="http://www.efgh.com/software/rijndael.htm">http://www.efgh.com/software/rijndael.htm</a></tt></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#aa55cc">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="struct.html">struct</a><br>
+</td><td width="25%" valign=top><a href="sys.html">sys</a><br>
+</td><td width="25%" valign=top></td><td width="25%" valign=top></td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ee77aa">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Classes</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl>
+<dt><font face="helvetica, arial"><a href="__builtin__.html#object">__builtin__.object</a>
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="pdfminer.rijndael.html#RijndaelDecryptor">RijndaelDecryptor</a>
+</font></dt><dt><font face="helvetica, arial"><a href="pdfminer.rijndael.html#RijndaelEncryptor">RijndaelEncryptor</a>
+</font></dt></dl>
+</dd>
+</dl>
+ <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="RijndaelDecryptor">class <strong>RijndaelDecryptor</strong></a>(<a href="__builtin__.html#object">__builtin__.object</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>&gt;&gt;&gt;&nbsp;key&nbsp;=&nbsp;'00010203050607080a0b0c0d0f101112'.decode('hex')<br>
+&gt;&gt;&gt;&nbsp;ciphertext&nbsp;=&nbsp;'d8f532538289ef7d06b506a4fd5be9c9'.decode('hex')<br>
+&gt;&gt;&gt;&nbsp;<a href="#RijndaelDecryptor">RijndaelDecryptor</a>(key,&nbsp;128).<a href="#RijndaelDecryptor-decrypt">decrypt</a>(ciphertext).encode('hex')<br>
+'506812a45f08c889b97f5980038b8359'<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="RijndaelDecryptor-__init__"><strong>__init__</strong></a>(self, key, keybits<font color="#909090">=256</font>)</dt></dl>
+
+<dl><dt><a name="RijndaelDecryptor-decrypt"><strong>decrypt</strong></a>(self, ciphertext)</dt></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="RijndaelEncryptor">class <strong>RijndaelEncryptor</strong></a>(<a href="__builtin__.html#object">__builtin__.object</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>&gt;&gt;&gt;&nbsp;key&nbsp;=&nbsp;'00010203050607080a0b0c0d0f101112'.decode('hex')<br>
+&gt;&gt;&gt;&nbsp;plaintext&nbsp;=&nbsp;'506812a45f08c889b97f5980038b8359'.decode('hex')<br>
+&gt;&gt;&gt;&nbsp;<a href="#RijndaelEncryptor">RijndaelEncryptor</a>(key,&nbsp;128).<a href="#RijndaelEncryptor-encrypt">encrypt</a>(plaintext).encode('hex')<br>
+'d8f532538289ef7d06b506a4fd5be9c9'<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="RijndaelEncryptor-__init__"><strong>__init__</strong></a>(self, key, keybits<font color="#909090">=256</font>)</dt></dl>
+
+<dl><dt><a name="RijndaelEncryptor-encrypt"><strong>encrypt</strong></a>(self, plaintext)</dt></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#eeaa77">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Functions</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#eeaa77"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt><a name="-GETU32"><strong>GETU32</strong></a>(x)</dt><dd><tt>#&nbsp;64bit</tt></dd></dl>
+ <dl><dt><a name="-KEYLENGTH"><strong>KEYLENGTH</strong></a>(keybits)</dt></dl>
+ <dl><dt><a name="-NROUNDS"><strong>NROUNDS</strong></a>(keybits)</dt></dl>
+ <dl><dt><a name="-PUTU32"><strong>PUTU32</strong></a>(x)</dt></dl>
+ <dl><dt><a name="-RKLENGTH"><strong>RKLENGTH</strong></a>(keybits)</dt></dl>
+ <dl><dt><a name="-rijndaelDecrypt"><strong>rijndaelDecrypt</strong></a>(rk, nrounds, ciphertext)</dt></dl>
+ <dl><dt><a name="-rijndaelEncrypt"><strong>rijndaelEncrypt</strong></a>(rk, nrounds, plaintext)</dt></dl>
+ <dl><dt><a name="-rijndaelSetupDecrypt"><strong>rijndaelSetupDecrypt</strong></a>(key, keybits)</dt><dd><tt>#&nbsp;Expand&nbsp;the&nbsp;cipher&nbsp;key&nbsp;into&nbsp;the&nbsp;decryption&nbsp;key&nbsp;schedule.<br>
+#<br>
+#&nbsp;@return&nbsp;the&nbsp;number&nbsp;of&nbsp;rounds&nbsp;for&nbsp;the&nbsp;given&nbsp;cipher&nbsp;key&nbsp;size.</tt></dd></dl>
+ <dl><dt><a name="-rijndaelSetupEncrypt"><strong>rijndaelSetupEncrypt</strong></a>(key, keybits)</dt><dd><tt>#&nbsp;Expand&nbsp;the&nbsp;cipher&nbsp;key&nbsp;into&nbsp;the&nbsp;encryption&nbsp;key&nbsp;schedule.<br>
+#<br>
+#&nbsp;@return&nbsp;the&nbsp;number&nbsp;of&nbsp;rounds&nbsp;for&nbsp;the&nbsp;given&nbsp;cipher&nbsp;key&nbsp;size.</tt></dd></dl>
+</td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#55aa55">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Data</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#55aa55"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><strong>Td0</strong> = [1374988112L, 2118214995L, 437757123L, 975658646L, 1001089995L, 530400753L, 2902087851L, 1273168787L, 540080725L, 2910219766L, 2295101073L, 4110568485L, 1340463100L, 3307916247L, 641025152L, 3043140495L, 3736164937L, 632953703L, 1172967064L, 1576976609L, ...]<br>
+<strong>Td1</strong> = [1347548327L, 1400783205L, 3273267108L, 2520393566L, 3409685355L, 4045380933L, 2880240216L, 2471224067L, 1428173050L, 4138563181L, 2441661558L, 636813900L, 4233094615L, 3620022987L, 2149987652L, 2411029155L, 1239331162L, 1730525723L, 2554718734L, 3781033664L, ...]<br>
+<strong>Td2</strong> = [2807058932L, 1699970625L, 2764249623L, 1586903591L, 1808481195L, 1173430173L, 1487645946L, 59984867L, 4199882800L, 1844882806L, 1989249228L, 1277555970L, 3623636965L, 3419915562L, 1149249077L, 2744104290L, 1514790577L, 459744698L, 244860394L, 3235995134L, ...]<br>
+<strong>Td3</strong> = [4104605777L, 1097159550L, 396673818L, 660510266L, 2875968315L, 2638606623L, 4200115116L, 3808662347L, 821712160L, 1986918061L, 3430322568L, 38544885L, 3856137295L, 718002117L, 893681702L, 1654886325L, 2975484382L, 3122358053L, 3926825029L, 4274053469L, ...]<br>
+<strong>Td4</strong> = [1381126738L, 151587081L, 1785358954L, 3587560917L, 808464432L, 909522486L, 2779096485L, 943208504L, 3217014719L, 1077952576L, 2745410467L, 2661195422L, 2172748161L, 4092851187L, 3621246935L, 4227595259L, 2088533116L, 3823363043L, 960051513L, 2189591170L, ...]<br>
+<strong>Te0</strong> = [3328402341L, 4168907908L, 4000806809L, 4135287693L, 4294111757L, 3597364157L, 3731845041L, 2445657428L, 1613770832L, 33620227L, 3462883241L, 1445669757L, 3892248089L, 3050821474L, 1303096294L, 3967186586L, 2412431941L, 528646813L, 2311702848L, 4202528135L, ...]<br>
+<strong>Te1</strong> = [2781242211L, 2230877308L, 2582542199L, 2381740923L, 234877682L, 3184946027L, 2984144751L, 1418839493L, 1348481072L, 50462977L, 2848876391L, 2102799147L, 434634494L, 1656084439L, 3863849899L, 2599188086L, 1167051466L, 2636087938L, 1082771913L, 2281340285L, ...]<br>
+<strong>Te2</strong> = [1671808611L, 2089089148L, 2006576759L, 2072901243L, 4061003762L, 1807603307L, 1873927791L, 3310653893L, 810573872L, 16974337L, 1739181671L, 729634347L, 4263110654L, 3613570519L, 2883997099L, 1989864566L, 3393556426L, 2191335298L, 3376449993L, 2106063485L, ...]<br>
+<strong>Te3</strong> = [1667474886L, 2088535288L, 2004326894L, 2071694838L, 4075949567L, 1802223062L, 1869591006L, 3318043793L, 808472672L, 16843522L, 1734846926L, 724270422L, 4278065639L, 3621216949L, 2880169549L, 1987484396L, 3402253711L, 2189597983L, 3385409673L, 2105378810L, ...]<br>
+<strong>Te4</strong> = [1667457891L, 2088533116L, 2004318071L, 2071690107L, 4076008178L, 1802201963L, 1869573999L, 3318072773L, 808464432L, 16843009L, 1734829927L, 724249387L, 4278124286L, 3621246935L, 2880154539L, 1987475062L, 3402287818L, 2189591170L, 3385444809L, 2105376125L, ...]<br>
+<strong>rcon</strong> = [16777216, 33554432, 67108864, 134217728, 268435456, 536870912, 1073741824, 2147483648, 452984832, 905969664]</td></tr></table>
+</body></html>

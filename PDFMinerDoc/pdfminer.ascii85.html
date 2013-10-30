@@ -1,0 +1,69 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module pdfminer.ascii85</title>
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong><a href="pdfminer.html"><font color="#ffffff">pdfminer</font></a>.ascii85</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:/usr/lib/python2.7/site-packages/pdfminer/ascii85.py">/usr/lib/python2.7/site-packages/pdfminer/ascii85.py</a></font></td></tr></table>
+    <p><tt>Python&nbsp;implementation&nbsp;of&nbsp;ASCII85/ASCIIHex&nbsp;decoder&nbsp;(Adobe&nbsp;version).<br>
+&nbsp;<br>
+This&nbsp;code&nbsp;is&nbsp;in&nbsp;the&nbsp;public&nbsp;domain.</tt></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#aa55cc">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="re.html">re</a><br>
+</td><td width="25%" valign=top><a href="struct.html">struct</a><br>
+</td><td width="25%" valign=top></td><td width="25%" valign=top></td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#eeaa77">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Functions</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#eeaa77"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt><a name="-ascii85decode"><strong>ascii85decode</strong></a>(data)</dt><dd><tt>In&nbsp;ASCII85&nbsp;encoding,&nbsp;every&nbsp;four&nbsp;bytes&nbsp;are&nbsp;encoded&nbsp;with&nbsp;five&nbsp;ASCII<br>
+letters,&nbsp;using&nbsp;85&nbsp;different&nbsp;types&nbsp;of&nbsp;characters&nbsp;(as&nbsp;256**4&nbsp;&lt;&nbsp;85**5).<br>
+When&nbsp;the&nbsp;length&nbsp;of&nbsp;the&nbsp;original&nbsp;bytes&nbsp;is&nbsp;not&nbsp;a&nbsp;multiple&nbsp;of&nbsp;4,&nbsp;a&nbsp;special<br>
+rule&nbsp;is&nbsp;used&nbsp;for&nbsp;round&nbsp;up.<br>
+&nbsp;<br>
+The&nbsp;Adobe's&nbsp;ASCII85&nbsp;implementation&nbsp;is&nbsp;slightly&nbsp;different&nbsp;from<br>
+its&nbsp;original&nbsp;in&nbsp;handling&nbsp;the&nbsp;last&nbsp;characters.<br>
+&nbsp;<br>
+The&nbsp;sample&nbsp;string&nbsp;is&nbsp;taken&nbsp;from:<br>
+&nbsp;&nbsp;<a href="http://en.wikipedia.org/w/index.php?title=Ascii85">http://en.wikipedia.org/w/index.php?title=Ascii85</a><br>
+&nbsp;<br>
+&gt;&gt;&gt;&nbsp;<a href="#-ascii85decode">ascii85decode</a>('9jqo^BlbD-BleB1DJ+*+F(f,q')<br>
+'Man&nbsp;is&nbsp;distinguished'<br>
+&gt;&gt;&gt;&nbsp;<a href="#-ascii85decode">ascii85decode</a>('E,9)oF*2M7/c~&gt;')<br>
+'pleasure.'</tt></dd></dl>
+ <dl><dt><a name="-asciihexdecode"><strong>asciihexdecode</strong></a>(data)</dt><dd><tt>ASCIIHexDecode&nbsp;filter:&nbsp;PDFReference&nbsp;v1.4&nbsp;section&nbsp;3.3.1<br>
+For&nbsp;each&nbsp;pair&nbsp;of&nbsp;ASCII&nbsp;hexadecimal&nbsp;digits&nbsp;(0-9&nbsp;and&nbsp;A-F&nbsp;or&nbsp;a-f),&nbsp;the<br>
+ASCIIHexDecode&nbsp;filter&nbsp;produces&nbsp;one&nbsp;byte&nbsp;of&nbsp;binary&nbsp;data.&nbsp;All&nbsp;white-space<br>
+characters&nbsp;are&nbsp;ignored.&nbsp;A&nbsp;right&nbsp;angle&nbsp;bracket&nbsp;character&nbsp;(&gt;)&nbsp;indicates<br>
+EOD.&nbsp;Any&nbsp;other&nbsp;characters&nbsp;will&nbsp;cause&nbsp;an&nbsp;error.&nbsp;If&nbsp;the&nbsp;filter&nbsp;encounters<br>
+the&nbsp;EOD&nbsp;marker&nbsp;after&nbsp;reading&nbsp;an&nbsp;odd&nbsp;number&nbsp;of&nbsp;hexadecimal&nbsp;digits,&nbsp;it<br>
+will&nbsp;behave&nbsp;as&nbsp;if&nbsp;a&nbsp;0&nbsp;followed&nbsp;the&nbsp;last&nbsp;digit.<br>
+&nbsp;<br>
+&gt;&gt;&gt;&nbsp;<a href="#-asciihexdecode">asciihexdecode</a>('61&nbsp;62&nbsp;2e6364&nbsp;&nbsp;&nbsp;65')<br>
+'ab.cde'<br>
+&gt;&gt;&gt;&nbsp;<a href="#-asciihexdecode">asciihexdecode</a>('61&nbsp;62&nbsp;2e6364&nbsp;&nbsp;&nbsp;657&gt;')<br>
+'ab.cdep'<br>
+&gt;&gt;&gt;&nbsp;<a href="#-asciihexdecode">asciihexdecode</a>('7&gt;')<br>
+'p'</tt></dd></dl>
+</td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#55aa55">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Data</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#55aa55"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><strong>hex_re</strong> = &lt;_sre.SRE_Pattern object&gt;<br>
+<strong>trail_re</strong> = &lt;_sre.SRE_Pattern object&gt;</td></tr></table>
+</body></html>

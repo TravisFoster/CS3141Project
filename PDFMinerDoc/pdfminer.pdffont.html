@@ -1,0 +1,708 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module pdfminer.pdffont</title>
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong><a href="pdfminer.html"><font color="#ffffff">pdfminer</font></a>.pdffont</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:/usr/lib/python2.7/site-packages/pdfminer/pdffont.py">/usr/lib/python2.7/site-packages/pdfminer/pdffont.py</a></font></td></tr></table>
+    <p></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#aa55cc">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="struct.html">struct</a><br>
+</td><td width="25%" valign=top><a href="sys.html">sys</a><br>
+</td><td width="25%" valign=top></td><td width="25%" valign=top></td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ee77aa">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Classes</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl>
+<dt><font face="helvetica, arial"><a href="__builtin__.html#object">__builtin__.object</a>
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="pdfminer.pdffont.html#CFFFont">CFFFont</a>
+</font></dt><dt><font face="helvetica, arial"><a href="pdfminer.pdffont.html#FontMetricsDB">FontMetricsDB</a>
+</font></dt><dt><font face="helvetica, arial"><a href="pdfminer.pdffont.html#PDFFont">PDFFont</a>
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="pdfminer.pdffont.html#PDFCIDFont">PDFCIDFont</a>
+</font></dt><dt><font face="helvetica, arial"><a href="pdfminer.pdffont.html#PDFSimpleFont">PDFSimpleFont</a>
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="pdfminer.pdffont.html#PDFType1Font">PDFType1Font</a>
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="pdfminer.pdffont.html#PDFTrueTypeFont">PDFTrueTypeFont</a>
+</font></dt></dl>
+</dd>
+<dt><font face="helvetica, arial"><a href="pdfminer.pdffont.html#PDFType3Font">PDFType3Font</a>
+</font></dt></dl>
+</dd>
+</dl>
+</dd>
+<dt><font face="helvetica, arial"><a href="pdfminer.pdffont.html#TrueTypeFont">TrueTypeFont</a>
+</font></dt></dl>
+</dd>
+<dt><font face="helvetica, arial"><a href="pdfminer.pdftypes.html#PDFException">pdfminer.pdftypes.PDFException</a>(<a href="pdfminer.psparser.html#PSException">pdfminer.psparser.PSException</a>)
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="pdfminer.pdffont.html#PDFFontError">PDFFontError</a>
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="pdfminer.pdffont.html#PDFUnicodeNotDefined">PDFUnicodeNotDefined</a>
+</font></dt></dl>
+</dd>
+</dl>
+</dd>
+<dt><font face="helvetica, arial"><a href="pdfminer.psparser.html#PSStackParser">pdfminer.psparser.PSStackParser</a>(<a href="pdfminer.psparser.html#PSBaseParser">pdfminer.psparser.PSBaseParser</a>)
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="pdfminer.pdffont.html#Type1FontHeaderParser">Type1FontHeaderParser</a>
+</font></dt></dl>
+</dd>
+</dl>
+ <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="CFFFont">class <strong>CFFFont</strong></a>(<a href="__builtin__.html#object">__builtin__.object</a>)</font></td></tr>
+    
+<tr><td bgcolor="#ffc8d8"><tt>&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="CFFFont-__init__"><strong>__init__</strong></a>(self, name, fp)</dt></dl>
+
+<dl><dt><a name="CFFFont-getstr"><strong>getstr</strong></a>(self, sid)</dt></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>INDEX</strong> = &lt;class 'pdfminer.pdffont.INDEX'&gt;</dl>
+
+<dl><dt><strong>STANDARD_STRINGS</strong> = ('.notdef', 'space', 'exclam', 'quotedbl', 'numbersign', 'dollar', 'percent', 'ampersand', 'quoteright', 'parenleft', 'parenright', 'asterisk', 'plus', 'comma', 'hyphen', 'period', 'slash', 'zero', 'one', 'two', ...)</dl>
+
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="FontMetricsDB">class <strong>FontMetricsDB</strong></a>(<a href="__builtin__.html#object">__builtin__.object</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>##&nbsp;&nbsp;<a href="#FontMetricsDB">FontMetricsDB</a><br>
+##<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Class methods defined here:<br>
+<dl><dt><a name="FontMetricsDB-get_metrics"><strong>get_metrics</strong></a>(klass, fontname)<font color="#909090"><font face="helvetica, arial"> from <a href="__builtin__.html#type">__builtin__.type</a></font></font></dt></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="PDFCIDFont">class <strong>PDFCIDFont</strong></a>(<a href="pdfminer.pdffont.html#PDFFont">PDFFont</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>#&nbsp;<a href="#PDFCIDFont">PDFCIDFont</a><br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="pdfminer.pdffont.html#PDFCIDFont">PDFCIDFont</a></dd>
+<dd><a href="pdfminer.pdffont.html#PDFFont">PDFFont</a></dd>
+<dd><a href="__builtin__.html#object">__builtin__.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="PDFCIDFont-__init__"><strong>__init__</strong></a>(self, rsrcmgr, spec)</dt></dl>
+
+<dl><dt><a name="PDFCIDFont-__repr__"><strong>__repr__</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="PDFCIDFont-char_disp"><strong>char_disp</strong></a>(self, cid)</dt><dd><tt>Returns&nbsp;an&nbsp;integer&nbsp;for&nbsp;horizontal&nbsp;fonts,&nbsp;a&nbsp;tuple&nbsp;for&nbsp;vertical&nbsp;fonts.</tt></dd></dl>
+
+<dl><dt><a name="PDFCIDFont-decode"><strong>decode</strong></a>(self, bytes)</dt></dl>
+
+<dl><dt><a name="PDFCIDFont-is_multibyte"><strong>is_multibyte</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="PDFCIDFont-is_vertical"><strong>is_vertical</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="PDFCIDFont-to_unichr"><strong>to_unichr</strong></a>(self, cid)</dt></dl>
+
+<hr>
+Methods inherited from <a href="pdfminer.pdffont.html#PDFFont">PDFFont</a>:<br>
+<dl><dt><a name="PDFCIDFont-char_width"><strong>char_width</strong></a>(self, cid)</dt></dl>
+
+<dl><dt><a name="PDFCIDFont-get_ascent"><strong>get_ascent</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="PDFCIDFont-get_descent"><strong>get_descent</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="PDFCIDFont-get_height"><strong>get_height</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="PDFCIDFont-get_width"><strong>get_width</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="PDFCIDFont-string_width"><strong>string_width</strong></a>(self, s)</dt></dl>
+
+<hr>
+Data descriptors inherited from <a href="pdfminer.pdffont.html#PDFFont">PDFFont</a>:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="PDFFont">class <strong>PDFFont</strong></a>(<a href="__builtin__.html#object">__builtin__.object</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>#&nbsp;<a href="#PDFFont">PDFFont</a><br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="PDFFont-__init__"><strong>__init__</strong></a>(self, descriptor, widths, default_width<font color="#909090">=None</font>)</dt></dl>
+
+<dl><dt><a name="PDFFont-__repr__"><strong>__repr__</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="PDFFont-char_disp"><strong>char_disp</strong></a>(self, cid)</dt></dl>
+
+<dl><dt><a name="PDFFont-char_width"><strong>char_width</strong></a>(self, cid)</dt></dl>
+
+<dl><dt><a name="PDFFont-decode"><strong>decode</strong></a>(self, bytes)</dt></dl>
+
+<dl><dt><a name="PDFFont-get_ascent"><strong>get_ascent</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="PDFFont-get_descent"><strong>get_descent</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="PDFFont-get_height"><strong>get_height</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="PDFFont-get_width"><strong>get_width</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="PDFFont-is_multibyte"><strong>is_multibyte</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="PDFFont-is_vertical"><strong>is_vertical</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="PDFFont-string_width"><strong>string_width</strong></a>(self, s)</dt></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="PDFFontError">class <strong>PDFFontError</strong></a>(<a href="pdfminer.pdftypes.html#PDFException">pdfminer.pdftypes.PDFException</a>)</font></td></tr>
+    
+<tr><td bgcolor="#ffc8d8"><tt>&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="pdfminer.pdffont.html#PDFFontError">PDFFontError</a></dd>
+<dd><a href="pdfminer.pdftypes.html#PDFException">pdfminer.pdftypes.PDFException</a></dd>
+<dd><a href="pdfminer.psparser.html#PSException">pdfminer.psparser.PSException</a></dd>
+<dd><a href="exceptions.html#Exception">exceptions.Exception</a></dd>
+<dd><a href="exceptions.html#BaseException">exceptions.BaseException</a></dd>
+<dd><a href="__builtin__.html#object">__builtin__.object</a></dd>
+</dl>
+<hr>
+Data descriptors inherited from <a href="pdfminer.psparser.html#PSException">pdfminer.psparser.PSException</a>:<br>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<hr>
+Methods inherited from <a href="exceptions.html#Exception">exceptions.Exception</a>:<br>
+<dl><dt><a name="PDFFontError-__init__"><strong>__init__</strong></a>(...)</dt><dd><tt>x.<a href="#PDFFontError-__init__">__init__</a>(...)&nbsp;initializes&nbsp;x;&nbsp;see&nbsp;help(type(x))&nbsp;for&nbsp;signature</tt></dd></dl>
+
+<hr>
+Data and other attributes inherited from <a href="exceptions.html#Exception">exceptions.Exception</a>:<br>
+<dl><dt><strong>__new__</strong> = &lt;built-in method __new__ of type object&gt;<dd><tt>T.<a href="#PDFFontError-__new__">__new__</a>(S,&nbsp;...)&nbsp;-&gt;&nbsp;a&nbsp;new&nbsp;<a href="__builtin__.html#object">object</a>&nbsp;with&nbsp;type&nbsp;S,&nbsp;a&nbsp;subtype&nbsp;of&nbsp;T</tt></dl>
+
+<hr>
+Methods inherited from <a href="exceptions.html#BaseException">exceptions.BaseException</a>:<br>
+<dl><dt><a name="PDFFontError-__delattr__"><strong>__delattr__</strong></a>(...)</dt><dd><tt>x.<a href="#PDFFontError-__delattr__">__delattr__</a>('name')&nbsp;&lt;==&gt;&nbsp;del&nbsp;x.name</tt></dd></dl>
+
+<dl><dt><a name="PDFFontError-__getattribute__"><strong>__getattribute__</strong></a>(...)</dt><dd><tt>x.<a href="#PDFFontError-__getattribute__">__getattribute__</a>('name')&nbsp;&lt;==&gt;&nbsp;x.name</tt></dd></dl>
+
+<dl><dt><a name="PDFFontError-__getitem__"><strong>__getitem__</strong></a>(...)</dt><dd><tt>x.<a href="#PDFFontError-__getitem__">__getitem__</a>(y)&nbsp;&lt;==&gt;&nbsp;x[y]</tt></dd></dl>
+
+<dl><dt><a name="PDFFontError-__getslice__"><strong>__getslice__</strong></a>(...)</dt><dd><tt>x.<a href="#PDFFontError-__getslice__">__getslice__</a>(i,&nbsp;j)&nbsp;&lt;==&gt;&nbsp;x[i:j]<br>
+&nbsp;<br>
+Use&nbsp;of&nbsp;negative&nbsp;indices&nbsp;is&nbsp;not&nbsp;supported.</tt></dd></dl>
+
+<dl><dt><a name="PDFFontError-__reduce__"><strong>__reduce__</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="PDFFontError-__repr__"><strong>__repr__</strong></a>(...)</dt><dd><tt>x.<a href="#PDFFontError-__repr__">__repr__</a>()&nbsp;&lt;==&gt;&nbsp;repr(x)</tt></dd></dl>
+
+<dl><dt><a name="PDFFontError-__setattr__"><strong>__setattr__</strong></a>(...)</dt><dd><tt>x.<a href="#PDFFontError-__setattr__">__setattr__</a>('name',&nbsp;value)&nbsp;&lt;==&gt;&nbsp;x.name&nbsp;=&nbsp;value</tt></dd></dl>
+
+<dl><dt><a name="PDFFontError-__setstate__"><strong>__setstate__</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="PDFFontError-__str__"><strong>__str__</strong></a>(...)</dt><dd><tt>x.<a href="#PDFFontError-__str__">__str__</a>()&nbsp;&lt;==&gt;&nbsp;str(x)</tt></dd></dl>
+
+<dl><dt><a name="PDFFontError-__unicode__"><strong>__unicode__</strong></a>(...)</dt></dl>
+
+<hr>
+Data descriptors inherited from <a href="exceptions.html#BaseException">exceptions.BaseException</a>:<br>
+<dl><dt><strong>__dict__</strong></dt>
+</dl>
+<dl><dt><strong>args</strong></dt>
+</dl>
+<dl><dt><strong>message</strong></dt>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="PDFSimpleFont">class <strong>PDFSimpleFont</strong></a>(<a href="pdfminer.pdffont.html#PDFFont">PDFFont</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>#&nbsp;<a href="#PDFSimpleFont">PDFSimpleFont</a><br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="pdfminer.pdffont.html#PDFSimpleFont">PDFSimpleFont</a></dd>
+<dd><a href="pdfminer.pdffont.html#PDFFont">PDFFont</a></dd>
+<dd><a href="__builtin__.html#object">__builtin__.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="PDFSimpleFont-__init__"><strong>__init__</strong></a>(self, descriptor, widths, spec)</dt></dl>
+
+<dl><dt><a name="PDFSimpleFont-to_unichr"><strong>to_unichr</strong></a>(self, cid)</dt></dl>
+
+<hr>
+Methods inherited from <a href="pdfminer.pdffont.html#PDFFont">PDFFont</a>:<br>
+<dl><dt><a name="PDFSimpleFont-__repr__"><strong>__repr__</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="PDFSimpleFont-char_disp"><strong>char_disp</strong></a>(self, cid)</dt></dl>
+
+<dl><dt><a name="PDFSimpleFont-char_width"><strong>char_width</strong></a>(self, cid)</dt></dl>
+
+<dl><dt><a name="PDFSimpleFont-decode"><strong>decode</strong></a>(self, bytes)</dt></dl>
+
+<dl><dt><a name="PDFSimpleFont-get_ascent"><strong>get_ascent</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="PDFSimpleFont-get_descent"><strong>get_descent</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="PDFSimpleFont-get_height"><strong>get_height</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="PDFSimpleFont-get_width"><strong>get_width</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="PDFSimpleFont-is_multibyte"><strong>is_multibyte</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="PDFSimpleFont-is_vertical"><strong>is_vertical</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="PDFSimpleFont-string_width"><strong>string_width</strong></a>(self, s)</dt></dl>
+
+<hr>
+Data descriptors inherited from <a href="pdfminer.pdffont.html#PDFFont">PDFFont</a>:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="PDFTrueTypeFont">class <strong>PDFTrueTypeFont</strong></a>(<a href="pdfminer.pdffont.html#PDFType1Font">PDFType1Font</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>#&nbsp;<a href="#PDFTrueTypeFont">PDFTrueTypeFont</a><br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="pdfminer.pdffont.html#PDFTrueTypeFont">PDFTrueTypeFont</a></dd>
+<dd><a href="pdfminer.pdffont.html#PDFType1Font">PDFType1Font</a></dd>
+<dd><a href="pdfminer.pdffont.html#PDFSimpleFont">PDFSimpleFont</a></dd>
+<dd><a href="pdfminer.pdffont.html#PDFFont">PDFFont</a></dd>
+<dd><a href="__builtin__.html#object">__builtin__.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="PDFTrueTypeFont-__repr__"><strong>__repr__</strong></a>(self)</dt></dl>
+
+<hr>
+Methods inherited from <a href="pdfminer.pdffont.html#PDFType1Font">PDFType1Font</a>:<br>
+<dl><dt><a name="PDFTrueTypeFont-__init__"><strong>__init__</strong></a>(self, rsrcmgr, spec)</dt></dl>
+
+<hr>
+Methods inherited from <a href="pdfminer.pdffont.html#PDFSimpleFont">PDFSimpleFont</a>:<br>
+<dl><dt><a name="PDFTrueTypeFont-to_unichr"><strong>to_unichr</strong></a>(self, cid)</dt></dl>
+
+<hr>
+Methods inherited from <a href="pdfminer.pdffont.html#PDFFont">PDFFont</a>:<br>
+<dl><dt><a name="PDFTrueTypeFont-char_disp"><strong>char_disp</strong></a>(self, cid)</dt></dl>
+
+<dl><dt><a name="PDFTrueTypeFont-char_width"><strong>char_width</strong></a>(self, cid)</dt></dl>
+
+<dl><dt><a name="PDFTrueTypeFont-decode"><strong>decode</strong></a>(self, bytes)</dt></dl>
+
+<dl><dt><a name="PDFTrueTypeFont-get_ascent"><strong>get_ascent</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="PDFTrueTypeFont-get_descent"><strong>get_descent</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="PDFTrueTypeFont-get_height"><strong>get_height</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="PDFTrueTypeFont-get_width"><strong>get_width</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="PDFTrueTypeFont-is_multibyte"><strong>is_multibyte</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="PDFTrueTypeFont-is_vertical"><strong>is_vertical</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="PDFTrueTypeFont-string_width"><strong>string_width</strong></a>(self, s)</dt></dl>
+
+<hr>
+Data descriptors inherited from <a href="pdfminer.pdffont.html#PDFFont">PDFFont</a>:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="PDFType1Font">class <strong>PDFType1Font</strong></a>(<a href="pdfminer.pdffont.html#PDFSimpleFont">PDFSimpleFont</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>#&nbsp;<a href="#PDFType1Font">PDFType1Font</a><br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="pdfminer.pdffont.html#PDFType1Font">PDFType1Font</a></dd>
+<dd><a href="pdfminer.pdffont.html#PDFSimpleFont">PDFSimpleFont</a></dd>
+<dd><a href="pdfminer.pdffont.html#PDFFont">PDFFont</a></dd>
+<dd><a href="__builtin__.html#object">__builtin__.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="PDFType1Font-__init__"><strong>__init__</strong></a>(self, rsrcmgr, spec)</dt></dl>
+
+<dl><dt><a name="PDFType1Font-__repr__"><strong>__repr__</strong></a>(self)</dt></dl>
+
+<hr>
+Methods inherited from <a href="pdfminer.pdffont.html#PDFSimpleFont">PDFSimpleFont</a>:<br>
+<dl><dt><a name="PDFType1Font-to_unichr"><strong>to_unichr</strong></a>(self, cid)</dt></dl>
+
+<hr>
+Methods inherited from <a href="pdfminer.pdffont.html#PDFFont">PDFFont</a>:<br>
+<dl><dt><a name="PDFType1Font-char_disp"><strong>char_disp</strong></a>(self, cid)</dt></dl>
+
+<dl><dt><a name="PDFType1Font-char_width"><strong>char_width</strong></a>(self, cid)</dt></dl>
+
+<dl><dt><a name="PDFType1Font-decode"><strong>decode</strong></a>(self, bytes)</dt></dl>
+
+<dl><dt><a name="PDFType1Font-get_ascent"><strong>get_ascent</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="PDFType1Font-get_descent"><strong>get_descent</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="PDFType1Font-get_height"><strong>get_height</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="PDFType1Font-get_width"><strong>get_width</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="PDFType1Font-is_multibyte"><strong>is_multibyte</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="PDFType1Font-is_vertical"><strong>is_vertical</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="PDFType1Font-string_width"><strong>string_width</strong></a>(self, s)</dt></dl>
+
+<hr>
+Data descriptors inherited from <a href="pdfminer.pdffont.html#PDFFont">PDFFont</a>:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="PDFType3Font">class <strong>PDFType3Font</strong></a>(<a href="pdfminer.pdffont.html#PDFSimpleFont">PDFSimpleFont</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>#&nbsp;<a href="#PDFType3Font">PDFType3Font</a><br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="pdfminer.pdffont.html#PDFType3Font">PDFType3Font</a></dd>
+<dd><a href="pdfminer.pdffont.html#PDFSimpleFont">PDFSimpleFont</a></dd>
+<dd><a href="pdfminer.pdffont.html#PDFFont">PDFFont</a></dd>
+<dd><a href="__builtin__.html#object">__builtin__.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="PDFType3Font-__init__"><strong>__init__</strong></a>(self, rsrcmgr, spec)</dt></dl>
+
+<dl><dt><a name="PDFType3Font-__repr__"><strong>__repr__</strong></a>(self)</dt></dl>
+
+<hr>
+Methods inherited from <a href="pdfminer.pdffont.html#PDFSimpleFont">PDFSimpleFont</a>:<br>
+<dl><dt><a name="PDFType3Font-to_unichr"><strong>to_unichr</strong></a>(self, cid)</dt></dl>
+
+<hr>
+Methods inherited from <a href="pdfminer.pdffont.html#PDFFont">PDFFont</a>:<br>
+<dl><dt><a name="PDFType3Font-char_disp"><strong>char_disp</strong></a>(self, cid)</dt></dl>
+
+<dl><dt><a name="PDFType3Font-char_width"><strong>char_width</strong></a>(self, cid)</dt></dl>
+
+<dl><dt><a name="PDFType3Font-decode"><strong>decode</strong></a>(self, bytes)</dt></dl>
+
+<dl><dt><a name="PDFType3Font-get_ascent"><strong>get_ascent</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="PDFType3Font-get_descent"><strong>get_descent</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="PDFType3Font-get_height"><strong>get_height</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="PDFType3Font-get_width"><strong>get_width</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="PDFType3Font-is_multibyte"><strong>is_multibyte</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="PDFType3Font-is_vertical"><strong>is_vertical</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="PDFType3Font-string_width"><strong>string_width</strong></a>(self, s)</dt></dl>
+
+<hr>
+Data descriptors inherited from <a href="pdfminer.pdffont.html#PDFFont">PDFFont</a>:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="PDFUnicodeNotDefined">class <strong>PDFUnicodeNotDefined</strong></a>(<a href="pdfminer.pdffont.html#PDFFontError">PDFFontError</a>)</font></td></tr>
+    
+<tr><td bgcolor="#ffc8d8"><tt>&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="pdfminer.pdffont.html#PDFUnicodeNotDefined">PDFUnicodeNotDefined</a></dd>
+<dd><a href="pdfminer.pdffont.html#PDFFontError">PDFFontError</a></dd>
+<dd><a href="pdfminer.pdftypes.html#PDFException">pdfminer.pdftypes.PDFException</a></dd>
+<dd><a href="pdfminer.psparser.html#PSException">pdfminer.psparser.PSException</a></dd>
+<dd><a href="exceptions.html#Exception">exceptions.Exception</a></dd>
+<dd><a href="exceptions.html#BaseException">exceptions.BaseException</a></dd>
+<dd><a href="__builtin__.html#object">__builtin__.object</a></dd>
+</dl>
+<hr>
+Data descriptors inherited from <a href="pdfminer.psparser.html#PSException">pdfminer.psparser.PSException</a>:<br>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<hr>
+Methods inherited from <a href="exceptions.html#Exception">exceptions.Exception</a>:<br>
+<dl><dt><a name="PDFUnicodeNotDefined-__init__"><strong>__init__</strong></a>(...)</dt><dd><tt>x.<a href="#PDFUnicodeNotDefined-__init__">__init__</a>(...)&nbsp;initializes&nbsp;x;&nbsp;see&nbsp;help(type(x))&nbsp;for&nbsp;signature</tt></dd></dl>
+
+<hr>
+Data and other attributes inherited from <a href="exceptions.html#Exception">exceptions.Exception</a>:<br>
+<dl><dt><strong>__new__</strong> = &lt;built-in method __new__ of type object&gt;<dd><tt>T.<a href="#PDFUnicodeNotDefined-__new__">__new__</a>(S,&nbsp;...)&nbsp;-&gt;&nbsp;a&nbsp;new&nbsp;<a href="__builtin__.html#object">object</a>&nbsp;with&nbsp;type&nbsp;S,&nbsp;a&nbsp;subtype&nbsp;of&nbsp;T</tt></dl>
+
+<hr>
+Methods inherited from <a href="exceptions.html#BaseException">exceptions.BaseException</a>:<br>
+<dl><dt><a name="PDFUnicodeNotDefined-__delattr__"><strong>__delattr__</strong></a>(...)</dt><dd><tt>x.<a href="#PDFUnicodeNotDefined-__delattr__">__delattr__</a>('name')&nbsp;&lt;==&gt;&nbsp;del&nbsp;x.name</tt></dd></dl>
+
+<dl><dt><a name="PDFUnicodeNotDefined-__getattribute__"><strong>__getattribute__</strong></a>(...)</dt><dd><tt>x.<a href="#PDFUnicodeNotDefined-__getattribute__">__getattribute__</a>('name')&nbsp;&lt;==&gt;&nbsp;x.name</tt></dd></dl>
+
+<dl><dt><a name="PDFUnicodeNotDefined-__getitem__"><strong>__getitem__</strong></a>(...)</dt><dd><tt>x.<a href="#PDFUnicodeNotDefined-__getitem__">__getitem__</a>(y)&nbsp;&lt;==&gt;&nbsp;x[y]</tt></dd></dl>
+
+<dl><dt><a name="PDFUnicodeNotDefined-__getslice__"><strong>__getslice__</strong></a>(...)</dt><dd><tt>x.<a href="#PDFUnicodeNotDefined-__getslice__">__getslice__</a>(i,&nbsp;j)&nbsp;&lt;==&gt;&nbsp;x[i:j]<br>
+&nbsp;<br>
+Use&nbsp;of&nbsp;negative&nbsp;indices&nbsp;is&nbsp;not&nbsp;supported.</tt></dd></dl>
+
+<dl><dt><a name="PDFUnicodeNotDefined-__reduce__"><strong>__reduce__</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="PDFUnicodeNotDefined-__repr__"><strong>__repr__</strong></a>(...)</dt><dd><tt>x.<a href="#PDFUnicodeNotDefined-__repr__">__repr__</a>()&nbsp;&lt;==&gt;&nbsp;repr(x)</tt></dd></dl>
+
+<dl><dt><a name="PDFUnicodeNotDefined-__setattr__"><strong>__setattr__</strong></a>(...)</dt><dd><tt>x.<a href="#PDFUnicodeNotDefined-__setattr__">__setattr__</a>('name',&nbsp;value)&nbsp;&lt;==&gt;&nbsp;x.name&nbsp;=&nbsp;value</tt></dd></dl>
+
+<dl><dt><a name="PDFUnicodeNotDefined-__setstate__"><strong>__setstate__</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="PDFUnicodeNotDefined-__str__"><strong>__str__</strong></a>(...)</dt><dd><tt>x.<a href="#PDFUnicodeNotDefined-__str__">__str__</a>()&nbsp;&lt;==&gt;&nbsp;str(x)</tt></dd></dl>
+
+<dl><dt><a name="PDFUnicodeNotDefined-__unicode__"><strong>__unicode__</strong></a>(...)</dt></dl>
+
+<hr>
+Data descriptors inherited from <a href="exceptions.html#BaseException">exceptions.BaseException</a>:<br>
+<dl><dt><strong>__dict__</strong></dt>
+</dl>
+<dl><dt><strong>args</strong></dt>
+</dl>
+<dl><dt><strong>message</strong></dt>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="TrueTypeFont">class <strong>TrueTypeFont</strong></a>(<a href="__builtin__.html#object">__builtin__.object</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>##&nbsp;&nbsp;<a href="#TrueTypeFont">TrueTypeFont</a><br>
+##<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="TrueTypeFont-__init__"><strong>__init__</strong></a>(self, name, fp)</dt></dl>
+
+<dl><dt><a name="TrueTypeFont-create_unicode_map"><strong>create_unicode_map</strong></a>(self)</dt></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>CMapNotFound</strong> = &lt;class 'pdfminer.pdffont.CMapNotFound'&gt;</dl>
+
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="Type1FontHeaderParser">class <strong>Type1FontHeaderParser</strong></a>(<a href="pdfminer.psparser.html#PSStackParser">pdfminer.psparser.PSStackParser</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>##&nbsp;&nbsp;<a href="#Type1FontHeaderParser">Type1FontHeaderParser</a><br>
+##<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="pdfminer.pdffont.html#Type1FontHeaderParser">Type1FontHeaderParser</a></dd>
+<dd><a href="pdfminer.psparser.html#PSStackParser">pdfminer.psparser.PSStackParser</a></dd>
+<dd><a href="pdfminer.psparser.html#PSBaseParser">pdfminer.psparser.PSBaseParser</a></dd>
+<dd><a href="__builtin__.html#object">__builtin__.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="Type1FontHeaderParser-__init__"><strong>__init__</strong></a>(self, data)</dt></dl>
+
+<dl><dt><a name="Type1FontHeaderParser-do_keyword"><strong>do_keyword</strong></a>(self, pos, token)</dt></dl>
+
+<dl><dt><a name="Type1FontHeaderParser-get_encoding"><strong>get_encoding</strong></a>(self)</dt></dl>
+
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>KEYWORD_ARRAY</strong> = array</dl>
+
+<dl><dt><strong>KEYWORD_BEGIN</strong> = begin</dl>
+
+<dl><dt><strong>KEYWORD_DEF</strong> = def</dl>
+
+<dl><dt><strong>KEYWORD_DICT</strong> = dict</dl>
+
+<dl><dt><strong>KEYWORD_END</strong> = end</dl>
+
+<dl><dt><strong>KEYWORD_FOR</strong> = for</dl>
+
+<dl><dt><strong>KEYWORD_PUT</strong> = put</dl>
+
+<dl><dt><strong>KEYWORD_READONLY</strong> = readonly</dl>
+
+<hr>
+Methods inherited from <a href="pdfminer.psparser.html#PSStackParser">pdfminer.psparser.PSStackParser</a>:<br>
+<dl><dt><a name="Type1FontHeaderParser-add_results"><strong>add_results</strong></a>(self, *objs)</dt></dl>
+
+<dl><dt><a name="Type1FontHeaderParser-end_type"><strong>end_type</strong></a>(self, type)</dt></dl>
+
+<dl><dt><a name="Type1FontHeaderParser-nextobject"><strong>nextobject</strong></a>(self)</dt><dd><tt>Yields&nbsp;a&nbsp;list&nbsp;of&nbsp;objects.<br>
+&nbsp;<br>
+Returns&nbsp;keywords,&nbsp;literals,&nbsp;strings,&nbsp;numbers,&nbsp;arrays&nbsp;and&nbsp;dictionaries.<br>
+Arrays&nbsp;and&nbsp;dictionaries&nbsp;are&nbsp;represented&nbsp;as&nbsp;Python&nbsp;lists&nbsp;and&nbsp;dictionaries.</tt></dd></dl>
+
+<dl><dt><a name="Type1FontHeaderParser-pop"><strong>pop</strong></a>(self, n)</dt></dl>
+
+<dl><dt><a name="Type1FontHeaderParser-popall"><strong>popall</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="Type1FontHeaderParser-push"><strong>push</strong></a>(self, *objs)</dt></dl>
+
+<dl><dt><a name="Type1FontHeaderParser-reset"><strong>reset</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="Type1FontHeaderParser-seek"><strong>seek</strong></a>(self, pos)</dt></dl>
+
+<dl><dt><a name="Type1FontHeaderParser-start_type"><strong>start_type</strong></a>(self, pos, type)</dt></dl>
+
+<hr>
+Methods inherited from <a href="pdfminer.psparser.html#PSBaseParser">pdfminer.psparser.PSBaseParser</a>:<br>
+<dl><dt><a name="Type1FontHeaderParser-__repr__"><strong>__repr__</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="Type1FontHeaderParser-close"><strong>close</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="Type1FontHeaderParser-fillbuf"><strong>fillbuf</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="Type1FontHeaderParser-flush"><strong>flush</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="Type1FontHeaderParser-nextline"><strong>nextline</strong></a>(self)</dt><dd><tt>Fetches&nbsp;a&nbsp;next&nbsp;line&nbsp;that&nbsp;ends&nbsp;either&nbsp;with&nbsp;\r&nbsp;or&nbsp;\n.</tt></dd></dl>
+
+<dl><dt><a name="Type1FontHeaderParser-nexttoken"><strong>nexttoken</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="Type1FontHeaderParser-poll"><strong>poll</strong></a>(self, pos<font color="#909090">=None</font>, n<font color="#909090">=80</font>)</dt></dl>
+
+<dl><dt><a name="Type1FontHeaderParser-revreadlines"><strong>revreadlines</strong></a>(self)</dt><dd><tt>Fetches&nbsp;a&nbsp;next&nbsp;line&nbsp;backword.<br>
+&nbsp;<br>
+This&nbsp;is&nbsp;used&nbsp;to&nbsp;locate&nbsp;the&nbsp;trailers&nbsp;at&nbsp;the&nbsp;end&nbsp;of&nbsp;a&nbsp;file.</tt></dd></dl>
+
+<dl><dt><a name="Type1FontHeaderParser-tell"><strong>tell</strong></a>(self)</dt></dl>
+
+<hr>
+Data descriptors inherited from <a href="pdfminer.psparser.html#PSBaseParser">pdfminer.psparser.PSBaseParser</a>:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<hr>
+Data and other attributes inherited from <a href="pdfminer.psparser.html#PSBaseParser">pdfminer.psparser.PSBaseParser</a>:<br>
+<dl><dt><strong>BUFSIZ</strong> = 4096</dl>
+
+<dl><dt><strong>debug</strong> = 0</dl>
+
+</td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#eeaa77">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Functions</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#eeaa77"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt><a name="-StringIO"><strong>StringIO</strong></a>(...)</dt><dd><tt><a href="#-StringIO">StringIO</a>([s])&nbsp;--&nbsp;Return&nbsp;a&nbsp;StringIO-like&nbsp;stream&nbsp;for&nbsp;reading&nbsp;or&nbsp;writing</tt></dd></dl>
+ <dl><dt><a name="-get_widths"><strong>get_widths</strong></a>(seq)</dt></dl>
+ <dl><dt><a name="-get_widths2"><strong>get_widths2</strong></a>(seq)</dt></dl>
+ <dl><dt><a name="-getdict"><strong>getdict</strong></a>(data)</dt></dl>
+ <dl><dt><a name="-main"><strong>main</strong></a>(argv)</dt><dd><tt>#&nbsp;main</tt></dd></dl>
+</td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#55aa55">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Data</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#55aa55"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><strong>FONT_METRICS</strong> = {'Courier': ({'Ascent': 627.0, 'CapHeight': 572.0, 'Descent': -194.0, 'Flags': 64, 'FontBBox': (-6.0, -249.0, 639.0, 803.0), 'FontFamily': 'Courier', 'FontName': 'Courier', 'FontWeight': 'Medium', 'ItalicAngle': 0.0, 'XHeight': 434.0}, {32: 600, 33: 600, 34: 600, 35: 600, 36: 600, 37: 600, 38: 600, 39: 600, 40: 600, 41: 600, ...}), 'Courier-Bold': ({'Ascent': 627.0, 'CapHeight': 572.0, 'Descent': -194.0, 'Flags': 64, 'FontBBox': (-88.0, -249.0, 697.0, 811.0), 'FontFamily': 'Courier', 'FontName': 'Courier-Bold', 'FontWeight': 'Bold', 'ItalicAngle': 0.0, 'XHeight': 434.0}, {32: 600, 33: 600, 34: 600, 35: 600, 36: 600, 37: 600, 38: 600, 39: 600, 40: 600, 41: 600, ...}), 'Courier-BoldOblique': ({'Ascent': 627.0, 'CapHeight': 572.0, 'Descent': -194.0, 'Flags': 64, 'FontBBox': (-49.0, -249.0, 758.0, 811.0), 'FontFamily': 'Courier', 'FontName': 'Courier-BoldOblique', 'FontWeight': 'Bold', 'ItalicAngle': -11.0, 'XHeight': 434.0}, {32: 600, 33: 600, 34: 600, 35: 600, 36: 600, 37: 600, 38: 600, 39: 600, 40: 600, 41: 600, ...}), 'Courier-Oblique': ({'Ascent': 627.0, 'CapHeight': 572.0, 'Descent': -194.0, 'Flags': 64, 'FontBBox': (-49.0, -249.0, 749.0, 803.0), 'FontFamily': 'Courier', 'FontName': 'Courier-Oblique', 'FontWeight': 'Medium', 'ItalicAngle': -11.0, 'XHeight': 434.0}, {32: 600, 33: 600, 34: 600, 35: 600, 36: 600, 37: 600, 38: 600, 39: 600, 40: 600, 41: 600, ...}), 'Helvetica': ({'Ascent': 718.0, 'CapHeight': 718.0, 'Descent': -207.0, 'Flags': 0, 'FontBBox': (-166.0, -225.0, 1000.0, 931.0), 'FontFamily': 'Helvetica', 'FontName': 'Helvetica', 'FontWeight': 'Medium', 'ItalicAngle': 0.0, 'XHeight': 523.0}, {32: 278, 33: 278, 34: 355, 35: 556, 36: 556, 37: 889, 38: 667, 39: 222, 40: 333, 41: 333, ...}), 'Helvetica-Bold': ({'Ascent': 718.0, 'CapHeight': 718.0, 'Descent': -207.0, 'Flags': 0, 'FontBBox': (-170.0, -228.0, 1003.0, 962.0), 'FontFamily': 'Helvetica', 'FontName': 'Helvetica-Bold', 'FontWeight': 'Bold', 'ItalicAngle': 0.0, 'XHeight': 532.0}, {32: 278, 33: 333, 34: 474, 35: 556, 36: 556, 37: 889, 38: 722, 39: 278, 40: 333, 41: 333, ...}), 'Helvetica-BoldOblique': ({'Ascent': 718.0, 'CapHeight': 718.0, 'Descent': -207.0, 'Flags': 0, 'FontBBox': (-175.0, -228.0, 1114.0, 962.0), 'FontFamily': 'Helvetica', 'FontName': 'Helvetica-BoldOblique', 'FontWeight': 'Bold', 'ItalicAngle': -12.0, 'XHeight': 532.0}, {32: 278, 33: 333, 34: 474, 35: 556, 36: 556, 37: 889, 38: 722, 39: 278, 40: 333, 41: 333, ...}), 'Helvetica-Oblique': ({'Ascent': 718.0, 'CapHeight': 718.0, 'Descent': -207.0, 'Flags': 0, 'FontBBox': (-171.0, -225.0, 1116.0, 931.0), 'FontFamily': 'Helvetica', 'FontName': 'Helvetica-Oblique', 'FontWeight': 'Medium', 'ItalicAngle': -12.0, 'XHeight': 523.0}, {32: 278, 33: 278, 34: 355, 35: 556, 36: 556, 37: 889, 38: 667, 39: 222, 40: 333, 41: 333, ...}), 'Symbol': ({'Flags': 0, 'FontBBox': (-180.0, -293.0, 1090.0, 1010.0), 'FontFamily': 'Symbol', 'FontName': 'Symbol', 'FontWeight': 'Medium', 'ItalicAngle': 0.0}, {32: 250, 33: 333, 34: 713, 35: 500, 36: 549, 37: 833, 38: 778, 39: 439, 40: 333, 41: 333, ...}), 'Times-Bold': ({'Ascent': 683.0, 'CapHeight': 676.0, 'Descent': -217.0, 'Flags': 0, 'FontBBox': (-168.0, -218.0, 1000.0, 935.0), 'FontFamily': 'Times', 'FontName': 'Times-Bold', 'FontWeight': 'Bold', 'ItalicAngle': 0.0, 'XHeight': 461.0}, {32: 250, 33: 333, 34: 555, 35: 500, 36: 500, 37: 1000, 38: 833, 39: 333, 40: 333, 41: 333, ...}), ...}<br>
+<strong>LITERAL_STANDARD_ENCODING</strong> = /StandardEncoding<br>
+<strong>LITERAL_TYPE1C</strong> = /Type1C<br>
+<strong>NIBBLES</strong> = ('0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '.', 'e', 'e-', None, '-')<br>
+<strong>STRICT</strong> = 0</td></tr></table>
+</body></html>

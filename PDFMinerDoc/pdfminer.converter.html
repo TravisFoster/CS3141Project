@@ -1,0 +1,566 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module pdfminer.converter</title>
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong><a href="pdfminer.html"><font color="#ffffff">pdfminer</font></a>.converter</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:/usr/lib/python2.7/site-packages/pdfminer/converter.py">/usr/lib/python2.7/site-packages/pdfminer/converter.py</a></font></td></tr></table>
+    <p></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#aa55cc">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="os.html">os</a><br>
+</td><td width="25%" valign=top><a href="sys.html">sys</a><br>
+</td><td width="25%" valign=top></td><td width="25%" valign=top></td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ee77aa">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Classes</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl>
+<dt><font face="helvetica, arial"><a href="pdfminer.pdfdevice.html#PDFTextDevice">pdfminer.pdfdevice.PDFTextDevice</a>(<a href="pdfminer.pdfdevice.html#PDFDevice">pdfminer.pdfdevice.PDFDevice</a>)
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="pdfminer.converter.html#PDFLayoutAnalyzer">PDFLayoutAnalyzer</a>
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="pdfminer.converter.html#PDFConverter">PDFConverter</a>
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="pdfminer.converter.html#HTMLConverter">HTMLConverter</a>
+</font></dt><dt><font face="helvetica, arial"><a href="pdfminer.converter.html#TextConverter">TextConverter</a>
+</font></dt><dt><font face="helvetica, arial"><a href="pdfminer.converter.html#XMLConverter">XMLConverter</a>
+</font></dt></dl>
+</dd>
+<dt><font face="helvetica, arial"><a href="pdfminer.converter.html#PDFPageAggregator">PDFPageAggregator</a>
+</font></dt></dl>
+</dd>
+</dl>
+</dd>
+</dl>
+ <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="HTMLConverter">class <strong>HTMLConverter</strong></a>(<a href="pdfminer.converter.html#PDFConverter">PDFConverter</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>##&nbsp;&nbsp;<a href="#HTMLConverter">HTMLConverter</a><br>
+##<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="pdfminer.converter.html#HTMLConverter">HTMLConverter</a></dd>
+<dd><a href="pdfminer.converter.html#PDFConverter">PDFConverter</a></dd>
+<dd><a href="pdfminer.converter.html#PDFLayoutAnalyzer">PDFLayoutAnalyzer</a></dd>
+<dd><a href="pdfminer.pdfdevice.html#PDFTextDevice">pdfminer.pdfdevice.PDFTextDevice</a></dd>
+<dd><a href="pdfminer.pdfdevice.html#PDFDevice">pdfminer.pdfdevice.PDFDevice</a></dd>
+<dd><a href="__builtin__.html#object">__builtin__.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="HTMLConverter-__init__"><strong>__init__</strong></a>(self, rsrcmgr, outfp, codec<font color="#909090">='utf-8'</font>, pageno<font color="#909090">=1</font>, laparams<font color="#909090">=None</font>, scale<font color="#909090">=1</font>, fontscale<font color="#909090">=0.7</font>, layoutmode<font color="#909090">='normal'</font>, showpageno<font color="#909090">=True</font>, pagemargin<font color="#909090">=50</font>, outdir<font color="#909090">=None</font>, rect_colors<font color="#909090">={'curve': 'black', 'page': 'gray'}</font>, text_colors<font color="#909090">={'char': 'black'}</font>)</dt></dl>
+
+<dl><dt><a name="HTMLConverter-begin_textbox"><strong>begin_textbox</strong></a>(self, color, borderwidth, x, y, w, h, writing_mode)</dt></dl>
+
+<dl><dt><a name="HTMLConverter-close"><strong>close</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="HTMLConverter-end_textbox"><strong>end_textbox</strong></a>(self, color)</dt></dl>
+
+<dl><dt><a name="HTMLConverter-place_border"><strong>place_border</strong></a>(self, color, borderwidth, item)</dt></dl>
+
+<dl><dt><a name="HTMLConverter-place_image"><strong>place_image</strong></a>(self, item, borderwidth, x, y, w, h)</dt></dl>
+
+<dl><dt><a name="HTMLConverter-place_rect"><strong>place_rect</strong></a>(self, color, borderwidth, x, y, w, h)</dt></dl>
+
+<dl><dt><a name="HTMLConverter-place_text"><strong>place_text</strong></a>(self, color, text, x, y, size)</dt></dl>
+
+<dl><dt><a name="HTMLConverter-put_newline"><strong>put_newline</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="HTMLConverter-put_text"><strong>put_text</strong></a>(self, text, fontname, fontsize)</dt></dl>
+
+<dl><dt><a name="HTMLConverter-receive_layout"><strong>receive_layout</strong></a>(self, ltpage)</dt></dl>
+
+<dl><dt><a name="HTMLConverter-write"><strong>write</strong></a>(self, text)</dt></dl>
+
+<dl><dt><a name="HTMLConverter-write_footer"><strong>write_footer</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="HTMLConverter-write_header"><strong>write_header</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="HTMLConverter-write_text"><strong>write_text</strong></a>(self, text)</dt></dl>
+
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>RECT_COLORS</strong> = {'curve': 'black', 'figure': 'yellow', 'page': 'gray', 'textbox': 'cyan', 'textgroup': 'red', 'textline': 'magenta'}</dl>
+
+<dl><dt><strong>TEXT_COLORS</strong> = {'char': 'black', 'textbox': 'blue'}</dl>
+
+<hr>
+Methods inherited from <a href="pdfminer.converter.html#PDFConverter">PDFConverter</a>:<br>
+<dl><dt><a name="HTMLConverter-write_image"><strong>write_image</strong></a>(self, image)</dt></dl>
+
+<hr>
+Methods inherited from <a href="pdfminer.converter.html#PDFLayoutAnalyzer">PDFLayoutAnalyzer</a>:<br>
+<dl><dt><a name="HTMLConverter-begin_figure"><strong>begin_figure</strong></a>(self, name, bbox, matrix)</dt></dl>
+
+<dl><dt><a name="HTMLConverter-begin_page"><strong>begin_page</strong></a>(self, page, ctm)</dt></dl>
+
+<dl><dt><a name="HTMLConverter-end_figure"><strong>end_figure</strong></a>(self, _)</dt></dl>
+
+<dl><dt><a name="HTMLConverter-end_page"><strong>end_page</strong></a>(self, page)</dt></dl>
+
+<dl><dt><a name="HTMLConverter-handle_undefined_char"><strong>handle_undefined_char</strong></a>(self, font, cid)</dt></dl>
+
+<dl><dt><a name="HTMLConverter-paint_path"><strong>paint_path</strong></a>(self, gstate, stroke, fill, evenodd, path)</dt></dl>
+
+<dl><dt><a name="HTMLConverter-render_char"><strong>render_char</strong></a>(self, matrix, font, fontsize, scaling, rise, cid)</dt></dl>
+
+<dl><dt><a name="HTMLConverter-render_image"><strong>render_image</strong></a>(self, name, stream)</dt></dl>
+
+<hr>
+Methods inherited from <a href="pdfminer.pdfdevice.html#PDFTextDevice">pdfminer.pdfdevice.PDFTextDevice</a>:<br>
+<dl><dt><a name="HTMLConverter-render_string"><strong>render_string</strong></a>(self, textstate, seq)</dt></dl>
+
+<dl><dt><a name="HTMLConverter-render_string_horizontal"><strong>render_string_horizontal</strong></a>(self, seq, matrix, (x, y), font, fontsize, scaling, charspace, wordspace, rise, dxscale)</dt></dl>
+
+<dl><dt><a name="HTMLConverter-render_string_vertical"><strong>render_string_vertical</strong></a>(self, seq, matrix, (x, y), font, fontsize, scaling, charspace, wordspace, rise, dxscale)</dt></dl>
+
+<hr>
+Methods inherited from <a href="pdfminer.pdfdevice.html#PDFDevice">pdfminer.pdfdevice.PDFDevice</a>:<br>
+<dl><dt><a name="HTMLConverter-__repr__"><strong>__repr__</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="HTMLConverter-begin_tag"><strong>begin_tag</strong></a>(self, tag, props<font color="#909090">=None</font>)</dt></dl>
+
+<dl><dt><a name="HTMLConverter-do_tag"><strong>do_tag</strong></a>(self, tag, props<font color="#909090">=None</font>)</dt></dl>
+
+<dl><dt><a name="HTMLConverter-end_tag"><strong>end_tag</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="HTMLConverter-set_ctm"><strong>set_ctm</strong></a>(self, ctm)</dt></dl>
+
+<hr>
+Data descriptors inherited from <a href="pdfminer.pdfdevice.html#PDFDevice">pdfminer.pdfdevice.PDFDevice</a>:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<hr>
+Data and other attributes inherited from <a href="pdfminer.pdfdevice.html#PDFDevice">pdfminer.pdfdevice.PDFDevice</a>:<br>
+<dl><dt><strong>debug</strong> = 0</dl>
+
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="PDFConverter">class <strong>PDFConverter</strong></a>(<a href="pdfminer.converter.html#PDFLayoutAnalyzer">PDFLayoutAnalyzer</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>##&nbsp;&nbsp;<a href="#PDFConverter">PDFConverter</a><br>
+##<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="pdfminer.converter.html#PDFConverter">PDFConverter</a></dd>
+<dd><a href="pdfminer.converter.html#PDFLayoutAnalyzer">PDFLayoutAnalyzer</a></dd>
+<dd><a href="pdfminer.pdfdevice.html#PDFTextDevice">pdfminer.pdfdevice.PDFTextDevice</a></dd>
+<dd><a href="pdfminer.pdfdevice.html#PDFDevice">pdfminer.pdfdevice.PDFDevice</a></dd>
+<dd><a href="__builtin__.html#object">__builtin__.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="PDFConverter-__init__"><strong>__init__</strong></a>(self, rsrcmgr, outfp, codec<font color="#909090">='utf-8'</font>, pageno<font color="#909090">=1</font>, laparams<font color="#909090">=None</font>)</dt></dl>
+
+<dl><dt><a name="PDFConverter-write_image"><strong>write_image</strong></a>(self, image)</dt></dl>
+
+<hr>
+Methods inherited from <a href="pdfminer.converter.html#PDFLayoutAnalyzer">PDFLayoutAnalyzer</a>:<br>
+<dl><dt><a name="PDFConverter-begin_figure"><strong>begin_figure</strong></a>(self, name, bbox, matrix)</dt></dl>
+
+<dl><dt><a name="PDFConverter-begin_page"><strong>begin_page</strong></a>(self, page, ctm)</dt></dl>
+
+<dl><dt><a name="PDFConverter-end_figure"><strong>end_figure</strong></a>(self, _)</dt></dl>
+
+<dl><dt><a name="PDFConverter-end_page"><strong>end_page</strong></a>(self, page)</dt></dl>
+
+<dl><dt><a name="PDFConverter-handle_undefined_char"><strong>handle_undefined_char</strong></a>(self, font, cid)</dt></dl>
+
+<dl><dt><a name="PDFConverter-paint_path"><strong>paint_path</strong></a>(self, gstate, stroke, fill, evenodd, path)</dt></dl>
+
+<dl><dt><a name="PDFConverter-receive_layout"><strong>receive_layout</strong></a>(self, ltpage)</dt></dl>
+
+<dl><dt><a name="PDFConverter-render_char"><strong>render_char</strong></a>(self, matrix, font, fontsize, scaling, rise, cid)</dt></dl>
+
+<dl><dt><a name="PDFConverter-render_image"><strong>render_image</strong></a>(self, name, stream)</dt></dl>
+
+<hr>
+Methods inherited from <a href="pdfminer.pdfdevice.html#PDFTextDevice">pdfminer.pdfdevice.PDFTextDevice</a>:<br>
+<dl><dt><a name="PDFConverter-render_string"><strong>render_string</strong></a>(self, textstate, seq)</dt></dl>
+
+<dl><dt><a name="PDFConverter-render_string_horizontal"><strong>render_string_horizontal</strong></a>(self, seq, matrix, (x, y), font, fontsize, scaling, charspace, wordspace, rise, dxscale)</dt></dl>
+
+<dl><dt><a name="PDFConverter-render_string_vertical"><strong>render_string_vertical</strong></a>(self, seq, matrix, (x, y), font, fontsize, scaling, charspace, wordspace, rise, dxscale)</dt></dl>
+
+<hr>
+Methods inherited from <a href="pdfminer.pdfdevice.html#PDFDevice">pdfminer.pdfdevice.PDFDevice</a>:<br>
+<dl><dt><a name="PDFConverter-__repr__"><strong>__repr__</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="PDFConverter-begin_tag"><strong>begin_tag</strong></a>(self, tag, props<font color="#909090">=None</font>)</dt></dl>
+
+<dl><dt><a name="PDFConverter-close"><strong>close</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="PDFConverter-do_tag"><strong>do_tag</strong></a>(self, tag, props<font color="#909090">=None</font>)</dt></dl>
+
+<dl><dt><a name="PDFConverter-end_tag"><strong>end_tag</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="PDFConverter-set_ctm"><strong>set_ctm</strong></a>(self, ctm)</dt></dl>
+
+<hr>
+Data descriptors inherited from <a href="pdfminer.pdfdevice.html#PDFDevice">pdfminer.pdfdevice.PDFDevice</a>:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<hr>
+Data and other attributes inherited from <a href="pdfminer.pdfdevice.html#PDFDevice">pdfminer.pdfdevice.PDFDevice</a>:<br>
+<dl><dt><strong>debug</strong> = 0</dl>
+
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="PDFLayoutAnalyzer">class <strong>PDFLayoutAnalyzer</strong></a>(<a href="pdfminer.pdfdevice.html#PDFTextDevice">pdfminer.pdfdevice.PDFTextDevice</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>##&nbsp;&nbsp;<a href="#PDFLayoutAnalyzer">PDFLayoutAnalyzer</a><br>
+##<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="pdfminer.converter.html#PDFLayoutAnalyzer">PDFLayoutAnalyzer</a></dd>
+<dd><a href="pdfminer.pdfdevice.html#PDFTextDevice">pdfminer.pdfdevice.PDFTextDevice</a></dd>
+<dd><a href="pdfminer.pdfdevice.html#PDFDevice">pdfminer.pdfdevice.PDFDevice</a></dd>
+<dd><a href="__builtin__.html#object">__builtin__.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="PDFLayoutAnalyzer-__init__"><strong>__init__</strong></a>(self, rsrcmgr, pageno<font color="#909090">=1</font>, laparams<font color="#909090">=None</font>)</dt></dl>
+
+<dl><dt><a name="PDFLayoutAnalyzer-begin_figure"><strong>begin_figure</strong></a>(self, name, bbox, matrix)</dt></dl>
+
+<dl><dt><a name="PDFLayoutAnalyzer-begin_page"><strong>begin_page</strong></a>(self, page, ctm)</dt></dl>
+
+<dl><dt><a name="PDFLayoutAnalyzer-end_figure"><strong>end_figure</strong></a>(self, _)</dt></dl>
+
+<dl><dt><a name="PDFLayoutAnalyzer-end_page"><strong>end_page</strong></a>(self, page)</dt></dl>
+
+<dl><dt><a name="PDFLayoutAnalyzer-handle_undefined_char"><strong>handle_undefined_char</strong></a>(self, font, cid)</dt></dl>
+
+<dl><dt><a name="PDFLayoutAnalyzer-paint_path"><strong>paint_path</strong></a>(self, gstate, stroke, fill, evenodd, path)</dt></dl>
+
+<dl><dt><a name="PDFLayoutAnalyzer-receive_layout"><strong>receive_layout</strong></a>(self, ltpage)</dt></dl>
+
+<dl><dt><a name="PDFLayoutAnalyzer-render_char"><strong>render_char</strong></a>(self, matrix, font, fontsize, scaling, rise, cid)</dt></dl>
+
+<dl><dt><a name="PDFLayoutAnalyzer-render_image"><strong>render_image</strong></a>(self, name, stream)</dt></dl>
+
+<hr>
+Methods inherited from <a href="pdfminer.pdfdevice.html#PDFTextDevice">pdfminer.pdfdevice.PDFTextDevice</a>:<br>
+<dl><dt><a name="PDFLayoutAnalyzer-render_string"><strong>render_string</strong></a>(self, textstate, seq)</dt></dl>
+
+<dl><dt><a name="PDFLayoutAnalyzer-render_string_horizontal"><strong>render_string_horizontal</strong></a>(self, seq, matrix, (x, y), font, fontsize, scaling, charspace, wordspace, rise, dxscale)</dt></dl>
+
+<dl><dt><a name="PDFLayoutAnalyzer-render_string_vertical"><strong>render_string_vertical</strong></a>(self, seq, matrix, (x, y), font, fontsize, scaling, charspace, wordspace, rise, dxscale)</dt></dl>
+
+<hr>
+Methods inherited from <a href="pdfminer.pdfdevice.html#PDFDevice">pdfminer.pdfdevice.PDFDevice</a>:<br>
+<dl><dt><a name="PDFLayoutAnalyzer-__repr__"><strong>__repr__</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="PDFLayoutAnalyzer-begin_tag"><strong>begin_tag</strong></a>(self, tag, props<font color="#909090">=None</font>)</dt></dl>
+
+<dl><dt><a name="PDFLayoutAnalyzer-close"><strong>close</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="PDFLayoutAnalyzer-do_tag"><strong>do_tag</strong></a>(self, tag, props<font color="#909090">=None</font>)</dt></dl>
+
+<dl><dt><a name="PDFLayoutAnalyzer-end_tag"><strong>end_tag</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="PDFLayoutAnalyzer-set_ctm"><strong>set_ctm</strong></a>(self, ctm)</dt></dl>
+
+<hr>
+Data descriptors inherited from <a href="pdfminer.pdfdevice.html#PDFDevice">pdfminer.pdfdevice.PDFDevice</a>:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<hr>
+Data and other attributes inherited from <a href="pdfminer.pdfdevice.html#PDFDevice">pdfminer.pdfdevice.PDFDevice</a>:<br>
+<dl><dt><strong>debug</strong> = 0</dl>
+
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="PDFPageAggregator">class <strong>PDFPageAggregator</strong></a>(<a href="pdfminer.converter.html#PDFLayoutAnalyzer">PDFLayoutAnalyzer</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>##&nbsp;&nbsp;<a href="#PDFPageAggregator">PDFPageAggregator</a><br>
+##<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="pdfminer.converter.html#PDFPageAggregator">PDFPageAggregator</a></dd>
+<dd><a href="pdfminer.converter.html#PDFLayoutAnalyzer">PDFLayoutAnalyzer</a></dd>
+<dd><a href="pdfminer.pdfdevice.html#PDFTextDevice">pdfminer.pdfdevice.PDFTextDevice</a></dd>
+<dd><a href="pdfminer.pdfdevice.html#PDFDevice">pdfminer.pdfdevice.PDFDevice</a></dd>
+<dd><a href="__builtin__.html#object">__builtin__.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="PDFPageAggregator-__init__"><strong>__init__</strong></a>(self, rsrcmgr, pageno<font color="#909090">=1</font>, laparams<font color="#909090">=None</font>)</dt></dl>
+
+<dl><dt><a name="PDFPageAggregator-get_result"><strong>get_result</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="PDFPageAggregator-receive_layout"><strong>receive_layout</strong></a>(self, ltpage)</dt></dl>
+
+<hr>
+Methods inherited from <a href="pdfminer.converter.html#PDFLayoutAnalyzer">PDFLayoutAnalyzer</a>:<br>
+<dl><dt><a name="PDFPageAggregator-begin_figure"><strong>begin_figure</strong></a>(self, name, bbox, matrix)</dt></dl>
+
+<dl><dt><a name="PDFPageAggregator-begin_page"><strong>begin_page</strong></a>(self, page, ctm)</dt></dl>
+
+<dl><dt><a name="PDFPageAggregator-end_figure"><strong>end_figure</strong></a>(self, _)</dt></dl>
+
+<dl><dt><a name="PDFPageAggregator-end_page"><strong>end_page</strong></a>(self, page)</dt></dl>
+
+<dl><dt><a name="PDFPageAggregator-handle_undefined_char"><strong>handle_undefined_char</strong></a>(self, font, cid)</dt></dl>
+
+<dl><dt><a name="PDFPageAggregator-paint_path"><strong>paint_path</strong></a>(self, gstate, stroke, fill, evenodd, path)</dt></dl>
+
+<dl><dt><a name="PDFPageAggregator-render_char"><strong>render_char</strong></a>(self, matrix, font, fontsize, scaling, rise, cid)</dt></dl>
+
+<dl><dt><a name="PDFPageAggregator-render_image"><strong>render_image</strong></a>(self, name, stream)</dt></dl>
+
+<hr>
+Methods inherited from <a href="pdfminer.pdfdevice.html#PDFTextDevice">pdfminer.pdfdevice.PDFTextDevice</a>:<br>
+<dl><dt><a name="PDFPageAggregator-render_string"><strong>render_string</strong></a>(self, textstate, seq)</dt></dl>
+
+<dl><dt><a name="PDFPageAggregator-render_string_horizontal"><strong>render_string_horizontal</strong></a>(self, seq, matrix, (x, y), font, fontsize, scaling, charspace, wordspace, rise, dxscale)</dt></dl>
+
+<dl><dt><a name="PDFPageAggregator-render_string_vertical"><strong>render_string_vertical</strong></a>(self, seq, matrix, (x, y), font, fontsize, scaling, charspace, wordspace, rise, dxscale)</dt></dl>
+
+<hr>
+Methods inherited from <a href="pdfminer.pdfdevice.html#PDFDevice">pdfminer.pdfdevice.PDFDevice</a>:<br>
+<dl><dt><a name="PDFPageAggregator-__repr__"><strong>__repr__</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="PDFPageAggregator-begin_tag"><strong>begin_tag</strong></a>(self, tag, props<font color="#909090">=None</font>)</dt></dl>
+
+<dl><dt><a name="PDFPageAggregator-close"><strong>close</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="PDFPageAggregator-do_tag"><strong>do_tag</strong></a>(self, tag, props<font color="#909090">=None</font>)</dt></dl>
+
+<dl><dt><a name="PDFPageAggregator-end_tag"><strong>end_tag</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="PDFPageAggregator-set_ctm"><strong>set_ctm</strong></a>(self, ctm)</dt></dl>
+
+<hr>
+Data descriptors inherited from <a href="pdfminer.pdfdevice.html#PDFDevice">pdfminer.pdfdevice.PDFDevice</a>:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<hr>
+Data and other attributes inherited from <a href="pdfminer.pdfdevice.html#PDFDevice">pdfminer.pdfdevice.PDFDevice</a>:<br>
+<dl><dt><strong>debug</strong> = 0</dl>
+
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="TextConverter">class <strong>TextConverter</strong></a>(<a href="pdfminer.converter.html#PDFConverter">PDFConverter</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>##&nbsp;&nbsp;<a href="#TextConverter">TextConverter</a><br>
+##<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="pdfminer.converter.html#TextConverter">TextConverter</a></dd>
+<dd><a href="pdfminer.converter.html#PDFConverter">PDFConverter</a></dd>
+<dd><a href="pdfminer.converter.html#PDFLayoutAnalyzer">PDFLayoutAnalyzer</a></dd>
+<dd><a href="pdfminer.pdfdevice.html#PDFTextDevice">pdfminer.pdfdevice.PDFTextDevice</a></dd>
+<dd><a href="pdfminer.pdfdevice.html#PDFDevice">pdfminer.pdfdevice.PDFDevice</a></dd>
+<dd><a href="__builtin__.html#object">__builtin__.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="TextConverter-__init__"><strong>__init__</strong></a>(self, rsrcmgr, outfp, codec<font color="#909090">='utf-8'</font>, pageno<font color="#909090">=1</font>, laparams<font color="#909090">=None</font>, showpageno<font color="#909090">=False</font>)</dt></dl>
+
+<dl><dt><a name="TextConverter-paint_path"><strong>paint_path</strong></a>(self, gstate, stroke, fill, evenodd, path)</dt></dl>
+
+<dl><dt><a name="TextConverter-receive_layout"><strong>receive_layout</strong></a>(self, ltpage)</dt></dl>
+
+<dl><dt><a name="TextConverter-render_image"><strong>render_image</strong></a>(self, name, stream)</dt><dd><tt>#&nbsp;Some&nbsp;dummy&nbsp;functions&nbsp;to&nbsp;save&nbsp;memory/CPU&nbsp;when&nbsp;all&nbsp;that&nbsp;is&nbsp;wanted&nbsp;is&nbsp;text.<br>
+#&nbsp;This&nbsp;stops&nbsp;all&nbsp;the&nbsp;image&nbsp;and&nbsp;drawing&nbsp;ouput&nbsp;from&nbsp;being&nbsp;recorded&nbsp;and&nbsp;taking<br>
+#&nbsp;up&nbsp;RAM.</tt></dd></dl>
+
+<dl><dt><a name="TextConverter-write_text"><strong>write_text</strong></a>(self, text)</dt></dl>
+
+<hr>
+Methods inherited from <a href="pdfminer.converter.html#PDFConverter">PDFConverter</a>:<br>
+<dl><dt><a name="TextConverter-write_image"><strong>write_image</strong></a>(self, image)</dt></dl>
+
+<hr>
+Methods inherited from <a href="pdfminer.converter.html#PDFLayoutAnalyzer">PDFLayoutAnalyzer</a>:<br>
+<dl><dt><a name="TextConverter-begin_figure"><strong>begin_figure</strong></a>(self, name, bbox, matrix)</dt></dl>
+
+<dl><dt><a name="TextConverter-begin_page"><strong>begin_page</strong></a>(self, page, ctm)</dt></dl>
+
+<dl><dt><a name="TextConverter-end_figure"><strong>end_figure</strong></a>(self, _)</dt></dl>
+
+<dl><dt><a name="TextConverter-end_page"><strong>end_page</strong></a>(self, page)</dt></dl>
+
+<dl><dt><a name="TextConverter-handle_undefined_char"><strong>handle_undefined_char</strong></a>(self, font, cid)</dt></dl>
+
+<dl><dt><a name="TextConverter-render_char"><strong>render_char</strong></a>(self, matrix, font, fontsize, scaling, rise, cid)</dt></dl>
+
+<hr>
+Methods inherited from <a href="pdfminer.pdfdevice.html#PDFTextDevice">pdfminer.pdfdevice.PDFTextDevice</a>:<br>
+<dl><dt><a name="TextConverter-render_string"><strong>render_string</strong></a>(self, textstate, seq)</dt></dl>
+
+<dl><dt><a name="TextConverter-render_string_horizontal"><strong>render_string_horizontal</strong></a>(self, seq, matrix, (x, y), font, fontsize, scaling, charspace, wordspace, rise, dxscale)</dt></dl>
+
+<dl><dt><a name="TextConverter-render_string_vertical"><strong>render_string_vertical</strong></a>(self, seq, matrix, (x, y), font, fontsize, scaling, charspace, wordspace, rise, dxscale)</dt></dl>
+
+<hr>
+Methods inherited from <a href="pdfminer.pdfdevice.html#PDFDevice">pdfminer.pdfdevice.PDFDevice</a>:<br>
+<dl><dt><a name="TextConverter-__repr__"><strong>__repr__</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="TextConverter-begin_tag"><strong>begin_tag</strong></a>(self, tag, props<font color="#909090">=None</font>)</dt></dl>
+
+<dl><dt><a name="TextConverter-close"><strong>close</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="TextConverter-do_tag"><strong>do_tag</strong></a>(self, tag, props<font color="#909090">=None</font>)</dt></dl>
+
+<dl><dt><a name="TextConverter-end_tag"><strong>end_tag</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="TextConverter-set_ctm"><strong>set_ctm</strong></a>(self, ctm)</dt></dl>
+
+<hr>
+Data descriptors inherited from <a href="pdfminer.pdfdevice.html#PDFDevice">pdfminer.pdfdevice.PDFDevice</a>:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<hr>
+Data and other attributes inherited from <a href="pdfminer.pdfdevice.html#PDFDevice">pdfminer.pdfdevice.PDFDevice</a>:<br>
+<dl><dt><strong>debug</strong> = 0</dl>
+
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="XMLConverter">class <strong>XMLConverter</strong></a>(<a href="pdfminer.converter.html#PDFConverter">PDFConverter</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>##&nbsp;&nbsp;<a href="#XMLConverter">XMLConverter</a><br>
+##<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="pdfminer.converter.html#XMLConverter">XMLConverter</a></dd>
+<dd><a href="pdfminer.converter.html#PDFConverter">PDFConverter</a></dd>
+<dd><a href="pdfminer.converter.html#PDFLayoutAnalyzer">PDFLayoutAnalyzer</a></dd>
+<dd><a href="pdfminer.pdfdevice.html#PDFTextDevice">pdfminer.pdfdevice.PDFTextDevice</a></dd>
+<dd><a href="pdfminer.pdfdevice.html#PDFDevice">pdfminer.pdfdevice.PDFDevice</a></dd>
+<dd><a href="__builtin__.html#object">__builtin__.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="XMLConverter-__init__"><strong>__init__</strong></a>(self, rsrcmgr, outfp, codec<font color="#909090">='utf-8'</font>, pageno<font color="#909090">=1</font>, laparams<font color="#909090">=None</font>, outdir<font color="#909090">=None</font>)</dt></dl>
+
+<dl><dt><a name="XMLConverter-close"><strong>close</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="XMLConverter-receive_layout"><strong>receive_layout</strong></a>(self, ltpage)</dt></dl>
+
+<dl><dt><a name="XMLConverter-write_footer"><strong>write_footer</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="XMLConverter-write_header"><strong>write_header</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="XMLConverter-write_text"><strong>write_text</strong></a>(self, text)</dt></dl>
+
+<hr>
+Methods inherited from <a href="pdfminer.converter.html#PDFConverter">PDFConverter</a>:<br>
+<dl><dt><a name="XMLConverter-write_image"><strong>write_image</strong></a>(self, image)</dt></dl>
+
+<hr>
+Methods inherited from <a href="pdfminer.converter.html#PDFLayoutAnalyzer">PDFLayoutAnalyzer</a>:<br>
+<dl><dt><a name="XMLConverter-begin_figure"><strong>begin_figure</strong></a>(self, name, bbox, matrix)</dt></dl>
+
+<dl><dt><a name="XMLConverter-begin_page"><strong>begin_page</strong></a>(self, page, ctm)</dt></dl>
+
+<dl><dt><a name="XMLConverter-end_figure"><strong>end_figure</strong></a>(self, _)</dt></dl>
+
+<dl><dt><a name="XMLConverter-end_page"><strong>end_page</strong></a>(self, page)</dt></dl>
+
+<dl><dt><a name="XMLConverter-handle_undefined_char"><strong>handle_undefined_char</strong></a>(self, font, cid)</dt></dl>
+
+<dl><dt><a name="XMLConverter-paint_path"><strong>paint_path</strong></a>(self, gstate, stroke, fill, evenodd, path)</dt></dl>
+
+<dl><dt><a name="XMLConverter-render_char"><strong>render_char</strong></a>(self, matrix, font, fontsize, scaling, rise, cid)</dt></dl>
+
+<dl><dt><a name="XMLConverter-render_image"><strong>render_image</strong></a>(self, name, stream)</dt></dl>
+
+<hr>
+Methods inherited from <a href="pdfminer.pdfdevice.html#PDFTextDevice">pdfminer.pdfdevice.PDFTextDevice</a>:<br>
+<dl><dt><a name="XMLConverter-render_string"><strong>render_string</strong></a>(self, textstate, seq)</dt></dl>
+
+<dl><dt><a name="XMLConverter-render_string_horizontal"><strong>render_string_horizontal</strong></a>(self, seq, matrix, (x, y), font, fontsize, scaling, charspace, wordspace, rise, dxscale)</dt></dl>
+
+<dl><dt><a name="XMLConverter-render_string_vertical"><strong>render_string_vertical</strong></a>(self, seq, matrix, (x, y), font, fontsize, scaling, charspace, wordspace, rise, dxscale)</dt></dl>
+
+<hr>
+Methods inherited from <a href="pdfminer.pdfdevice.html#PDFDevice">pdfminer.pdfdevice.PDFDevice</a>:<br>
+<dl><dt><a name="XMLConverter-__repr__"><strong>__repr__</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="XMLConverter-begin_tag"><strong>begin_tag</strong></a>(self, tag, props<font color="#909090">=None</font>)</dt></dl>
+
+<dl><dt><a name="XMLConverter-do_tag"><strong>do_tag</strong></a>(self, tag, props<font color="#909090">=None</font>)</dt></dl>
+
+<dl><dt><a name="XMLConverter-end_tag"><strong>end_tag</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="XMLConverter-set_ctm"><strong>set_ctm</strong></a>(self, ctm)</dt></dl>
+
+<hr>
+Data descriptors inherited from <a href="pdfminer.pdfdevice.html#PDFDevice">pdfminer.pdfdevice.PDFDevice</a>:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<hr>
+Data and other attributes inherited from <a href="pdfminer.pdfdevice.html#PDFDevice">pdfminer.pdfdevice.PDFDevice</a>:<br>
+<dl><dt><strong>debug</strong> = 0</dl>
+
+</td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#55aa55">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Data</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#55aa55"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><strong>LITERALS_DCT_DECODE</strong> = (/DCTDecode, /DCT)<br>
+<strong>LITERAL_DEVICE_GRAY</strong> = /DeviceGray<br>
+<strong>LITERAL_DEVICE_RGB</strong> = /DeviceRGB</td></tr></table>
+</body></html>

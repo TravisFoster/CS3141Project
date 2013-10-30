@@ -1,0 +1,1595 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module pdfminer.layout</title>
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong><a href="pdfminer.html"><font color="#ffffff">pdfminer</font></a>.layout</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:/usr/lib/python2.7/site-packages/pdfminer/layout.py">/usr/lib/python2.7/site-packages/pdfminer/layout.py</a></font></td></tr></table>
+    <p></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#aa55cc">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="sys.html">sys</a><br>
+</td><td width="25%" valign=top></td><td width="25%" valign=top></td><td width="25%" valign=top></td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ee77aa">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Classes</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl>
+<dt><font face="helvetica, arial"><a href="__builtin__.html#object">__builtin__.object</a>
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="pdfminer.layout.html#IndexAssigner">IndexAssigner</a>
+</font></dt><dt><font face="helvetica, arial"><a href="pdfminer.layout.html#LAParams">LAParams</a>
+</font></dt><dt><font face="helvetica, arial"><a href="pdfminer.layout.html#LTItem">LTItem</a>
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="pdfminer.layout.html#LTAnon">LTAnon</a>(<a href="pdfminer.layout.html#LTItem">LTItem</a>, <a href="pdfminer.layout.html#LTText">LTText</a>)
+</font></dt><dt><font face="helvetica, arial"><a href="pdfminer.layout.html#LTComponent">LTComponent</a>
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="pdfminer.layout.html#LTChar">LTChar</a>(<a href="pdfminer.layout.html#LTComponent">LTComponent</a>, <a href="pdfminer.layout.html#LTText">LTText</a>)
+</font></dt><dt><font face="helvetica, arial"><a href="pdfminer.layout.html#LTContainer">LTContainer</a>
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="pdfminer.layout.html#LTExpandableContainer">LTExpandableContainer</a>
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="pdfminer.layout.html#LTTextContainer">LTTextContainer</a>(<a href="pdfminer.layout.html#LTExpandableContainer">LTExpandableContainer</a>, <a href="pdfminer.layout.html#LTText">LTText</a>)
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="pdfminer.layout.html#LTTextBox">LTTextBox</a>
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="pdfminer.layout.html#LTTextBoxHorizontal">LTTextBoxHorizontal</a>
+</font></dt><dt><font face="helvetica, arial"><a href="pdfminer.layout.html#LTTextBoxVertical">LTTextBoxVertical</a>
+</font></dt></dl>
+</dd>
+<dt><font face="helvetica, arial"><a href="pdfminer.layout.html#LTTextGroup">LTTextGroup</a>
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="pdfminer.layout.html#LTTextGroupLRTB">LTTextGroupLRTB</a>
+</font></dt><dt><font face="helvetica, arial"><a href="pdfminer.layout.html#LTTextGroupTBRL">LTTextGroupTBRL</a>
+</font></dt></dl>
+</dd>
+<dt><font face="helvetica, arial"><a href="pdfminer.layout.html#LTTextLine">LTTextLine</a>
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="pdfminer.layout.html#LTTextLineHorizontal">LTTextLineHorizontal</a>
+</font></dt><dt><font face="helvetica, arial"><a href="pdfminer.layout.html#LTTextLineVertical">LTTextLineVertical</a>
+</font></dt></dl>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd>
+<dt><font face="helvetica, arial"><a href="pdfminer.layout.html#LTLayoutContainer">LTLayoutContainer</a>
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="pdfminer.layout.html#LTFigure">LTFigure</a>
+</font></dt><dt><font face="helvetica, arial"><a href="pdfminer.layout.html#LTPage">LTPage</a>
+</font></dt></dl>
+</dd>
+</dl>
+</dd>
+<dt><font face="helvetica, arial"><a href="pdfminer.layout.html#LTCurve">LTCurve</a>
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="pdfminer.layout.html#LTLine">LTLine</a>
+</font></dt><dt><font face="helvetica, arial"><a href="pdfminer.layout.html#LTRect">LTRect</a>
+</font></dt></dl>
+</dd>
+<dt><font face="helvetica, arial"><a href="pdfminer.layout.html#LTImage">LTImage</a>
+</font></dt></dl>
+</dd>
+</dl>
+</dd>
+<dt><font face="helvetica, arial"><a href="pdfminer.layout.html#LTText">LTText</a>
+</font></dt></dl>
+</dd>
+</dl>
+ <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="IndexAssigner">class <strong>IndexAssigner</strong></a>(<a href="__builtin__.html#object">__builtin__.object</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>##&nbsp;&nbsp;<a href="#IndexAssigner">IndexAssigner</a><br>
+##<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="IndexAssigner-__init__"><strong>__init__</strong></a>(self, index<font color="#909090">=0</font>)</dt></dl>
+
+<dl><dt><a name="IndexAssigner-run"><strong>run</strong></a>(self, obj)</dt></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="LAParams">class <strong>LAParams</strong></a>(<a href="__builtin__.html#object">__builtin__.object</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>##&nbsp;&nbsp;<a href="#LAParams">LAParams</a><br>
+##<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="LAParams-__init__"><strong>__init__</strong></a>(self, line_overlap<font color="#909090">=0.5</font>, char_margin<font color="#909090">=2.0</font>, line_margin<font color="#909090">=0.5</font>, word_margin<font color="#909090">=0.1</font>, boxes_flow<font color="#909090">=0.5</font>, detect_vertical<font color="#909090">=False</font>, all_texts<font color="#909090">=False</font>)</dt></dl>
+
+<dl><dt><a name="LAParams-__repr__"><strong>__repr__</strong></a>(self)</dt></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="LTAnon">class <strong>LTAnon</strong></a>(<a href="pdfminer.layout.html#LTItem">LTItem</a>, <a href="pdfminer.layout.html#LTText">LTText</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>##&nbsp;&nbsp;<a href="#LTAnon">LTAnon</a><br>
+##<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="pdfminer.layout.html#LTAnon">LTAnon</a></dd>
+<dd><a href="pdfminer.layout.html#LTItem">LTItem</a></dd>
+<dd><a href="pdfminer.layout.html#LTText">LTText</a></dd>
+<dd><a href="__builtin__.html#object">__builtin__.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="LTAnon-__init__"><strong>__init__</strong></a>(self, text)</dt></dl>
+
+<dl><dt><a name="LTAnon-get_text"><strong>get_text</strong></a>(self)</dt></dl>
+
+<hr>
+Methods inherited from <a href="pdfminer.layout.html#LTItem">LTItem</a>:<br>
+<dl><dt><a name="LTAnon-analyze"><strong>analyze</strong></a>(self, laparams)</dt><dd><tt>Perform&nbsp;the&nbsp;layout&nbsp;analysis.</tt></dd></dl>
+
+<hr>
+Data descriptors inherited from <a href="pdfminer.layout.html#LTItem">LTItem</a>:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<hr>
+Methods inherited from <a href="pdfminer.layout.html#LTText">LTText</a>:<br>
+<dl><dt><a name="LTAnon-__repr__"><strong>__repr__</strong></a>(self)</dt></dl>
+
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="LTChar">class <strong>LTChar</strong></a>(<a href="pdfminer.layout.html#LTComponent">LTComponent</a>, <a href="pdfminer.layout.html#LTText">LTText</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>##&nbsp;&nbsp;<a href="#LTChar">LTChar</a><br>
+##<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="pdfminer.layout.html#LTChar">LTChar</a></dd>
+<dd><a href="pdfminer.layout.html#LTComponent">LTComponent</a></dd>
+<dd><a href="pdfminer.layout.html#LTItem">LTItem</a></dd>
+<dd><a href="pdfminer.layout.html#LTText">LTText</a></dd>
+<dd><a href="__builtin__.html#object">__builtin__.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="LTChar-__init__"><strong>__init__</strong></a>(self, matrix, font, fontsize, scaling, rise, text, textwidth, textdisp)</dt></dl>
+
+<dl><dt><a name="LTChar-__repr__"><strong>__repr__</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="LTChar-get_text"><strong>get_text</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="LTChar-is_compatible"><strong>is_compatible</strong></a>(self, obj)</dt><dd><tt>Returns&nbsp;True&nbsp;if&nbsp;two&nbsp;characters&nbsp;can&nbsp;coexist&nbsp;in&nbsp;the&nbsp;same&nbsp;line.</tt></dd></dl>
+
+<hr>
+Methods inherited from <a href="pdfminer.layout.html#LTComponent">LTComponent</a>:<br>
+<dl><dt><a name="LTChar-hdistance"><strong>hdistance</strong></a>(self, obj)</dt></dl>
+
+<dl><dt><a name="LTChar-hoverlap"><strong>hoverlap</strong></a>(self, obj)</dt></dl>
+
+<dl><dt><a name="LTChar-is_empty"><strong>is_empty</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="LTChar-is_hoverlap"><strong>is_hoverlap</strong></a>(self, obj)</dt></dl>
+
+<dl><dt><a name="LTChar-is_voverlap"><strong>is_voverlap</strong></a>(self, obj)</dt></dl>
+
+<dl><dt><a name="LTChar-set_bbox"><strong>set_bbox</strong></a>(self, (x0, y0, x1, y1))</dt></dl>
+
+<dl><dt><a name="LTChar-vdistance"><strong>vdistance</strong></a>(self, obj)</dt></dl>
+
+<dl><dt><a name="LTChar-voverlap"><strong>voverlap</strong></a>(self, obj)</dt></dl>
+
+<hr>
+Methods inherited from <a href="pdfminer.layout.html#LTItem">LTItem</a>:<br>
+<dl><dt><a name="LTChar-analyze"><strong>analyze</strong></a>(self, laparams)</dt><dd><tt>Perform&nbsp;the&nbsp;layout&nbsp;analysis.</tt></dd></dl>
+
+<hr>
+Data descriptors inherited from <a href="pdfminer.layout.html#LTItem">LTItem</a>:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="LTComponent">class <strong>LTComponent</strong></a>(<a href="pdfminer.layout.html#LTItem">LTItem</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>##&nbsp;&nbsp;<a href="#LTComponent">LTComponent</a><br>
+##<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="pdfminer.layout.html#LTComponent">LTComponent</a></dd>
+<dd><a href="pdfminer.layout.html#LTItem">LTItem</a></dd>
+<dd><a href="__builtin__.html#object">__builtin__.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="LTComponent-__init__"><strong>__init__</strong></a>(self, bbox)</dt></dl>
+
+<dl><dt><a name="LTComponent-__repr__"><strong>__repr__</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="LTComponent-hdistance"><strong>hdistance</strong></a>(self, obj)</dt></dl>
+
+<dl><dt><a name="LTComponent-hoverlap"><strong>hoverlap</strong></a>(self, obj)</dt></dl>
+
+<dl><dt><a name="LTComponent-is_empty"><strong>is_empty</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="LTComponent-is_hoverlap"><strong>is_hoverlap</strong></a>(self, obj)</dt></dl>
+
+<dl><dt><a name="LTComponent-is_voverlap"><strong>is_voverlap</strong></a>(self, obj)</dt></dl>
+
+<dl><dt><a name="LTComponent-set_bbox"><strong>set_bbox</strong></a>(self, (x0, y0, x1, y1))</dt></dl>
+
+<dl><dt><a name="LTComponent-vdistance"><strong>vdistance</strong></a>(self, obj)</dt></dl>
+
+<dl><dt><a name="LTComponent-voverlap"><strong>voverlap</strong></a>(self, obj)</dt></dl>
+
+<hr>
+Methods inherited from <a href="pdfminer.layout.html#LTItem">LTItem</a>:<br>
+<dl><dt><a name="LTComponent-analyze"><strong>analyze</strong></a>(self, laparams)</dt><dd><tt>Perform&nbsp;the&nbsp;layout&nbsp;analysis.</tt></dd></dl>
+
+<hr>
+Data descriptors inherited from <a href="pdfminer.layout.html#LTItem">LTItem</a>:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="LTContainer">class <strong>LTContainer</strong></a>(<a href="pdfminer.layout.html#LTComponent">LTComponent</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>##&nbsp;&nbsp;<a href="#LTContainer">LTContainer</a><br>
+##<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="pdfminer.layout.html#LTContainer">LTContainer</a></dd>
+<dd><a href="pdfminer.layout.html#LTComponent">LTComponent</a></dd>
+<dd><a href="pdfminer.layout.html#LTItem">LTItem</a></dd>
+<dd><a href="__builtin__.html#object">__builtin__.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="LTContainer-__init__"><strong>__init__</strong></a>(self, bbox)</dt></dl>
+
+<dl><dt><a name="LTContainer-__iter__"><strong>__iter__</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="LTContainer-__len__"><strong>__len__</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="LTContainer-add"><strong>add</strong></a>(self, obj)</dt></dl>
+
+<dl><dt><a name="LTContainer-analyze"><strong>analyze</strong></a>(self, laparams)</dt></dl>
+
+<dl><dt><a name="LTContainer-extend"><strong>extend</strong></a>(self, objs)</dt></dl>
+
+<hr>
+Methods inherited from <a href="pdfminer.layout.html#LTComponent">LTComponent</a>:<br>
+<dl><dt><a name="LTContainer-__repr__"><strong>__repr__</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="LTContainer-hdistance"><strong>hdistance</strong></a>(self, obj)</dt></dl>
+
+<dl><dt><a name="LTContainer-hoverlap"><strong>hoverlap</strong></a>(self, obj)</dt></dl>
+
+<dl><dt><a name="LTContainer-is_empty"><strong>is_empty</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="LTContainer-is_hoverlap"><strong>is_hoverlap</strong></a>(self, obj)</dt></dl>
+
+<dl><dt><a name="LTContainer-is_voverlap"><strong>is_voverlap</strong></a>(self, obj)</dt></dl>
+
+<dl><dt><a name="LTContainer-set_bbox"><strong>set_bbox</strong></a>(self, (x0, y0, x1, y1))</dt></dl>
+
+<dl><dt><a name="LTContainer-vdistance"><strong>vdistance</strong></a>(self, obj)</dt></dl>
+
+<dl><dt><a name="LTContainer-voverlap"><strong>voverlap</strong></a>(self, obj)</dt></dl>
+
+<hr>
+Data descriptors inherited from <a href="pdfminer.layout.html#LTItem">LTItem</a>:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="LTCurve">class <strong>LTCurve</strong></a>(<a href="pdfminer.layout.html#LTComponent">LTComponent</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>##&nbsp;&nbsp;<a href="#LTCurve">LTCurve</a><br>
+##<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="pdfminer.layout.html#LTCurve">LTCurve</a></dd>
+<dd><a href="pdfminer.layout.html#LTComponent">LTComponent</a></dd>
+<dd><a href="pdfminer.layout.html#LTItem">LTItem</a></dd>
+<dd><a href="__builtin__.html#object">__builtin__.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="LTCurve-__init__"><strong>__init__</strong></a>(self, linewidth, pts)</dt></dl>
+
+<dl><dt><a name="LTCurve-get_pts"><strong>get_pts</strong></a>(self)</dt></dl>
+
+<hr>
+Methods inherited from <a href="pdfminer.layout.html#LTComponent">LTComponent</a>:<br>
+<dl><dt><a name="LTCurve-__repr__"><strong>__repr__</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="LTCurve-hdistance"><strong>hdistance</strong></a>(self, obj)</dt></dl>
+
+<dl><dt><a name="LTCurve-hoverlap"><strong>hoverlap</strong></a>(self, obj)</dt></dl>
+
+<dl><dt><a name="LTCurve-is_empty"><strong>is_empty</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="LTCurve-is_hoverlap"><strong>is_hoverlap</strong></a>(self, obj)</dt></dl>
+
+<dl><dt><a name="LTCurve-is_voverlap"><strong>is_voverlap</strong></a>(self, obj)</dt></dl>
+
+<dl><dt><a name="LTCurve-set_bbox"><strong>set_bbox</strong></a>(self, (x0, y0, x1, y1))</dt></dl>
+
+<dl><dt><a name="LTCurve-vdistance"><strong>vdistance</strong></a>(self, obj)</dt></dl>
+
+<dl><dt><a name="LTCurve-voverlap"><strong>voverlap</strong></a>(self, obj)</dt></dl>
+
+<hr>
+Methods inherited from <a href="pdfminer.layout.html#LTItem">LTItem</a>:<br>
+<dl><dt><a name="LTCurve-analyze"><strong>analyze</strong></a>(self, laparams)</dt><dd><tt>Perform&nbsp;the&nbsp;layout&nbsp;analysis.</tt></dd></dl>
+
+<hr>
+Data descriptors inherited from <a href="pdfminer.layout.html#LTItem">LTItem</a>:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="LTExpandableContainer">class <strong>LTExpandableContainer</strong></a>(<a href="pdfminer.layout.html#LTContainer">LTContainer</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>##&nbsp;&nbsp;<a href="#LTExpandableContainer">LTExpandableContainer</a><br>
+##<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="pdfminer.layout.html#LTExpandableContainer">LTExpandableContainer</a></dd>
+<dd><a href="pdfminer.layout.html#LTContainer">LTContainer</a></dd>
+<dd><a href="pdfminer.layout.html#LTComponent">LTComponent</a></dd>
+<dd><a href="pdfminer.layout.html#LTItem">LTItem</a></dd>
+<dd><a href="__builtin__.html#object">__builtin__.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="LTExpandableContainer-__init__"><strong>__init__</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="LTExpandableContainer-add"><strong>add</strong></a>(self, obj)</dt></dl>
+
+<hr>
+Methods inherited from <a href="pdfminer.layout.html#LTContainer">LTContainer</a>:<br>
+<dl><dt><a name="LTExpandableContainer-__iter__"><strong>__iter__</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="LTExpandableContainer-__len__"><strong>__len__</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="LTExpandableContainer-analyze"><strong>analyze</strong></a>(self, laparams)</dt></dl>
+
+<dl><dt><a name="LTExpandableContainer-extend"><strong>extend</strong></a>(self, objs)</dt></dl>
+
+<hr>
+Methods inherited from <a href="pdfminer.layout.html#LTComponent">LTComponent</a>:<br>
+<dl><dt><a name="LTExpandableContainer-__repr__"><strong>__repr__</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="LTExpandableContainer-hdistance"><strong>hdistance</strong></a>(self, obj)</dt></dl>
+
+<dl><dt><a name="LTExpandableContainer-hoverlap"><strong>hoverlap</strong></a>(self, obj)</dt></dl>
+
+<dl><dt><a name="LTExpandableContainer-is_empty"><strong>is_empty</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="LTExpandableContainer-is_hoverlap"><strong>is_hoverlap</strong></a>(self, obj)</dt></dl>
+
+<dl><dt><a name="LTExpandableContainer-is_voverlap"><strong>is_voverlap</strong></a>(self, obj)</dt></dl>
+
+<dl><dt><a name="LTExpandableContainer-set_bbox"><strong>set_bbox</strong></a>(self, (x0, y0, x1, y1))</dt></dl>
+
+<dl><dt><a name="LTExpandableContainer-vdistance"><strong>vdistance</strong></a>(self, obj)</dt></dl>
+
+<dl><dt><a name="LTExpandableContainer-voverlap"><strong>voverlap</strong></a>(self, obj)</dt></dl>
+
+<hr>
+Data descriptors inherited from <a href="pdfminer.layout.html#LTItem">LTItem</a>:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="LTFigure">class <strong>LTFigure</strong></a>(<a href="pdfminer.layout.html#LTLayoutContainer">LTLayoutContainer</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>##&nbsp;&nbsp;<a href="#LTFigure">LTFigure</a><br>
+##<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="pdfminer.layout.html#LTFigure">LTFigure</a></dd>
+<dd><a href="pdfminer.layout.html#LTLayoutContainer">LTLayoutContainer</a></dd>
+<dd><a href="pdfminer.layout.html#LTContainer">LTContainer</a></dd>
+<dd><a href="pdfminer.layout.html#LTComponent">LTComponent</a></dd>
+<dd><a href="pdfminer.layout.html#LTItem">LTItem</a></dd>
+<dd><a href="__builtin__.html#object">__builtin__.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="LTFigure-__init__"><strong>__init__</strong></a>(self, name, bbox, matrix)</dt></dl>
+
+<dl><dt><a name="LTFigure-__repr__"><strong>__repr__</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="LTFigure-analyze"><strong>analyze</strong></a>(self, laparams)</dt></dl>
+
+<hr>
+Methods inherited from <a href="pdfminer.layout.html#LTLayoutContainer">LTLayoutContainer</a>:<br>
+<dl><dt><a name="LTFigure-get_textboxes"><strong>get_textboxes</strong></a>(self, laparams, lines)</dt></dl>
+
+<dl><dt><a name="LTFigure-get_textlines"><strong>get_textlines</strong></a>(self, laparams, objs)</dt></dl>
+
+<dl><dt><a name="LTFigure-group_textboxes"><strong>group_textboxes</strong></a>(self, laparams, boxes)</dt></dl>
+
+<hr>
+Methods inherited from <a href="pdfminer.layout.html#LTContainer">LTContainer</a>:<br>
+<dl><dt><a name="LTFigure-__iter__"><strong>__iter__</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="LTFigure-__len__"><strong>__len__</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="LTFigure-add"><strong>add</strong></a>(self, obj)</dt></dl>
+
+<dl><dt><a name="LTFigure-extend"><strong>extend</strong></a>(self, objs)</dt></dl>
+
+<hr>
+Methods inherited from <a href="pdfminer.layout.html#LTComponent">LTComponent</a>:<br>
+<dl><dt><a name="LTFigure-hdistance"><strong>hdistance</strong></a>(self, obj)</dt></dl>
+
+<dl><dt><a name="LTFigure-hoverlap"><strong>hoverlap</strong></a>(self, obj)</dt></dl>
+
+<dl><dt><a name="LTFigure-is_empty"><strong>is_empty</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="LTFigure-is_hoverlap"><strong>is_hoverlap</strong></a>(self, obj)</dt></dl>
+
+<dl><dt><a name="LTFigure-is_voverlap"><strong>is_voverlap</strong></a>(self, obj)</dt></dl>
+
+<dl><dt><a name="LTFigure-set_bbox"><strong>set_bbox</strong></a>(self, (x0, y0, x1, y1))</dt></dl>
+
+<dl><dt><a name="LTFigure-vdistance"><strong>vdistance</strong></a>(self, obj)</dt></dl>
+
+<dl><dt><a name="LTFigure-voverlap"><strong>voverlap</strong></a>(self, obj)</dt></dl>
+
+<hr>
+Data descriptors inherited from <a href="pdfminer.layout.html#LTItem">LTItem</a>:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="LTImage">class <strong>LTImage</strong></a>(<a href="pdfminer.layout.html#LTComponent">LTComponent</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>##&nbsp;&nbsp;<a href="#LTImage">LTImage</a><br>
+##<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="pdfminer.layout.html#LTImage">LTImage</a></dd>
+<dd><a href="pdfminer.layout.html#LTComponent">LTComponent</a></dd>
+<dd><a href="pdfminer.layout.html#LTItem">LTItem</a></dd>
+<dd><a href="__builtin__.html#object">__builtin__.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="LTImage-__init__"><strong>__init__</strong></a>(self, name, stream, bbox)</dt></dl>
+
+<dl><dt><a name="LTImage-__repr__"><strong>__repr__</strong></a>(self)</dt></dl>
+
+<hr>
+Methods inherited from <a href="pdfminer.layout.html#LTComponent">LTComponent</a>:<br>
+<dl><dt><a name="LTImage-hdistance"><strong>hdistance</strong></a>(self, obj)</dt></dl>
+
+<dl><dt><a name="LTImage-hoverlap"><strong>hoverlap</strong></a>(self, obj)</dt></dl>
+
+<dl><dt><a name="LTImage-is_empty"><strong>is_empty</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="LTImage-is_hoverlap"><strong>is_hoverlap</strong></a>(self, obj)</dt></dl>
+
+<dl><dt><a name="LTImage-is_voverlap"><strong>is_voverlap</strong></a>(self, obj)</dt></dl>
+
+<dl><dt><a name="LTImage-set_bbox"><strong>set_bbox</strong></a>(self, (x0, y0, x1, y1))</dt></dl>
+
+<dl><dt><a name="LTImage-vdistance"><strong>vdistance</strong></a>(self, obj)</dt></dl>
+
+<dl><dt><a name="LTImage-voverlap"><strong>voverlap</strong></a>(self, obj)</dt></dl>
+
+<hr>
+Methods inherited from <a href="pdfminer.layout.html#LTItem">LTItem</a>:<br>
+<dl><dt><a name="LTImage-analyze"><strong>analyze</strong></a>(self, laparams)</dt><dd><tt>Perform&nbsp;the&nbsp;layout&nbsp;analysis.</tt></dd></dl>
+
+<hr>
+Data descriptors inherited from <a href="pdfminer.layout.html#LTItem">LTItem</a>:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="LTItem">class <strong>LTItem</strong></a>(<a href="__builtin__.html#object">__builtin__.object</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>##&nbsp;&nbsp;<a href="#LTItem">LTItem</a><br>
+##<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="LTItem-analyze"><strong>analyze</strong></a>(self, laparams)</dt><dd><tt>Perform&nbsp;the&nbsp;layout&nbsp;analysis.</tt></dd></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="LTLayoutContainer">class <strong>LTLayoutContainer</strong></a>(<a href="pdfminer.layout.html#LTContainer">LTContainer</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>##&nbsp;&nbsp;<a href="#LTLayoutContainer">LTLayoutContainer</a><br>
+##<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="pdfminer.layout.html#LTLayoutContainer">LTLayoutContainer</a></dd>
+<dd><a href="pdfminer.layout.html#LTContainer">LTContainer</a></dd>
+<dd><a href="pdfminer.layout.html#LTComponent">LTComponent</a></dd>
+<dd><a href="pdfminer.layout.html#LTItem">LTItem</a></dd>
+<dd><a href="__builtin__.html#object">__builtin__.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="LTLayoutContainer-__init__"><strong>__init__</strong></a>(self, bbox)</dt></dl>
+
+<dl><dt><a name="LTLayoutContainer-analyze"><strong>analyze</strong></a>(self, laparams)</dt></dl>
+
+<dl><dt><a name="LTLayoutContainer-get_textboxes"><strong>get_textboxes</strong></a>(self, laparams, lines)</dt></dl>
+
+<dl><dt><a name="LTLayoutContainer-get_textlines"><strong>get_textlines</strong></a>(self, laparams, objs)</dt></dl>
+
+<dl><dt><a name="LTLayoutContainer-group_textboxes"><strong>group_textboxes</strong></a>(self, laparams, boxes)</dt></dl>
+
+<hr>
+Methods inherited from <a href="pdfminer.layout.html#LTContainer">LTContainer</a>:<br>
+<dl><dt><a name="LTLayoutContainer-__iter__"><strong>__iter__</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="LTLayoutContainer-__len__"><strong>__len__</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="LTLayoutContainer-add"><strong>add</strong></a>(self, obj)</dt></dl>
+
+<dl><dt><a name="LTLayoutContainer-extend"><strong>extend</strong></a>(self, objs)</dt></dl>
+
+<hr>
+Methods inherited from <a href="pdfminer.layout.html#LTComponent">LTComponent</a>:<br>
+<dl><dt><a name="LTLayoutContainer-__repr__"><strong>__repr__</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="LTLayoutContainer-hdistance"><strong>hdistance</strong></a>(self, obj)</dt></dl>
+
+<dl><dt><a name="LTLayoutContainer-hoverlap"><strong>hoverlap</strong></a>(self, obj)</dt></dl>
+
+<dl><dt><a name="LTLayoutContainer-is_empty"><strong>is_empty</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="LTLayoutContainer-is_hoverlap"><strong>is_hoverlap</strong></a>(self, obj)</dt></dl>
+
+<dl><dt><a name="LTLayoutContainer-is_voverlap"><strong>is_voverlap</strong></a>(self, obj)</dt></dl>
+
+<dl><dt><a name="LTLayoutContainer-set_bbox"><strong>set_bbox</strong></a>(self, (x0, y0, x1, y1))</dt></dl>
+
+<dl><dt><a name="LTLayoutContainer-vdistance"><strong>vdistance</strong></a>(self, obj)</dt></dl>
+
+<dl><dt><a name="LTLayoutContainer-voverlap"><strong>voverlap</strong></a>(self, obj)</dt></dl>
+
+<hr>
+Data descriptors inherited from <a href="pdfminer.layout.html#LTItem">LTItem</a>:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="LTLine">class <strong>LTLine</strong></a>(<a href="pdfminer.layout.html#LTCurve">LTCurve</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>##&nbsp;&nbsp;<a href="#LTLine">LTLine</a><br>
+##<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="pdfminer.layout.html#LTLine">LTLine</a></dd>
+<dd><a href="pdfminer.layout.html#LTCurve">LTCurve</a></dd>
+<dd><a href="pdfminer.layout.html#LTComponent">LTComponent</a></dd>
+<dd><a href="pdfminer.layout.html#LTItem">LTItem</a></dd>
+<dd><a href="__builtin__.html#object">__builtin__.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="LTLine-__init__"><strong>__init__</strong></a>(self, linewidth, p0, p1)</dt></dl>
+
+<hr>
+Methods inherited from <a href="pdfminer.layout.html#LTCurve">LTCurve</a>:<br>
+<dl><dt><a name="LTLine-get_pts"><strong>get_pts</strong></a>(self)</dt></dl>
+
+<hr>
+Methods inherited from <a href="pdfminer.layout.html#LTComponent">LTComponent</a>:<br>
+<dl><dt><a name="LTLine-__repr__"><strong>__repr__</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="LTLine-hdistance"><strong>hdistance</strong></a>(self, obj)</dt></dl>
+
+<dl><dt><a name="LTLine-hoverlap"><strong>hoverlap</strong></a>(self, obj)</dt></dl>
+
+<dl><dt><a name="LTLine-is_empty"><strong>is_empty</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="LTLine-is_hoverlap"><strong>is_hoverlap</strong></a>(self, obj)</dt></dl>
+
+<dl><dt><a name="LTLine-is_voverlap"><strong>is_voverlap</strong></a>(self, obj)</dt></dl>
+
+<dl><dt><a name="LTLine-set_bbox"><strong>set_bbox</strong></a>(self, (x0, y0, x1, y1))</dt></dl>
+
+<dl><dt><a name="LTLine-vdistance"><strong>vdistance</strong></a>(self, obj)</dt></dl>
+
+<dl><dt><a name="LTLine-voverlap"><strong>voverlap</strong></a>(self, obj)</dt></dl>
+
+<hr>
+Methods inherited from <a href="pdfminer.layout.html#LTItem">LTItem</a>:<br>
+<dl><dt><a name="LTLine-analyze"><strong>analyze</strong></a>(self, laparams)</dt><dd><tt>Perform&nbsp;the&nbsp;layout&nbsp;analysis.</tt></dd></dl>
+
+<hr>
+Data descriptors inherited from <a href="pdfminer.layout.html#LTItem">LTItem</a>:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="LTPage">class <strong>LTPage</strong></a>(<a href="pdfminer.layout.html#LTLayoutContainer">LTLayoutContainer</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>##&nbsp;&nbsp;<a href="#LTPage">LTPage</a><br>
+##<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="pdfminer.layout.html#LTPage">LTPage</a></dd>
+<dd><a href="pdfminer.layout.html#LTLayoutContainer">LTLayoutContainer</a></dd>
+<dd><a href="pdfminer.layout.html#LTContainer">LTContainer</a></dd>
+<dd><a href="pdfminer.layout.html#LTComponent">LTComponent</a></dd>
+<dd><a href="pdfminer.layout.html#LTItem">LTItem</a></dd>
+<dd><a href="__builtin__.html#object">__builtin__.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="LTPage-__init__"><strong>__init__</strong></a>(self, pageid, bbox, rotate<font color="#909090">=0</font>)</dt></dl>
+
+<dl><dt><a name="LTPage-__repr__"><strong>__repr__</strong></a>(self)</dt></dl>
+
+<hr>
+Methods inherited from <a href="pdfminer.layout.html#LTLayoutContainer">LTLayoutContainer</a>:<br>
+<dl><dt><a name="LTPage-analyze"><strong>analyze</strong></a>(self, laparams)</dt></dl>
+
+<dl><dt><a name="LTPage-get_textboxes"><strong>get_textboxes</strong></a>(self, laparams, lines)</dt></dl>
+
+<dl><dt><a name="LTPage-get_textlines"><strong>get_textlines</strong></a>(self, laparams, objs)</dt></dl>
+
+<dl><dt><a name="LTPage-group_textboxes"><strong>group_textboxes</strong></a>(self, laparams, boxes)</dt></dl>
+
+<hr>
+Methods inherited from <a href="pdfminer.layout.html#LTContainer">LTContainer</a>:<br>
+<dl><dt><a name="LTPage-__iter__"><strong>__iter__</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="LTPage-__len__"><strong>__len__</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="LTPage-add"><strong>add</strong></a>(self, obj)</dt></dl>
+
+<dl><dt><a name="LTPage-extend"><strong>extend</strong></a>(self, objs)</dt></dl>
+
+<hr>
+Methods inherited from <a href="pdfminer.layout.html#LTComponent">LTComponent</a>:<br>
+<dl><dt><a name="LTPage-hdistance"><strong>hdistance</strong></a>(self, obj)</dt></dl>
+
+<dl><dt><a name="LTPage-hoverlap"><strong>hoverlap</strong></a>(self, obj)</dt></dl>
+
+<dl><dt><a name="LTPage-is_empty"><strong>is_empty</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="LTPage-is_hoverlap"><strong>is_hoverlap</strong></a>(self, obj)</dt></dl>
+
+<dl><dt><a name="LTPage-is_voverlap"><strong>is_voverlap</strong></a>(self, obj)</dt></dl>
+
+<dl><dt><a name="LTPage-set_bbox"><strong>set_bbox</strong></a>(self, (x0, y0, x1, y1))</dt></dl>
+
+<dl><dt><a name="LTPage-vdistance"><strong>vdistance</strong></a>(self, obj)</dt></dl>
+
+<dl><dt><a name="LTPage-voverlap"><strong>voverlap</strong></a>(self, obj)</dt></dl>
+
+<hr>
+Data descriptors inherited from <a href="pdfminer.layout.html#LTItem">LTItem</a>:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="LTRect">class <strong>LTRect</strong></a>(<a href="pdfminer.layout.html#LTCurve">LTCurve</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>##&nbsp;&nbsp;<a href="#LTRect">LTRect</a><br>
+##<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="pdfminer.layout.html#LTRect">LTRect</a></dd>
+<dd><a href="pdfminer.layout.html#LTCurve">LTCurve</a></dd>
+<dd><a href="pdfminer.layout.html#LTComponent">LTComponent</a></dd>
+<dd><a href="pdfminer.layout.html#LTItem">LTItem</a></dd>
+<dd><a href="__builtin__.html#object">__builtin__.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="LTRect-__init__"><strong>__init__</strong></a>(self, linewidth, (x0, y0, x1, y1))</dt></dl>
+
+<hr>
+Methods inherited from <a href="pdfminer.layout.html#LTCurve">LTCurve</a>:<br>
+<dl><dt><a name="LTRect-get_pts"><strong>get_pts</strong></a>(self)</dt></dl>
+
+<hr>
+Methods inherited from <a href="pdfminer.layout.html#LTComponent">LTComponent</a>:<br>
+<dl><dt><a name="LTRect-__repr__"><strong>__repr__</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="LTRect-hdistance"><strong>hdistance</strong></a>(self, obj)</dt></dl>
+
+<dl><dt><a name="LTRect-hoverlap"><strong>hoverlap</strong></a>(self, obj)</dt></dl>
+
+<dl><dt><a name="LTRect-is_empty"><strong>is_empty</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="LTRect-is_hoverlap"><strong>is_hoverlap</strong></a>(self, obj)</dt></dl>
+
+<dl><dt><a name="LTRect-is_voverlap"><strong>is_voverlap</strong></a>(self, obj)</dt></dl>
+
+<dl><dt><a name="LTRect-set_bbox"><strong>set_bbox</strong></a>(self, (x0, y0, x1, y1))</dt></dl>
+
+<dl><dt><a name="LTRect-vdistance"><strong>vdistance</strong></a>(self, obj)</dt></dl>
+
+<dl><dt><a name="LTRect-voverlap"><strong>voverlap</strong></a>(self, obj)</dt></dl>
+
+<hr>
+Methods inherited from <a href="pdfminer.layout.html#LTItem">LTItem</a>:<br>
+<dl><dt><a name="LTRect-analyze"><strong>analyze</strong></a>(self, laparams)</dt><dd><tt>Perform&nbsp;the&nbsp;layout&nbsp;analysis.</tt></dd></dl>
+
+<hr>
+Data descriptors inherited from <a href="pdfminer.layout.html#LTItem">LTItem</a>:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="LTText">class <strong>LTText</strong></a>(<a href="__builtin__.html#object">__builtin__.object</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>##&nbsp;&nbsp;<a href="#LTText">LTText</a><br>
+##<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="LTText-__repr__"><strong>__repr__</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="LTText-get_text"><strong>get_text</strong></a>(self)</dt></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="LTTextBox">class <strong>LTTextBox</strong></a>(<a href="pdfminer.layout.html#LTTextContainer">LTTextContainer</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>##&nbsp;&nbsp;<a href="#LTTextBox">LTTextBox</a><br>
+##<br>
+##&nbsp;&nbsp;A&nbsp;set&nbsp;of&nbsp;text&nbsp;objects&nbsp;that&nbsp;are&nbsp;grouped&nbsp;within<br>
+##&nbsp;&nbsp;a&nbsp;certain&nbsp;rectangular&nbsp;area.<br>
+##<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="pdfminer.layout.html#LTTextBox">LTTextBox</a></dd>
+<dd><a href="pdfminer.layout.html#LTTextContainer">LTTextContainer</a></dd>
+<dd><a href="pdfminer.layout.html#LTExpandableContainer">LTExpandableContainer</a></dd>
+<dd><a href="pdfminer.layout.html#LTContainer">LTContainer</a></dd>
+<dd><a href="pdfminer.layout.html#LTComponent">LTComponent</a></dd>
+<dd><a href="pdfminer.layout.html#LTItem">LTItem</a></dd>
+<dd><a href="pdfminer.layout.html#LTText">LTText</a></dd>
+<dd><a href="__builtin__.html#object">__builtin__.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="LTTextBox-__init__"><strong>__init__</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="LTTextBox-__repr__"><strong>__repr__</strong></a>(self)</dt></dl>
+
+<hr>
+Methods inherited from <a href="pdfminer.layout.html#LTTextContainer">LTTextContainer</a>:<br>
+<dl><dt><a name="LTTextBox-get_text"><strong>get_text</strong></a>(self)</dt></dl>
+
+<hr>
+Methods inherited from <a href="pdfminer.layout.html#LTExpandableContainer">LTExpandableContainer</a>:<br>
+<dl><dt><a name="LTTextBox-add"><strong>add</strong></a>(self, obj)</dt></dl>
+
+<hr>
+Methods inherited from <a href="pdfminer.layout.html#LTContainer">LTContainer</a>:<br>
+<dl><dt><a name="LTTextBox-__iter__"><strong>__iter__</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="LTTextBox-__len__"><strong>__len__</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="LTTextBox-analyze"><strong>analyze</strong></a>(self, laparams)</dt></dl>
+
+<dl><dt><a name="LTTextBox-extend"><strong>extend</strong></a>(self, objs)</dt></dl>
+
+<hr>
+Methods inherited from <a href="pdfminer.layout.html#LTComponent">LTComponent</a>:<br>
+<dl><dt><a name="LTTextBox-hdistance"><strong>hdistance</strong></a>(self, obj)</dt></dl>
+
+<dl><dt><a name="LTTextBox-hoverlap"><strong>hoverlap</strong></a>(self, obj)</dt></dl>
+
+<dl><dt><a name="LTTextBox-is_empty"><strong>is_empty</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="LTTextBox-is_hoverlap"><strong>is_hoverlap</strong></a>(self, obj)</dt></dl>
+
+<dl><dt><a name="LTTextBox-is_voverlap"><strong>is_voverlap</strong></a>(self, obj)</dt></dl>
+
+<dl><dt><a name="LTTextBox-set_bbox"><strong>set_bbox</strong></a>(self, (x0, y0, x1, y1))</dt></dl>
+
+<dl><dt><a name="LTTextBox-vdistance"><strong>vdistance</strong></a>(self, obj)</dt></dl>
+
+<dl><dt><a name="LTTextBox-voverlap"><strong>voverlap</strong></a>(self, obj)</dt></dl>
+
+<hr>
+Data descriptors inherited from <a href="pdfminer.layout.html#LTItem">LTItem</a>:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="LTTextBoxHorizontal">class <strong>LTTextBoxHorizontal</strong></a>(<a href="pdfminer.layout.html#LTTextBox">LTTextBox</a>)</font></td></tr>
+    
+<tr><td bgcolor="#ffc8d8"><tt>&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="pdfminer.layout.html#LTTextBoxHorizontal">LTTextBoxHorizontal</a></dd>
+<dd><a href="pdfminer.layout.html#LTTextBox">LTTextBox</a></dd>
+<dd><a href="pdfminer.layout.html#LTTextContainer">LTTextContainer</a></dd>
+<dd><a href="pdfminer.layout.html#LTExpandableContainer">LTExpandableContainer</a></dd>
+<dd><a href="pdfminer.layout.html#LTContainer">LTContainer</a></dd>
+<dd><a href="pdfminer.layout.html#LTComponent">LTComponent</a></dd>
+<dd><a href="pdfminer.layout.html#LTItem">LTItem</a></dd>
+<dd><a href="pdfminer.layout.html#LTText">LTText</a></dd>
+<dd><a href="__builtin__.html#object">__builtin__.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="LTTextBoxHorizontal-analyze"><strong>analyze</strong></a>(self, laparams)</dt></dl>
+
+<dl><dt><a name="LTTextBoxHorizontal-get_writing_mode"><strong>get_writing_mode</strong></a>(self)</dt></dl>
+
+<hr>
+Methods inherited from <a href="pdfminer.layout.html#LTTextBox">LTTextBox</a>:<br>
+<dl><dt><a name="LTTextBoxHorizontal-__init__"><strong>__init__</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="LTTextBoxHorizontal-__repr__"><strong>__repr__</strong></a>(self)</dt></dl>
+
+<hr>
+Methods inherited from <a href="pdfminer.layout.html#LTTextContainer">LTTextContainer</a>:<br>
+<dl><dt><a name="LTTextBoxHorizontal-get_text"><strong>get_text</strong></a>(self)</dt></dl>
+
+<hr>
+Methods inherited from <a href="pdfminer.layout.html#LTExpandableContainer">LTExpandableContainer</a>:<br>
+<dl><dt><a name="LTTextBoxHorizontal-add"><strong>add</strong></a>(self, obj)</dt></dl>
+
+<hr>
+Methods inherited from <a href="pdfminer.layout.html#LTContainer">LTContainer</a>:<br>
+<dl><dt><a name="LTTextBoxHorizontal-__iter__"><strong>__iter__</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="LTTextBoxHorizontal-__len__"><strong>__len__</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="LTTextBoxHorizontal-extend"><strong>extend</strong></a>(self, objs)</dt></dl>
+
+<hr>
+Methods inherited from <a href="pdfminer.layout.html#LTComponent">LTComponent</a>:<br>
+<dl><dt><a name="LTTextBoxHorizontal-hdistance"><strong>hdistance</strong></a>(self, obj)</dt></dl>
+
+<dl><dt><a name="LTTextBoxHorizontal-hoverlap"><strong>hoverlap</strong></a>(self, obj)</dt></dl>
+
+<dl><dt><a name="LTTextBoxHorizontal-is_empty"><strong>is_empty</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="LTTextBoxHorizontal-is_hoverlap"><strong>is_hoverlap</strong></a>(self, obj)</dt></dl>
+
+<dl><dt><a name="LTTextBoxHorizontal-is_voverlap"><strong>is_voverlap</strong></a>(self, obj)</dt></dl>
+
+<dl><dt><a name="LTTextBoxHorizontal-set_bbox"><strong>set_bbox</strong></a>(self, (x0, y0, x1, y1))</dt></dl>
+
+<dl><dt><a name="LTTextBoxHorizontal-vdistance"><strong>vdistance</strong></a>(self, obj)</dt></dl>
+
+<dl><dt><a name="LTTextBoxHorizontal-voverlap"><strong>voverlap</strong></a>(self, obj)</dt></dl>
+
+<hr>
+Data descriptors inherited from <a href="pdfminer.layout.html#LTItem">LTItem</a>:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="LTTextBoxVertical">class <strong>LTTextBoxVertical</strong></a>(<a href="pdfminer.layout.html#LTTextBox">LTTextBox</a>)</font></td></tr>
+    
+<tr><td bgcolor="#ffc8d8"><tt>&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="pdfminer.layout.html#LTTextBoxVertical">LTTextBoxVertical</a></dd>
+<dd><a href="pdfminer.layout.html#LTTextBox">LTTextBox</a></dd>
+<dd><a href="pdfminer.layout.html#LTTextContainer">LTTextContainer</a></dd>
+<dd><a href="pdfminer.layout.html#LTExpandableContainer">LTExpandableContainer</a></dd>
+<dd><a href="pdfminer.layout.html#LTContainer">LTContainer</a></dd>
+<dd><a href="pdfminer.layout.html#LTComponent">LTComponent</a></dd>
+<dd><a href="pdfminer.layout.html#LTItem">LTItem</a></dd>
+<dd><a href="pdfminer.layout.html#LTText">LTText</a></dd>
+<dd><a href="__builtin__.html#object">__builtin__.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="LTTextBoxVertical-analyze"><strong>analyze</strong></a>(self, laparams)</dt></dl>
+
+<dl><dt><a name="LTTextBoxVertical-get_writing_mode"><strong>get_writing_mode</strong></a>(self)</dt></dl>
+
+<hr>
+Methods inherited from <a href="pdfminer.layout.html#LTTextBox">LTTextBox</a>:<br>
+<dl><dt><a name="LTTextBoxVertical-__init__"><strong>__init__</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="LTTextBoxVertical-__repr__"><strong>__repr__</strong></a>(self)</dt></dl>
+
+<hr>
+Methods inherited from <a href="pdfminer.layout.html#LTTextContainer">LTTextContainer</a>:<br>
+<dl><dt><a name="LTTextBoxVertical-get_text"><strong>get_text</strong></a>(self)</dt></dl>
+
+<hr>
+Methods inherited from <a href="pdfminer.layout.html#LTExpandableContainer">LTExpandableContainer</a>:<br>
+<dl><dt><a name="LTTextBoxVertical-add"><strong>add</strong></a>(self, obj)</dt></dl>
+
+<hr>
+Methods inherited from <a href="pdfminer.layout.html#LTContainer">LTContainer</a>:<br>
+<dl><dt><a name="LTTextBoxVertical-__iter__"><strong>__iter__</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="LTTextBoxVertical-__len__"><strong>__len__</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="LTTextBoxVertical-extend"><strong>extend</strong></a>(self, objs)</dt></dl>
+
+<hr>
+Methods inherited from <a href="pdfminer.layout.html#LTComponent">LTComponent</a>:<br>
+<dl><dt><a name="LTTextBoxVertical-hdistance"><strong>hdistance</strong></a>(self, obj)</dt></dl>
+
+<dl><dt><a name="LTTextBoxVertical-hoverlap"><strong>hoverlap</strong></a>(self, obj)</dt></dl>
+
+<dl><dt><a name="LTTextBoxVertical-is_empty"><strong>is_empty</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="LTTextBoxVertical-is_hoverlap"><strong>is_hoverlap</strong></a>(self, obj)</dt></dl>
+
+<dl><dt><a name="LTTextBoxVertical-is_voverlap"><strong>is_voverlap</strong></a>(self, obj)</dt></dl>
+
+<dl><dt><a name="LTTextBoxVertical-set_bbox"><strong>set_bbox</strong></a>(self, (x0, y0, x1, y1))</dt></dl>
+
+<dl><dt><a name="LTTextBoxVertical-vdistance"><strong>vdistance</strong></a>(self, obj)</dt></dl>
+
+<dl><dt><a name="LTTextBoxVertical-voverlap"><strong>voverlap</strong></a>(self, obj)</dt></dl>
+
+<hr>
+Data descriptors inherited from <a href="pdfminer.layout.html#LTItem">LTItem</a>:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="LTTextContainer">class <strong>LTTextContainer</strong></a>(<a href="pdfminer.layout.html#LTExpandableContainer">LTExpandableContainer</a>, <a href="pdfminer.layout.html#LTText">LTText</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>##&nbsp;&nbsp;<a href="#LTTextContainer">LTTextContainer</a><br>
+##<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="pdfminer.layout.html#LTTextContainer">LTTextContainer</a></dd>
+<dd><a href="pdfminer.layout.html#LTExpandableContainer">LTExpandableContainer</a></dd>
+<dd><a href="pdfminer.layout.html#LTContainer">LTContainer</a></dd>
+<dd><a href="pdfminer.layout.html#LTComponent">LTComponent</a></dd>
+<dd><a href="pdfminer.layout.html#LTItem">LTItem</a></dd>
+<dd><a href="pdfminer.layout.html#LTText">LTText</a></dd>
+<dd><a href="__builtin__.html#object">__builtin__.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="LTTextContainer-__init__"><strong>__init__</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="LTTextContainer-get_text"><strong>get_text</strong></a>(self)</dt></dl>
+
+<hr>
+Methods inherited from <a href="pdfminer.layout.html#LTExpandableContainer">LTExpandableContainer</a>:<br>
+<dl><dt><a name="LTTextContainer-add"><strong>add</strong></a>(self, obj)</dt></dl>
+
+<hr>
+Methods inherited from <a href="pdfminer.layout.html#LTContainer">LTContainer</a>:<br>
+<dl><dt><a name="LTTextContainer-__iter__"><strong>__iter__</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="LTTextContainer-__len__"><strong>__len__</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="LTTextContainer-analyze"><strong>analyze</strong></a>(self, laparams)</dt></dl>
+
+<dl><dt><a name="LTTextContainer-extend"><strong>extend</strong></a>(self, objs)</dt></dl>
+
+<hr>
+Methods inherited from <a href="pdfminer.layout.html#LTComponent">LTComponent</a>:<br>
+<dl><dt><a name="LTTextContainer-__repr__"><strong>__repr__</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="LTTextContainer-hdistance"><strong>hdistance</strong></a>(self, obj)</dt></dl>
+
+<dl><dt><a name="LTTextContainer-hoverlap"><strong>hoverlap</strong></a>(self, obj)</dt></dl>
+
+<dl><dt><a name="LTTextContainer-is_empty"><strong>is_empty</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="LTTextContainer-is_hoverlap"><strong>is_hoverlap</strong></a>(self, obj)</dt></dl>
+
+<dl><dt><a name="LTTextContainer-is_voverlap"><strong>is_voverlap</strong></a>(self, obj)</dt></dl>
+
+<dl><dt><a name="LTTextContainer-set_bbox"><strong>set_bbox</strong></a>(self, (x0, y0, x1, y1))</dt></dl>
+
+<dl><dt><a name="LTTextContainer-vdistance"><strong>vdistance</strong></a>(self, obj)</dt></dl>
+
+<dl><dt><a name="LTTextContainer-voverlap"><strong>voverlap</strong></a>(self, obj)</dt></dl>
+
+<hr>
+Data descriptors inherited from <a href="pdfminer.layout.html#LTItem">LTItem</a>:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="LTTextGroup">class <strong>LTTextGroup</strong></a>(<a href="pdfminer.layout.html#LTTextContainer">LTTextContainer</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>##&nbsp;&nbsp;<a href="#LTTextGroup">LTTextGroup</a><br>
+##<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="pdfminer.layout.html#LTTextGroup">LTTextGroup</a></dd>
+<dd><a href="pdfminer.layout.html#LTTextContainer">LTTextContainer</a></dd>
+<dd><a href="pdfminer.layout.html#LTExpandableContainer">LTExpandableContainer</a></dd>
+<dd><a href="pdfminer.layout.html#LTContainer">LTContainer</a></dd>
+<dd><a href="pdfminer.layout.html#LTComponent">LTComponent</a></dd>
+<dd><a href="pdfminer.layout.html#LTItem">LTItem</a></dd>
+<dd><a href="pdfminer.layout.html#LTText">LTText</a></dd>
+<dd><a href="__builtin__.html#object">__builtin__.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="LTTextGroup-__init__"><strong>__init__</strong></a>(self, objs)</dt></dl>
+
+<hr>
+Methods inherited from <a href="pdfminer.layout.html#LTTextContainer">LTTextContainer</a>:<br>
+<dl><dt><a name="LTTextGroup-get_text"><strong>get_text</strong></a>(self)</dt></dl>
+
+<hr>
+Methods inherited from <a href="pdfminer.layout.html#LTExpandableContainer">LTExpandableContainer</a>:<br>
+<dl><dt><a name="LTTextGroup-add"><strong>add</strong></a>(self, obj)</dt></dl>
+
+<hr>
+Methods inherited from <a href="pdfminer.layout.html#LTContainer">LTContainer</a>:<br>
+<dl><dt><a name="LTTextGroup-__iter__"><strong>__iter__</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="LTTextGroup-__len__"><strong>__len__</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="LTTextGroup-analyze"><strong>analyze</strong></a>(self, laparams)</dt></dl>
+
+<dl><dt><a name="LTTextGroup-extend"><strong>extend</strong></a>(self, objs)</dt></dl>
+
+<hr>
+Methods inherited from <a href="pdfminer.layout.html#LTComponent">LTComponent</a>:<br>
+<dl><dt><a name="LTTextGroup-__repr__"><strong>__repr__</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="LTTextGroup-hdistance"><strong>hdistance</strong></a>(self, obj)</dt></dl>
+
+<dl><dt><a name="LTTextGroup-hoverlap"><strong>hoverlap</strong></a>(self, obj)</dt></dl>
+
+<dl><dt><a name="LTTextGroup-is_empty"><strong>is_empty</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="LTTextGroup-is_hoverlap"><strong>is_hoverlap</strong></a>(self, obj)</dt></dl>
+
+<dl><dt><a name="LTTextGroup-is_voverlap"><strong>is_voverlap</strong></a>(self, obj)</dt></dl>
+
+<dl><dt><a name="LTTextGroup-set_bbox"><strong>set_bbox</strong></a>(self, (x0, y0, x1, y1))</dt></dl>
+
+<dl><dt><a name="LTTextGroup-vdistance"><strong>vdistance</strong></a>(self, obj)</dt></dl>
+
+<dl><dt><a name="LTTextGroup-voverlap"><strong>voverlap</strong></a>(self, obj)</dt></dl>
+
+<hr>
+Data descriptors inherited from <a href="pdfminer.layout.html#LTItem">LTItem</a>:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="LTTextGroupLRTB">class <strong>LTTextGroupLRTB</strong></a>(<a href="pdfminer.layout.html#LTTextGroup">LTTextGroup</a>)</font></td></tr>
+    
+<tr><td bgcolor="#ffc8d8"><tt>&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="pdfminer.layout.html#LTTextGroupLRTB">LTTextGroupLRTB</a></dd>
+<dd><a href="pdfminer.layout.html#LTTextGroup">LTTextGroup</a></dd>
+<dd><a href="pdfminer.layout.html#LTTextContainer">LTTextContainer</a></dd>
+<dd><a href="pdfminer.layout.html#LTExpandableContainer">LTExpandableContainer</a></dd>
+<dd><a href="pdfminer.layout.html#LTContainer">LTContainer</a></dd>
+<dd><a href="pdfminer.layout.html#LTComponent">LTComponent</a></dd>
+<dd><a href="pdfminer.layout.html#LTItem">LTItem</a></dd>
+<dd><a href="pdfminer.layout.html#LTText">LTText</a></dd>
+<dd><a href="__builtin__.html#object">__builtin__.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="LTTextGroupLRTB-analyze"><strong>analyze</strong></a>(self, laparams)</dt></dl>
+
+<hr>
+Methods inherited from <a href="pdfminer.layout.html#LTTextGroup">LTTextGroup</a>:<br>
+<dl><dt><a name="LTTextGroupLRTB-__init__"><strong>__init__</strong></a>(self, objs)</dt></dl>
+
+<hr>
+Methods inherited from <a href="pdfminer.layout.html#LTTextContainer">LTTextContainer</a>:<br>
+<dl><dt><a name="LTTextGroupLRTB-get_text"><strong>get_text</strong></a>(self)</dt></dl>
+
+<hr>
+Methods inherited from <a href="pdfminer.layout.html#LTExpandableContainer">LTExpandableContainer</a>:<br>
+<dl><dt><a name="LTTextGroupLRTB-add"><strong>add</strong></a>(self, obj)</dt></dl>
+
+<hr>
+Methods inherited from <a href="pdfminer.layout.html#LTContainer">LTContainer</a>:<br>
+<dl><dt><a name="LTTextGroupLRTB-__iter__"><strong>__iter__</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="LTTextGroupLRTB-__len__"><strong>__len__</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="LTTextGroupLRTB-extend"><strong>extend</strong></a>(self, objs)</dt></dl>
+
+<hr>
+Methods inherited from <a href="pdfminer.layout.html#LTComponent">LTComponent</a>:<br>
+<dl><dt><a name="LTTextGroupLRTB-__repr__"><strong>__repr__</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="LTTextGroupLRTB-hdistance"><strong>hdistance</strong></a>(self, obj)</dt></dl>
+
+<dl><dt><a name="LTTextGroupLRTB-hoverlap"><strong>hoverlap</strong></a>(self, obj)</dt></dl>
+
+<dl><dt><a name="LTTextGroupLRTB-is_empty"><strong>is_empty</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="LTTextGroupLRTB-is_hoverlap"><strong>is_hoverlap</strong></a>(self, obj)</dt></dl>
+
+<dl><dt><a name="LTTextGroupLRTB-is_voverlap"><strong>is_voverlap</strong></a>(self, obj)</dt></dl>
+
+<dl><dt><a name="LTTextGroupLRTB-set_bbox"><strong>set_bbox</strong></a>(self, (x0, y0, x1, y1))</dt></dl>
+
+<dl><dt><a name="LTTextGroupLRTB-vdistance"><strong>vdistance</strong></a>(self, obj)</dt></dl>
+
+<dl><dt><a name="LTTextGroupLRTB-voverlap"><strong>voverlap</strong></a>(self, obj)</dt></dl>
+
+<hr>
+Data descriptors inherited from <a href="pdfminer.layout.html#LTItem">LTItem</a>:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="LTTextGroupTBRL">class <strong>LTTextGroupTBRL</strong></a>(<a href="pdfminer.layout.html#LTTextGroup">LTTextGroup</a>)</font></td></tr>
+    
+<tr><td bgcolor="#ffc8d8"><tt>&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="pdfminer.layout.html#LTTextGroupTBRL">LTTextGroupTBRL</a></dd>
+<dd><a href="pdfminer.layout.html#LTTextGroup">LTTextGroup</a></dd>
+<dd><a href="pdfminer.layout.html#LTTextContainer">LTTextContainer</a></dd>
+<dd><a href="pdfminer.layout.html#LTExpandableContainer">LTExpandableContainer</a></dd>
+<dd><a href="pdfminer.layout.html#LTContainer">LTContainer</a></dd>
+<dd><a href="pdfminer.layout.html#LTComponent">LTComponent</a></dd>
+<dd><a href="pdfminer.layout.html#LTItem">LTItem</a></dd>
+<dd><a href="pdfminer.layout.html#LTText">LTText</a></dd>
+<dd><a href="__builtin__.html#object">__builtin__.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="LTTextGroupTBRL-analyze"><strong>analyze</strong></a>(self, laparams)</dt></dl>
+
+<hr>
+Methods inherited from <a href="pdfminer.layout.html#LTTextGroup">LTTextGroup</a>:<br>
+<dl><dt><a name="LTTextGroupTBRL-__init__"><strong>__init__</strong></a>(self, objs)</dt></dl>
+
+<hr>
+Methods inherited from <a href="pdfminer.layout.html#LTTextContainer">LTTextContainer</a>:<br>
+<dl><dt><a name="LTTextGroupTBRL-get_text"><strong>get_text</strong></a>(self)</dt></dl>
+
+<hr>
+Methods inherited from <a href="pdfminer.layout.html#LTExpandableContainer">LTExpandableContainer</a>:<br>
+<dl><dt><a name="LTTextGroupTBRL-add"><strong>add</strong></a>(self, obj)</dt></dl>
+
+<hr>
+Methods inherited from <a href="pdfminer.layout.html#LTContainer">LTContainer</a>:<br>
+<dl><dt><a name="LTTextGroupTBRL-__iter__"><strong>__iter__</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="LTTextGroupTBRL-__len__"><strong>__len__</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="LTTextGroupTBRL-extend"><strong>extend</strong></a>(self, objs)</dt></dl>
+
+<hr>
+Methods inherited from <a href="pdfminer.layout.html#LTComponent">LTComponent</a>:<br>
+<dl><dt><a name="LTTextGroupTBRL-__repr__"><strong>__repr__</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="LTTextGroupTBRL-hdistance"><strong>hdistance</strong></a>(self, obj)</dt></dl>
+
+<dl><dt><a name="LTTextGroupTBRL-hoverlap"><strong>hoverlap</strong></a>(self, obj)</dt></dl>
+
+<dl><dt><a name="LTTextGroupTBRL-is_empty"><strong>is_empty</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="LTTextGroupTBRL-is_hoverlap"><strong>is_hoverlap</strong></a>(self, obj)</dt></dl>
+
+<dl><dt><a name="LTTextGroupTBRL-is_voverlap"><strong>is_voverlap</strong></a>(self, obj)</dt></dl>
+
+<dl><dt><a name="LTTextGroupTBRL-set_bbox"><strong>set_bbox</strong></a>(self, (x0, y0, x1, y1))</dt></dl>
+
+<dl><dt><a name="LTTextGroupTBRL-vdistance"><strong>vdistance</strong></a>(self, obj)</dt></dl>
+
+<dl><dt><a name="LTTextGroupTBRL-voverlap"><strong>voverlap</strong></a>(self, obj)</dt></dl>
+
+<hr>
+Data descriptors inherited from <a href="pdfminer.layout.html#LTItem">LTItem</a>:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="LTTextLine">class <strong>LTTextLine</strong></a>(<a href="pdfminer.layout.html#LTTextContainer">LTTextContainer</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>##&nbsp;&nbsp;<a href="#LTTextLine">LTTextLine</a><br>
+##<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="pdfminer.layout.html#LTTextLine">LTTextLine</a></dd>
+<dd><a href="pdfminer.layout.html#LTTextContainer">LTTextContainer</a></dd>
+<dd><a href="pdfminer.layout.html#LTExpandableContainer">LTExpandableContainer</a></dd>
+<dd><a href="pdfminer.layout.html#LTContainer">LTContainer</a></dd>
+<dd><a href="pdfminer.layout.html#LTComponent">LTComponent</a></dd>
+<dd><a href="pdfminer.layout.html#LTItem">LTItem</a></dd>
+<dd><a href="pdfminer.layout.html#LTText">LTText</a></dd>
+<dd><a href="__builtin__.html#object">__builtin__.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="LTTextLine-__init__"><strong>__init__</strong></a>(self, word_margin)</dt></dl>
+
+<dl><dt><a name="LTTextLine-__repr__"><strong>__repr__</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="LTTextLine-analyze"><strong>analyze</strong></a>(self, laparams)</dt></dl>
+
+<dl><dt><a name="LTTextLine-find_neighbors"><strong>find_neighbors</strong></a>(self, plane, ratio)</dt></dl>
+
+<hr>
+Methods inherited from <a href="pdfminer.layout.html#LTTextContainer">LTTextContainer</a>:<br>
+<dl><dt><a name="LTTextLine-get_text"><strong>get_text</strong></a>(self)</dt></dl>
+
+<hr>
+Methods inherited from <a href="pdfminer.layout.html#LTExpandableContainer">LTExpandableContainer</a>:<br>
+<dl><dt><a name="LTTextLine-add"><strong>add</strong></a>(self, obj)</dt></dl>
+
+<hr>
+Methods inherited from <a href="pdfminer.layout.html#LTContainer">LTContainer</a>:<br>
+<dl><dt><a name="LTTextLine-__iter__"><strong>__iter__</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="LTTextLine-__len__"><strong>__len__</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="LTTextLine-extend"><strong>extend</strong></a>(self, objs)</dt></dl>
+
+<hr>
+Methods inherited from <a href="pdfminer.layout.html#LTComponent">LTComponent</a>:<br>
+<dl><dt><a name="LTTextLine-hdistance"><strong>hdistance</strong></a>(self, obj)</dt></dl>
+
+<dl><dt><a name="LTTextLine-hoverlap"><strong>hoverlap</strong></a>(self, obj)</dt></dl>
+
+<dl><dt><a name="LTTextLine-is_empty"><strong>is_empty</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="LTTextLine-is_hoverlap"><strong>is_hoverlap</strong></a>(self, obj)</dt></dl>
+
+<dl><dt><a name="LTTextLine-is_voverlap"><strong>is_voverlap</strong></a>(self, obj)</dt></dl>
+
+<dl><dt><a name="LTTextLine-set_bbox"><strong>set_bbox</strong></a>(self, (x0, y0, x1, y1))</dt></dl>
+
+<dl><dt><a name="LTTextLine-vdistance"><strong>vdistance</strong></a>(self, obj)</dt></dl>
+
+<dl><dt><a name="LTTextLine-voverlap"><strong>voverlap</strong></a>(self, obj)</dt></dl>
+
+<hr>
+Data descriptors inherited from <a href="pdfminer.layout.html#LTItem">LTItem</a>:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="LTTextLineHorizontal">class <strong>LTTextLineHorizontal</strong></a>(<a href="pdfminer.layout.html#LTTextLine">LTTextLine</a>)</font></td></tr>
+    
+<tr><td bgcolor="#ffc8d8"><tt>&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="pdfminer.layout.html#LTTextLineHorizontal">LTTextLineHorizontal</a></dd>
+<dd><a href="pdfminer.layout.html#LTTextLine">LTTextLine</a></dd>
+<dd><a href="pdfminer.layout.html#LTTextContainer">LTTextContainer</a></dd>
+<dd><a href="pdfminer.layout.html#LTExpandableContainer">LTExpandableContainer</a></dd>
+<dd><a href="pdfminer.layout.html#LTContainer">LTContainer</a></dd>
+<dd><a href="pdfminer.layout.html#LTComponent">LTComponent</a></dd>
+<dd><a href="pdfminer.layout.html#LTItem">LTItem</a></dd>
+<dd><a href="pdfminer.layout.html#LTText">LTText</a></dd>
+<dd><a href="__builtin__.html#object">__builtin__.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="LTTextLineHorizontal-__init__"><strong>__init__</strong></a>(self, word_margin)</dt></dl>
+
+<dl><dt><a name="LTTextLineHorizontal-add"><strong>add</strong></a>(self, obj)</dt></dl>
+
+<dl><dt><a name="LTTextLineHorizontal-find_neighbors"><strong>find_neighbors</strong></a>(self, plane, ratio)</dt></dl>
+
+<hr>
+Methods inherited from <a href="pdfminer.layout.html#LTTextLine">LTTextLine</a>:<br>
+<dl><dt><a name="LTTextLineHorizontal-__repr__"><strong>__repr__</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="LTTextLineHorizontal-analyze"><strong>analyze</strong></a>(self, laparams)</dt></dl>
+
+<hr>
+Methods inherited from <a href="pdfminer.layout.html#LTTextContainer">LTTextContainer</a>:<br>
+<dl><dt><a name="LTTextLineHorizontal-get_text"><strong>get_text</strong></a>(self)</dt></dl>
+
+<hr>
+Methods inherited from <a href="pdfminer.layout.html#LTContainer">LTContainer</a>:<br>
+<dl><dt><a name="LTTextLineHorizontal-__iter__"><strong>__iter__</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="LTTextLineHorizontal-__len__"><strong>__len__</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="LTTextLineHorizontal-extend"><strong>extend</strong></a>(self, objs)</dt></dl>
+
+<hr>
+Methods inherited from <a href="pdfminer.layout.html#LTComponent">LTComponent</a>:<br>
+<dl><dt><a name="LTTextLineHorizontal-hdistance"><strong>hdistance</strong></a>(self, obj)</dt></dl>
+
+<dl><dt><a name="LTTextLineHorizontal-hoverlap"><strong>hoverlap</strong></a>(self, obj)</dt></dl>
+
+<dl><dt><a name="LTTextLineHorizontal-is_empty"><strong>is_empty</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="LTTextLineHorizontal-is_hoverlap"><strong>is_hoverlap</strong></a>(self, obj)</dt></dl>
+
+<dl><dt><a name="LTTextLineHorizontal-is_voverlap"><strong>is_voverlap</strong></a>(self, obj)</dt></dl>
+
+<dl><dt><a name="LTTextLineHorizontal-set_bbox"><strong>set_bbox</strong></a>(self, (x0, y0, x1, y1))</dt></dl>
+
+<dl><dt><a name="LTTextLineHorizontal-vdistance"><strong>vdistance</strong></a>(self, obj)</dt></dl>
+
+<dl><dt><a name="LTTextLineHorizontal-voverlap"><strong>voverlap</strong></a>(self, obj)</dt></dl>
+
+<hr>
+Data descriptors inherited from <a href="pdfminer.layout.html#LTItem">LTItem</a>:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="LTTextLineVertical">class <strong>LTTextLineVertical</strong></a>(<a href="pdfminer.layout.html#LTTextLine">LTTextLine</a>)</font></td></tr>
+    
+<tr><td bgcolor="#ffc8d8"><tt>&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="pdfminer.layout.html#LTTextLineVertical">LTTextLineVertical</a></dd>
+<dd><a href="pdfminer.layout.html#LTTextLine">LTTextLine</a></dd>
+<dd><a href="pdfminer.layout.html#LTTextContainer">LTTextContainer</a></dd>
+<dd><a href="pdfminer.layout.html#LTExpandableContainer">LTExpandableContainer</a></dd>
+<dd><a href="pdfminer.layout.html#LTContainer">LTContainer</a></dd>
+<dd><a href="pdfminer.layout.html#LTComponent">LTComponent</a></dd>
+<dd><a href="pdfminer.layout.html#LTItem">LTItem</a></dd>
+<dd><a href="pdfminer.layout.html#LTText">LTText</a></dd>
+<dd><a href="__builtin__.html#object">__builtin__.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="LTTextLineVertical-__init__"><strong>__init__</strong></a>(self, word_margin)</dt></dl>
+
+<dl><dt><a name="LTTextLineVertical-add"><strong>add</strong></a>(self, obj)</dt></dl>
+
+<dl><dt><a name="LTTextLineVertical-find_neighbors"><strong>find_neighbors</strong></a>(self, plane, ratio)</dt></dl>
+
+<hr>
+Methods inherited from <a href="pdfminer.layout.html#LTTextLine">LTTextLine</a>:<br>
+<dl><dt><a name="LTTextLineVertical-__repr__"><strong>__repr__</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="LTTextLineVertical-analyze"><strong>analyze</strong></a>(self, laparams)</dt></dl>
+
+<hr>
+Methods inherited from <a href="pdfminer.layout.html#LTTextContainer">LTTextContainer</a>:<br>
+<dl><dt><a name="LTTextLineVertical-get_text"><strong>get_text</strong></a>(self)</dt></dl>
+
+<hr>
+Methods inherited from <a href="pdfminer.layout.html#LTContainer">LTContainer</a>:<br>
+<dl><dt><a name="LTTextLineVertical-__iter__"><strong>__iter__</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="LTTextLineVertical-__len__"><strong>__len__</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="LTTextLineVertical-extend"><strong>extend</strong></a>(self, objs)</dt></dl>
+
+<hr>
+Methods inherited from <a href="pdfminer.layout.html#LTComponent">LTComponent</a>:<br>
+<dl><dt><a name="LTTextLineVertical-hdistance"><strong>hdistance</strong></a>(self, obj)</dt></dl>
+
+<dl><dt><a name="LTTextLineVertical-hoverlap"><strong>hoverlap</strong></a>(self, obj)</dt></dl>
+
+<dl><dt><a name="LTTextLineVertical-is_empty"><strong>is_empty</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="LTTextLineVertical-is_hoverlap"><strong>is_hoverlap</strong></a>(self, obj)</dt></dl>
+
+<dl><dt><a name="LTTextLineVertical-is_voverlap"><strong>is_voverlap</strong></a>(self, obj)</dt></dl>
+
+<dl><dt><a name="LTTextLineVertical-set_bbox"><strong>set_bbox</strong></a>(self, (x0, y0, x1, y1))</dt></dl>
+
+<dl><dt><a name="LTTextLineVertical-vdistance"><strong>vdistance</strong></a>(self, obj)</dt></dl>
+
+<dl><dt><a name="LTTextLineVertical-voverlap"><strong>voverlap</strong></a>(self, obj)</dt></dl>
+
+<hr>
+Data descriptors inherited from <a href="pdfminer.layout.html#LTItem">LTItem</a>:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#55aa55">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Data</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#55aa55"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><strong>INF</strong> = 9223372036854775807</td></tr></table>
+</body></html>

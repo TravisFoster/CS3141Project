@@ -1,0 +1,514 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module pdfminer.cmapdb</title>
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong><a href="pdfminer.html"><font color="#ffffff">pdfminer</font></a>.cmapdb</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:/usr/lib/python2.7/site-packages/pdfminer/cmapdb.py">/usr/lib/python2.7/site-packages/pdfminer/cmapdb.py</a></font></td></tr></table>
+    <p><tt>Adobe&nbsp;character&nbsp;mapping&nbsp;(<a href="#CMap">CMap</a>)&nbsp;support.<br>
+&nbsp;<br>
+CMaps&nbsp;provide&nbsp;the&nbsp;mapping&nbsp;between&nbsp;character&nbsp;codes&nbsp;and&nbsp;Unicode<br>
+code-points&nbsp;to&nbsp;character&nbsp;ids&nbsp;(CIDs).<br>
+&nbsp;<br>
+More&nbsp;information&nbsp;is&nbsp;available&nbsp;on&nbsp;the&nbsp;Adobe&nbsp;website:<br>
+&nbsp;<br>
+&nbsp;&nbsp;<a href="http://opensource.adobe.com/wiki/display/cmap/CMap+Resources">http://opensource.adobe.com/wiki/display/cmap/CMap+Resources</a></tt></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#aa55cc">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="pdfminer.cmap.html">pdfminer.cmap</a><br>
+<a href="gzip.html">gzip</a><br>
+</td><td width="25%" valign=top><a href="os.html">os</a><br>
+<a href="cPickle.html">cPickle</a><br>
+</td><td width="25%" valign=top><a href="re.html">re</a><br>
+<a href="struct.html">struct</a><br>
+</td><td width="25%" valign=top><a href="sys.html">sys</a><br>
+</td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ee77aa">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Classes</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl>
+<dt><font face="helvetica, arial"><a href="__builtin__.html#object">__builtin__.object</a>
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="pdfminer.cmapdb.html#CMap">CMap</a>
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="pdfminer.cmapdb.html#FileCMap">FileCMap</a>
+</font></dt><dt><font face="helvetica, arial"><a href="pdfminer.cmapdb.html#PyCMap">PyCMap</a>
+</font></dt></dl>
+</dd>
+<dt><font face="helvetica, arial"><a href="pdfminer.cmapdb.html#CMapDB">CMapDB</a>
+</font></dt><dt><font face="helvetica, arial"><a href="pdfminer.cmapdb.html#IdentityCMap">IdentityCMap</a>
+</font></dt><dt><font face="helvetica, arial"><a href="pdfminer.cmapdb.html#UnicodeMap">UnicodeMap</a>
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="pdfminer.cmapdb.html#FileUnicodeMap">FileUnicodeMap</a>
+</font></dt><dt><font face="helvetica, arial"><a href="pdfminer.cmapdb.html#PyUnicodeMap">PyUnicodeMap</a>
+</font></dt></dl>
+</dd>
+</dl>
+</dd>
+<dt><font face="helvetica, arial"><a href="exceptions.html#Exception">exceptions.Exception</a>(<a href="exceptions.html#BaseException">exceptions.BaseException</a>)
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="pdfminer.cmapdb.html#CMapError">CMapError</a>
+</font></dt></dl>
+</dd>
+<dt><font face="helvetica, arial"><a href="pdfminer.psparser.html#PSStackParser">pdfminer.psparser.PSStackParser</a>(<a href="pdfminer.psparser.html#PSBaseParser">pdfminer.psparser.PSBaseParser</a>)
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="pdfminer.cmapdb.html#CMapParser">CMapParser</a>
+</font></dt></dl>
+</dd>
+</dl>
+ <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="CMap">class <strong>CMap</strong></a>(<a href="__builtin__.html#object">__builtin__.object</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>##&nbsp;&nbsp;<a href="#CMap">CMap</a><br>
+##<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="CMap-__init__"><strong>__init__</strong></a>(self, code2cid<font color="#909090">=None</font>)</dt></dl>
+
+<dl><dt><a name="CMap-decode"><strong>decode</strong></a>(self, code)</dt></dl>
+
+<dl><dt><a name="CMap-dump"><strong>dump</strong></a>(self, out<font color="#909090">=&lt;open file '&lt;stdout&gt;', mode 'w'&gt;</font>, code2cid<font color="#909090">=None</font>, code<font color="#909090">=None</font>)</dt></dl>
+
+<dl><dt><a name="CMap-is_vertical"><strong>is_vertical</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="CMap-use_cmap"><strong>use_cmap</strong></a>(self, cmap)</dt></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>debug</strong> = 0</dl>
+
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="CMapDB">class <strong>CMapDB</strong></a>(<a href="__builtin__.html#object">__builtin__.object</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>##&nbsp;&nbsp;<a href="#CMapDB">CMapDB</a><br>
+##<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Class methods defined here:<br>
+<dl><dt><a name="CMapDB-get_cmap"><strong>get_cmap</strong></a>(klass, name)<font color="#909090"><font face="helvetica, arial"> from <a href="__builtin__.html#type">__builtin__.type</a></font></font></dt></dl>
+
+<dl><dt><a name="CMapDB-get_unicode_map"><strong>get_unicode_map</strong></a>(klass, name, vertical<font color="#909090">=False</font>)<font color="#909090"><font face="helvetica, arial"> from <a href="__builtin__.html#type">__builtin__.type</a></font></font></dt></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>CMapNotFound</strong> = &lt;class 'pdfminer.cmapdb.CMapNotFound'&gt;</dl>
+
+<dl><dt><strong>debug</strong> = 0</dl>
+
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="CMapError">class <strong>CMapError</strong></a>(<a href="exceptions.html#Exception">exceptions.Exception</a>)</font></td></tr>
+    
+<tr><td bgcolor="#ffc8d8"><tt>&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="pdfminer.cmapdb.html#CMapError">CMapError</a></dd>
+<dd><a href="exceptions.html#Exception">exceptions.Exception</a></dd>
+<dd><a href="exceptions.html#BaseException">exceptions.BaseException</a></dd>
+<dd><a href="__builtin__.html#object">__builtin__.object</a></dd>
+</dl>
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<hr>
+Methods inherited from <a href="exceptions.html#Exception">exceptions.Exception</a>:<br>
+<dl><dt><a name="CMapError-__init__"><strong>__init__</strong></a>(...)</dt><dd><tt>x.<a href="#CMapError-__init__">__init__</a>(...)&nbsp;initializes&nbsp;x;&nbsp;see&nbsp;help(type(x))&nbsp;for&nbsp;signature</tt></dd></dl>
+
+<hr>
+Data and other attributes inherited from <a href="exceptions.html#Exception">exceptions.Exception</a>:<br>
+<dl><dt><strong>__new__</strong> = &lt;built-in method __new__ of type object&gt;<dd><tt>T.<a href="#CMapError-__new__">__new__</a>(S,&nbsp;...)&nbsp;-&gt;&nbsp;a&nbsp;new&nbsp;<a href="__builtin__.html#object">object</a>&nbsp;with&nbsp;type&nbsp;S,&nbsp;a&nbsp;subtype&nbsp;of&nbsp;T</tt></dl>
+
+<hr>
+Methods inherited from <a href="exceptions.html#BaseException">exceptions.BaseException</a>:<br>
+<dl><dt><a name="CMapError-__delattr__"><strong>__delattr__</strong></a>(...)</dt><dd><tt>x.<a href="#CMapError-__delattr__">__delattr__</a>('name')&nbsp;&lt;==&gt;&nbsp;del&nbsp;x.name</tt></dd></dl>
+
+<dl><dt><a name="CMapError-__getattribute__"><strong>__getattribute__</strong></a>(...)</dt><dd><tt>x.<a href="#CMapError-__getattribute__">__getattribute__</a>('name')&nbsp;&lt;==&gt;&nbsp;x.name</tt></dd></dl>
+
+<dl><dt><a name="CMapError-__getitem__"><strong>__getitem__</strong></a>(...)</dt><dd><tt>x.<a href="#CMapError-__getitem__">__getitem__</a>(y)&nbsp;&lt;==&gt;&nbsp;x[y]</tt></dd></dl>
+
+<dl><dt><a name="CMapError-__getslice__"><strong>__getslice__</strong></a>(...)</dt><dd><tt>x.<a href="#CMapError-__getslice__">__getslice__</a>(i,&nbsp;j)&nbsp;&lt;==&gt;&nbsp;x[i:j]<br>
+&nbsp;<br>
+Use&nbsp;of&nbsp;negative&nbsp;indices&nbsp;is&nbsp;not&nbsp;supported.</tt></dd></dl>
+
+<dl><dt><a name="CMapError-__reduce__"><strong>__reduce__</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="CMapError-__repr__"><strong>__repr__</strong></a>(...)</dt><dd><tt>x.<a href="#CMapError-__repr__">__repr__</a>()&nbsp;&lt;==&gt;&nbsp;repr(x)</tt></dd></dl>
+
+<dl><dt><a name="CMapError-__setattr__"><strong>__setattr__</strong></a>(...)</dt><dd><tt>x.<a href="#CMapError-__setattr__">__setattr__</a>('name',&nbsp;value)&nbsp;&lt;==&gt;&nbsp;x.name&nbsp;=&nbsp;value</tt></dd></dl>
+
+<dl><dt><a name="CMapError-__setstate__"><strong>__setstate__</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="CMapError-__str__"><strong>__str__</strong></a>(...)</dt><dd><tt>x.<a href="#CMapError-__str__">__str__</a>()&nbsp;&lt;==&gt;&nbsp;str(x)</tt></dd></dl>
+
+<dl><dt><a name="CMapError-__unicode__"><strong>__unicode__</strong></a>(...)</dt></dl>
+
+<hr>
+Data descriptors inherited from <a href="exceptions.html#BaseException">exceptions.BaseException</a>:<br>
+<dl><dt><strong>__dict__</strong></dt>
+</dl>
+<dl><dt><strong>args</strong></dt>
+</dl>
+<dl><dt><strong>message</strong></dt>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="CMapParser">class <strong>CMapParser</strong></a>(<a href="pdfminer.psparser.html#PSStackParser">pdfminer.psparser.PSStackParser</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>##&nbsp;&nbsp;<a href="#CMapParser">CMapParser</a><br>
+##<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="pdfminer.cmapdb.html#CMapParser">CMapParser</a></dd>
+<dd><a href="pdfminer.psparser.html#PSStackParser">pdfminer.psparser.PSStackParser</a></dd>
+<dd><a href="pdfminer.psparser.html#PSBaseParser">pdfminer.psparser.PSBaseParser</a></dd>
+<dd><a href="__builtin__.html#object">__builtin__.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="CMapParser-__init__"><strong>__init__</strong></a>(self, cmap, fp)</dt></dl>
+
+<dl><dt><a name="CMapParser-do_keyword"><strong>do_keyword</strong></a>(self, pos, token)</dt></dl>
+
+<dl><dt><a name="CMapParser-run"><strong>run</strong></a>(self)</dt></dl>
+
+<hr>
+Methods inherited from <a href="pdfminer.psparser.html#PSStackParser">pdfminer.psparser.PSStackParser</a>:<br>
+<dl><dt><a name="CMapParser-add_results"><strong>add_results</strong></a>(self, *objs)</dt></dl>
+
+<dl><dt><a name="CMapParser-end_type"><strong>end_type</strong></a>(self, type)</dt></dl>
+
+<dl><dt><a name="CMapParser-nextobject"><strong>nextobject</strong></a>(self)</dt><dd><tt>Yields&nbsp;a&nbsp;list&nbsp;of&nbsp;objects.<br>
+&nbsp;<br>
+Returns&nbsp;keywords,&nbsp;literals,&nbsp;strings,&nbsp;numbers,&nbsp;arrays&nbsp;and&nbsp;dictionaries.<br>
+Arrays&nbsp;and&nbsp;dictionaries&nbsp;are&nbsp;represented&nbsp;as&nbsp;Python&nbsp;lists&nbsp;and&nbsp;dictionaries.</tt></dd></dl>
+
+<dl><dt><a name="CMapParser-pop"><strong>pop</strong></a>(self, n)</dt></dl>
+
+<dl><dt><a name="CMapParser-popall"><strong>popall</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="CMapParser-push"><strong>push</strong></a>(self, *objs)</dt></dl>
+
+<dl><dt><a name="CMapParser-reset"><strong>reset</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="CMapParser-seek"><strong>seek</strong></a>(self, pos)</dt></dl>
+
+<dl><dt><a name="CMapParser-start_type"><strong>start_type</strong></a>(self, pos, type)</dt></dl>
+
+<hr>
+Methods inherited from <a href="pdfminer.psparser.html#PSBaseParser">pdfminer.psparser.PSBaseParser</a>:<br>
+<dl><dt><a name="CMapParser-__repr__"><strong>__repr__</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="CMapParser-close"><strong>close</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="CMapParser-fillbuf"><strong>fillbuf</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="CMapParser-flush"><strong>flush</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="CMapParser-nextline"><strong>nextline</strong></a>(self)</dt><dd><tt>Fetches&nbsp;a&nbsp;next&nbsp;line&nbsp;that&nbsp;ends&nbsp;either&nbsp;with&nbsp;\r&nbsp;or&nbsp;\n.</tt></dd></dl>
+
+<dl><dt><a name="CMapParser-nexttoken"><strong>nexttoken</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="CMapParser-poll"><strong>poll</strong></a>(self, pos<font color="#909090">=None</font>, n<font color="#909090">=80</font>)</dt></dl>
+
+<dl><dt><a name="CMapParser-revreadlines"><strong>revreadlines</strong></a>(self)</dt><dd><tt>Fetches&nbsp;a&nbsp;next&nbsp;line&nbsp;backword.<br>
+&nbsp;<br>
+This&nbsp;is&nbsp;used&nbsp;to&nbsp;locate&nbsp;the&nbsp;trailers&nbsp;at&nbsp;the&nbsp;end&nbsp;of&nbsp;a&nbsp;file.</tt></dd></dl>
+
+<dl><dt><a name="CMapParser-tell"><strong>tell</strong></a>(self)</dt></dl>
+
+<hr>
+Data descriptors inherited from <a href="pdfminer.psparser.html#PSBaseParser">pdfminer.psparser.PSBaseParser</a>:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<hr>
+Data and other attributes inherited from <a href="pdfminer.psparser.html#PSBaseParser">pdfminer.psparser.PSBaseParser</a>:<br>
+<dl><dt><strong>BUFSIZ</strong> = 4096</dl>
+
+<dl><dt><strong>debug</strong> = 0</dl>
+
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="FileCMap">class <strong>FileCMap</strong></a>(<a href="pdfminer.cmapdb.html#CMap">CMap</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>##&nbsp;&nbsp;<a href="#FileCMap">FileCMap</a><br>
+##<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="pdfminer.cmapdb.html#FileCMap">FileCMap</a></dd>
+<dd><a href="pdfminer.cmapdb.html#CMap">CMap</a></dd>
+<dd><a href="__builtin__.html#object">__builtin__.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="FileCMap-__init__"><strong>__init__</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="FileCMap-__repr__"><strong>__repr__</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="FileCMap-add_code2cid"><strong>add_code2cid</strong></a>(self, code, cid)</dt></dl>
+
+<dl><dt><a name="FileCMap-is_vertical"><strong>is_vertical</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="FileCMap-set_attr"><strong>set_attr</strong></a>(self, k, v)</dt></dl>
+
+<hr>
+Methods inherited from <a href="pdfminer.cmapdb.html#CMap">CMap</a>:<br>
+<dl><dt><a name="FileCMap-decode"><strong>decode</strong></a>(self, code)</dt></dl>
+
+<dl><dt><a name="FileCMap-dump"><strong>dump</strong></a>(self, out<font color="#909090">=&lt;open file '&lt;stdout&gt;', mode 'w'&gt;</font>, code2cid<font color="#909090">=None</font>, code<font color="#909090">=None</font>)</dt></dl>
+
+<dl><dt><a name="FileCMap-use_cmap"><strong>use_cmap</strong></a>(self, cmap)</dt></dl>
+
+<hr>
+Data descriptors inherited from <a href="pdfminer.cmapdb.html#CMap">CMap</a>:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<hr>
+Data and other attributes inherited from <a href="pdfminer.cmapdb.html#CMap">CMap</a>:<br>
+<dl><dt><strong>debug</strong> = 0</dl>
+
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="FileUnicodeMap">class <strong>FileUnicodeMap</strong></a>(<a href="pdfminer.cmapdb.html#UnicodeMap">UnicodeMap</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>##&nbsp;&nbsp;<a href="#FileUnicodeMap">FileUnicodeMap</a><br>
+##<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="pdfminer.cmapdb.html#FileUnicodeMap">FileUnicodeMap</a></dd>
+<dd><a href="pdfminer.cmapdb.html#UnicodeMap">UnicodeMap</a></dd>
+<dd><a href="__builtin__.html#object">__builtin__.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="FileUnicodeMap-__init__"><strong>__init__</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="FileUnicodeMap-__repr__"><strong>__repr__</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="FileUnicodeMap-add_cid2unichr"><strong>add_cid2unichr</strong></a>(self, cid, code)</dt></dl>
+
+<dl><dt><a name="FileUnicodeMap-set_attr"><strong>set_attr</strong></a>(self, k, v)</dt></dl>
+
+<hr>
+Methods inherited from <a href="pdfminer.cmapdb.html#UnicodeMap">UnicodeMap</a>:<br>
+<dl><dt><a name="FileUnicodeMap-dump"><strong>dump</strong></a>(self, out<font color="#909090">=&lt;open file '&lt;stdout&gt;', mode 'w'&gt;</font>)</dt></dl>
+
+<dl><dt><a name="FileUnicodeMap-get_unichr"><strong>get_unichr</strong></a>(self, cid)</dt></dl>
+
+<hr>
+Data descriptors inherited from <a href="pdfminer.cmapdb.html#UnicodeMap">UnicodeMap</a>:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<hr>
+Data and other attributes inherited from <a href="pdfminer.cmapdb.html#UnicodeMap">UnicodeMap</a>:<br>
+<dl><dt><strong>debug</strong> = 0</dl>
+
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="IdentityCMap">class <strong>IdentityCMap</strong></a>(<a href="__builtin__.html#object">__builtin__.object</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>##&nbsp;&nbsp;<a href="#IdentityCMap">IdentityCMap</a><br>
+##<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="IdentityCMap-__init__"><strong>__init__</strong></a>(self, vertical)</dt></dl>
+
+<dl><dt><a name="IdentityCMap-decode"><strong>decode</strong></a>(self, code)</dt></dl>
+
+<dl><dt><a name="IdentityCMap-is_vertical"><strong>is_vertical</strong></a>(self)</dt></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="PyCMap">class <strong>PyCMap</strong></a>(<a href="pdfminer.cmapdb.html#CMap">CMap</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>##&nbsp;&nbsp;<a href="#PyCMap">PyCMap</a><br>
+##<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="pdfminer.cmapdb.html#PyCMap">PyCMap</a></dd>
+<dd><a href="pdfminer.cmapdb.html#CMap">CMap</a></dd>
+<dd><a href="__builtin__.html#object">__builtin__.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="PyCMap-__init__"><strong>__init__</strong></a>(self, name, module)</dt></dl>
+
+<dl><dt><a name="PyCMap-__repr__"><strong>__repr__</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="PyCMap-is_vertical"><strong>is_vertical</strong></a>(self)</dt></dl>
+
+<hr>
+Methods inherited from <a href="pdfminer.cmapdb.html#CMap">CMap</a>:<br>
+<dl><dt><a name="PyCMap-decode"><strong>decode</strong></a>(self, code)</dt></dl>
+
+<dl><dt><a name="PyCMap-dump"><strong>dump</strong></a>(self, out<font color="#909090">=&lt;open file '&lt;stdout&gt;', mode 'w'&gt;</font>, code2cid<font color="#909090">=None</font>, code<font color="#909090">=None</font>)</dt></dl>
+
+<dl><dt><a name="PyCMap-use_cmap"><strong>use_cmap</strong></a>(self, cmap)</dt></dl>
+
+<hr>
+Data descriptors inherited from <a href="pdfminer.cmapdb.html#CMap">CMap</a>:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<hr>
+Data and other attributes inherited from <a href="pdfminer.cmapdb.html#CMap">CMap</a>:<br>
+<dl><dt><strong>debug</strong> = 0</dl>
+
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="PyUnicodeMap">class <strong>PyUnicodeMap</strong></a>(<a href="pdfminer.cmapdb.html#UnicodeMap">UnicodeMap</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>##&nbsp;&nbsp;<a href="#PyUnicodeMap">PyUnicodeMap</a><br>
+##<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="pdfminer.cmapdb.html#PyUnicodeMap">PyUnicodeMap</a></dd>
+<dd><a href="pdfminer.cmapdb.html#UnicodeMap">UnicodeMap</a></dd>
+<dd><a href="__builtin__.html#object">__builtin__.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="PyUnicodeMap-__init__"><strong>__init__</strong></a>(self, name, module, vertical)</dt></dl>
+
+<dl><dt><a name="PyUnicodeMap-__repr__"><strong>__repr__</strong></a>(self)</dt></dl>
+
+<hr>
+Methods inherited from <a href="pdfminer.cmapdb.html#UnicodeMap">UnicodeMap</a>:<br>
+<dl><dt><a name="PyUnicodeMap-dump"><strong>dump</strong></a>(self, out<font color="#909090">=&lt;open file '&lt;stdout&gt;', mode 'w'&gt;</font>)</dt></dl>
+
+<dl><dt><a name="PyUnicodeMap-get_unichr"><strong>get_unichr</strong></a>(self, cid)</dt></dl>
+
+<hr>
+Data descriptors inherited from <a href="pdfminer.cmapdb.html#UnicodeMap">UnicodeMap</a>:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<hr>
+Data and other attributes inherited from <a href="pdfminer.cmapdb.html#UnicodeMap">UnicodeMap</a>:<br>
+<dl><dt><strong>debug</strong> = 0</dl>
+
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="UnicodeMap">class <strong>UnicodeMap</strong></a>(<a href="__builtin__.html#object">__builtin__.object</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>##&nbsp;&nbsp;<a href="#UnicodeMap">UnicodeMap</a><br>
+##<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="UnicodeMap-__init__"><strong>__init__</strong></a>(self, cid2unichr<font color="#909090">=None</font>)</dt></dl>
+
+<dl><dt><a name="UnicodeMap-dump"><strong>dump</strong></a>(self, out<font color="#909090">=&lt;open file '&lt;stdout&gt;', mode 'w'&gt;</font>)</dt></dl>
+
+<dl><dt><a name="UnicodeMap-get_unichr"><strong>get_unichr</strong></a>(self, cid)</dt></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>debug</strong> = 0</dl>
+
+</td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#eeaa77">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Functions</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#eeaa77"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt><a name="-main"><strong>main</strong></a>(argv)</dt><dd><tt>#&nbsp;test</tt></dd></dl>
+</td></tr></table>
+</body></html>

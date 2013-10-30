@@ -1,0 +1,218 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module pdfminer.pdfdevice</title>
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong><a href="pdfminer.html"><font color="#ffffff">pdfminer</font></a>.pdfdevice</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:/usr/lib/python2.7/site-packages/pdfminer/pdfdevice.py">/usr/lib/python2.7/site-packages/pdfminer/pdfdevice.py</a></font></td></tr></table>
+    <p></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#aa55cc">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="sys.html">sys</a><br>
+</td><td width="25%" valign=top></td><td width="25%" valign=top></td><td width="25%" valign=top></td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ee77aa">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Classes</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl>
+<dt><font face="helvetica, arial"><a href="__builtin__.html#object">__builtin__.object</a>
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="pdfminer.pdfdevice.html#PDFDevice">PDFDevice</a>
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="pdfminer.pdfdevice.html#PDFTextDevice">PDFTextDevice</a>
+</font></dt><dt><font face="helvetica, arial"><a href="pdfminer.pdfdevice.html#TagExtractor">TagExtractor</a>
+</font></dt></dl>
+</dd>
+</dl>
+</dd>
+</dl>
+ <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="PDFDevice">class <strong>PDFDevice</strong></a>(<a href="__builtin__.html#object">__builtin__.object</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>##&nbsp;&nbsp;<a href="#PDFDevice">PDFDevice</a><br>
+##<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="PDFDevice-__init__"><strong>__init__</strong></a>(self, rsrcmgr)</dt></dl>
+
+<dl><dt><a name="PDFDevice-__repr__"><strong>__repr__</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="PDFDevice-begin_figure"><strong>begin_figure</strong></a>(self, name, bbox, matrix)</dt></dl>
+
+<dl><dt><a name="PDFDevice-begin_page"><strong>begin_page</strong></a>(self, page, ctm)</dt></dl>
+
+<dl><dt><a name="PDFDevice-begin_tag"><strong>begin_tag</strong></a>(self, tag, props<font color="#909090">=None</font>)</dt></dl>
+
+<dl><dt><a name="PDFDevice-close"><strong>close</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="PDFDevice-do_tag"><strong>do_tag</strong></a>(self, tag, props<font color="#909090">=None</font>)</dt></dl>
+
+<dl><dt><a name="PDFDevice-end_figure"><strong>end_figure</strong></a>(self, name)</dt></dl>
+
+<dl><dt><a name="PDFDevice-end_page"><strong>end_page</strong></a>(self, page)</dt></dl>
+
+<dl><dt><a name="PDFDevice-end_tag"><strong>end_tag</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="PDFDevice-paint_path"><strong>paint_path</strong></a>(self, graphicstate, stroke, fill, evenodd, path)</dt></dl>
+
+<dl><dt><a name="PDFDevice-render_image"><strong>render_image</strong></a>(self, name, stream)</dt></dl>
+
+<dl><dt><a name="PDFDevice-render_string"><strong>render_string</strong></a>(self, textstate, seq)</dt></dl>
+
+<dl><dt><a name="PDFDevice-set_ctm"><strong>set_ctm</strong></a>(self, ctm)</dt></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>debug</strong> = 0</dl>
+
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="PDFTextDevice">class <strong>PDFTextDevice</strong></a>(<a href="pdfminer.pdfdevice.html#PDFDevice">PDFDevice</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>##&nbsp;&nbsp;<a href="#PDFTextDevice">PDFTextDevice</a><br>
+##<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="pdfminer.pdfdevice.html#PDFTextDevice">PDFTextDevice</a></dd>
+<dd><a href="pdfminer.pdfdevice.html#PDFDevice">PDFDevice</a></dd>
+<dd><a href="__builtin__.html#object">__builtin__.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="PDFTextDevice-render_char"><strong>render_char</strong></a>(self, matrix, font, fontsize, scaling, rise, cid)</dt></dl>
+
+<dl><dt><a name="PDFTextDevice-render_string"><strong>render_string</strong></a>(self, textstate, seq)</dt></dl>
+
+<dl><dt><a name="PDFTextDevice-render_string_horizontal"><strong>render_string_horizontal</strong></a>(self, seq, matrix, (x, y), font, fontsize, scaling, charspace, wordspace, rise, dxscale)</dt></dl>
+
+<dl><dt><a name="PDFTextDevice-render_string_vertical"><strong>render_string_vertical</strong></a>(self, seq, matrix, (x, y), font, fontsize, scaling, charspace, wordspace, rise, dxscale)</dt></dl>
+
+<hr>
+Methods inherited from <a href="pdfminer.pdfdevice.html#PDFDevice">PDFDevice</a>:<br>
+<dl><dt><a name="PDFTextDevice-__init__"><strong>__init__</strong></a>(self, rsrcmgr)</dt></dl>
+
+<dl><dt><a name="PDFTextDevice-__repr__"><strong>__repr__</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="PDFTextDevice-begin_figure"><strong>begin_figure</strong></a>(self, name, bbox, matrix)</dt></dl>
+
+<dl><dt><a name="PDFTextDevice-begin_page"><strong>begin_page</strong></a>(self, page, ctm)</dt></dl>
+
+<dl><dt><a name="PDFTextDevice-begin_tag"><strong>begin_tag</strong></a>(self, tag, props<font color="#909090">=None</font>)</dt></dl>
+
+<dl><dt><a name="PDFTextDevice-close"><strong>close</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="PDFTextDevice-do_tag"><strong>do_tag</strong></a>(self, tag, props<font color="#909090">=None</font>)</dt></dl>
+
+<dl><dt><a name="PDFTextDevice-end_figure"><strong>end_figure</strong></a>(self, name)</dt></dl>
+
+<dl><dt><a name="PDFTextDevice-end_page"><strong>end_page</strong></a>(self, page)</dt></dl>
+
+<dl><dt><a name="PDFTextDevice-end_tag"><strong>end_tag</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="PDFTextDevice-paint_path"><strong>paint_path</strong></a>(self, graphicstate, stroke, fill, evenodd, path)</dt></dl>
+
+<dl><dt><a name="PDFTextDevice-render_image"><strong>render_image</strong></a>(self, name, stream)</dt></dl>
+
+<dl><dt><a name="PDFTextDevice-set_ctm"><strong>set_ctm</strong></a>(self, ctm)</dt></dl>
+
+<hr>
+Data descriptors inherited from <a href="pdfminer.pdfdevice.html#PDFDevice">PDFDevice</a>:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<hr>
+Data and other attributes inherited from <a href="pdfminer.pdfdevice.html#PDFDevice">PDFDevice</a>:<br>
+<dl><dt><strong>debug</strong> = 0</dl>
+
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="TagExtractor">class <strong>TagExtractor</strong></a>(<a href="pdfminer.pdfdevice.html#PDFDevice">PDFDevice</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>##&nbsp;&nbsp;<a href="#TagExtractor">TagExtractor</a><br>
+##<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="pdfminer.pdfdevice.html#TagExtractor">TagExtractor</a></dd>
+<dd><a href="pdfminer.pdfdevice.html#PDFDevice">PDFDevice</a></dd>
+<dd><a href="__builtin__.html#object">__builtin__.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="TagExtractor-__init__"><strong>__init__</strong></a>(self, rsrcmgr, outfp, codec<font color="#909090">='utf-8'</font>, debug<font color="#909090">=0</font>)</dt></dl>
+
+<dl><dt><a name="TagExtractor-begin_page"><strong>begin_page</strong></a>(self, page, ctm)</dt></dl>
+
+<dl><dt><a name="TagExtractor-begin_tag"><strong>begin_tag</strong></a>(self, tag, props<font color="#909090">=None</font>)</dt></dl>
+
+<dl><dt><a name="TagExtractor-do_tag"><strong>do_tag</strong></a>(self, tag, props<font color="#909090">=None</font>)</dt></dl>
+
+<dl><dt><a name="TagExtractor-end_page"><strong>end_page</strong></a>(self, page)</dt></dl>
+
+<dl><dt><a name="TagExtractor-end_tag"><strong>end_tag</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="TagExtractor-render_string"><strong>render_string</strong></a>(self, textstate, seq)</dt></dl>
+
+<hr>
+Methods inherited from <a href="pdfminer.pdfdevice.html#PDFDevice">PDFDevice</a>:<br>
+<dl><dt><a name="TagExtractor-__repr__"><strong>__repr__</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="TagExtractor-begin_figure"><strong>begin_figure</strong></a>(self, name, bbox, matrix)</dt></dl>
+
+<dl><dt><a name="TagExtractor-close"><strong>close</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="TagExtractor-end_figure"><strong>end_figure</strong></a>(self, name)</dt></dl>
+
+<dl><dt><a name="TagExtractor-paint_path"><strong>paint_path</strong></a>(self, graphicstate, stroke, fill, evenodd, path)</dt></dl>
+
+<dl><dt><a name="TagExtractor-render_image"><strong>render_image</strong></a>(self, name, stream)</dt></dl>
+
+<dl><dt><a name="TagExtractor-set_ctm"><strong>set_ctm</strong></a>(self, ctm)</dt></dl>
+
+<hr>
+Data descriptors inherited from <a href="pdfminer.pdfdevice.html#PDFDevice">PDFDevice</a>:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<hr>
+Data and other attributes inherited from <a href="pdfminer.pdfdevice.html#PDFDevice">PDFDevice</a>:<br>
+<dl><dt><strong>debug</strong> = 0</dl>
+
+</td></tr></table></td></tr></table>
+</body></html>

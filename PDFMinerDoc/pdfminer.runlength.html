@@ -1,0 +1,47 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module pdfminer.runlength</title>
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong><a href="pdfminer.html"><font color="#ffffff">pdfminer</font></a>.runlength</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:/usr/lib/python2.7/site-packages/pdfminer/runlength.py">/usr/lib/python2.7/site-packages/pdfminer/runlength.py</a></font></td></tr></table>
+    <p><tt>#&nbsp;RunLength&nbsp;decoder&nbsp;(Adobe&nbsp;version)&nbsp;implementation&nbsp;based&nbsp;on&nbsp;PDF&nbsp;Reference<br>
+#&nbsp;version&nbsp;1.4&nbsp;section&nbsp;3.3.4.<br>
+#<br>
+#&nbsp;&nbsp;*&nbsp;public&nbsp;domain&nbsp;*<br>
+#</tt></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#aa55cc">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="sys.html">sys</a><br>
+</td><td width="25%" valign=top></td><td width="25%" valign=top></td><td width="25%" valign=top></td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#eeaa77">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Functions</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#eeaa77"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt><a name="-rldecode"><strong>rldecode</strong></a>(data)</dt><dd><tt>RunLength&nbsp;decoder&nbsp;(Adobe&nbsp;version)&nbsp;implementation&nbsp;based&nbsp;on&nbsp;PDF&nbsp;Reference<br>
+version&nbsp;1.4&nbsp;section&nbsp;3.3.4:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;The&nbsp;RunLengthDecode&nbsp;filter&nbsp;decodes&nbsp;data&nbsp;that&nbsp;has&nbsp;been&nbsp;encoded&nbsp;in&nbsp;a<br>
+&nbsp;&nbsp;&nbsp;&nbsp;simple&nbsp;byte-oriented&nbsp;format&nbsp;based&nbsp;on&nbsp;run&nbsp;length.&nbsp;The&nbsp;encoded&nbsp;data<br>
+&nbsp;&nbsp;&nbsp;&nbsp;is&nbsp;a&nbsp;sequence&nbsp;of&nbsp;runs,&nbsp;where&nbsp;each&nbsp;run&nbsp;consists&nbsp;of&nbsp;a&nbsp;length&nbsp;byte<br>
+&nbsp;&nbsp;&nbsp;&nbsp;followed&nbsp;by&nbsp;1&nbsp;to&nbsp;128&nbsp;bytes&nbsp;of&nbsp;data.&nbsp;If&nbsp;the&nbsp;length&nbsp;byte&nbsp;is&nbsp;in&nbsp;the<br>
+&nbsp;&nbsp;&nbsp;&nbsp;range&nbsp;0&nbsp;to&nbsp;127,&nbsp;the&nbsp;following&nbsp;length&nbsp;+&nbsp;1&nbsp;(1&nbsp;to&nbsp;128)&nbsp;bytes&nbsp;are<br>
+&nbsp;&nbsp;&nbsp;&nbsp;copied&nbsp;literally&nbsp;during&nbsp;decompression.&nbsp;If&nbsp;length&nbsp;is&nbsp;in&nbsp;the&nbsp;range<br>
+&nbsp;&nbsp;&nbsp;&nbsp;129&nbsp;to&nbsp;255,&nbsp;the&nbsp;following&nbsp;single&nbsp;byte&nbsp;is&nbsp;to&nbsp;be&nbsp;copied&nbsp;257&nbsp;-&nbsp;length<br>
+&nbsp;&nbsp;&nbsp;&nbsp;(2&nbsp;to&nbsp;128)&nbsp;times&nbsp;during&nbsp;decompression.&nbsp;A&nbsp;length&nbsp;value&nbsp;of&nbsp;128<br>
+&nbsp;&nbsp;&nbsp;&nbsp;denotes&nbsp;EOD.<br>
+&gt;&gt;&gt;&nbsp;s&nbsp;=&nbsp;"123456ú7abcde€junk"<br>
+&gt;&gt;&gt;&nbsp;<a href="#-rldecode">rldecode</a>(s)<br>
+'1234567777777abcde'</tt></dd></dl>
+</td></tr></table>
+</body></html>

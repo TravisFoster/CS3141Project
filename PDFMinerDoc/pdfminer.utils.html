@@ -1,0 +1,139 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module pdfminer.utils</title>
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong><a href="pdfminer.html"><font color="#ffffff">pdfminer</font></a>.utils</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:/usr/lib/python2.7/site-packages/pdfminer/utils.py">/usr/lib/python2.7/site-packages/pdfminer/utils.py</a></font></td></tr></table>
+    <p><tt>Miscellaneous&nbsp;Routines.</tt></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#aa55cc">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="struct.html">struct</a><br>
+</td><td width="25%" valign=top></td><td width="25%" valign=top></td><td width="25%" valign=top></td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ee77aa">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Classes</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl>
+<dt><font face="helvetica, arial"><a href="__builtin__.html#object">__builtin__.object</a>
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="pdfminer.utils.html#ObjIdRange">ObjIdRange</a>
+</font></dt><dt><font face="helvetica, arial"><a href="pdfminer.utils.html#Plane">Plane</a>
+</font></dt></dl>
+</dd>
+</dl>
+ <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="ObjIdRange">class <strong>ObjIdRange</strong></a>(<a href="__builtin__.html#object">__builtin__.object</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>A&nbsp;utility&nbsp;class&nbsp;to&nbsp;represent&nbsp;a&nbsp;range&nbsp;of&nbsp;<a href="__builtin__.html#object">object</a>&nbsp;IDs.<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="ObjIdRange-__init__"><strong>__init__</strong></a>(self, start, nobjs)</dt></dl>
+
+<dl><dt><a name="ObjIdRange-__repr__"><strong>__repr__</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="ObjIdRange-get_end_id"><strong>get_end_id</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="ObjIdRange-get_nobjs"><strong>get_nobjs</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="ObjIdRange-get_start_id"><strong>get_start_id</strong></a>(self)</dt></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="Plane">class <strong>Plane</strong></a>(<a href="__builtin__.html#object">__builtin__.object</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>##&nbsp;&nbsp;<a href="#Plane">Plane</a><br>
+##<br>
+##&nbsp;&nbsp;A&nbsp;set-like&nbsp;data&nbsp;structure&nbsp;for&nbsp;objects&nbsp;placed&nbsp;on&nbsp;a&nbsp;plane.<br>
+##&nbsp;&nbsp;Can&nbsp;efficiently&nbsp;find&nbsp;objects&nbsp;in&nbsp;a&nbsp;certain&nbsp;rectangular&nbsp;area.<br>
+##&nbsp;&nbsp;It&nbsp;maintains&nbsp;two&nbsp;parallel&nbsp;lists&nbsp;of&nbsp;objects,&nbsp;each&nbsp;of<br>
+##&nbsp;&nbsp;which&nbsp;is&nbsp;sorted&nbsp;by&nbsp;its&nbsp;x&nbsp;or&nbsp;y&nbsp;coordinate.<br>
+##<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="Plane-__contains__"><strong>__contains__</strong></a>(self, obj)</dt></dl>
+
+<dl><dt><a name="Plane-__init__"><strong>__init__</strong></a>(self, objs<font color="#909090">=None</font>, gridsize<font color="#909090">=50</font>)</dt></dl>
+
+<dl><dt><a name="Plane-__iter__"><strong>__iter__</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="Plane-__len__"><strong>__len__</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="Plane-__repr__"><strong>__repr__</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="Plane-add"><strong>add</strong></a>(self, obj)</dt><dd><tt>#&nbsp;<a href="#Plane-add">add</a>(obj):&nbsp;place&nbsp;an&nbsp;<a href="__builtin__.html#object">object</a>.</tt></dd></dl>
+
+<dl><dt><a name="Plane-find"><strong>find</strong></a>(self, (x0, y0, x1, y1))</dt><dd><tt>#&nbsp;<a href="#Plane-find">find</a>():&nbsp;finds&nbsp;objects&nbsp;that&nbsp;are&nbsp;in&nbsp;a&nbsp;certain&nbsp;area.</tt></dd></dl>
+
+<dl><dt><a name="Plane-remove"><strong>remove</strong></a>(self, obj)</dt><dd><tt>#&nbsp;<a href="#Plane-remove">remove</a>(obj):&nbsp;displace&nbsp;an&nbsp;<a href="__builtin__.html#object">object</a>.</tt></dd></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#eeaa77">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Functions</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#eeaa77"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt><a name="-apply_matrix_norm"><strong>apply_matrix_norm</strong></a>((a, b, c, d, e, f), (p, q))</dt><dd><tt>Equivalent&nbsp;to&nbsp;<a href="#-apply_matrix_pt">apply_matrix_pt</a>(M,&nbsp;(p,q))&nbsp;-&nbsp;<a href="#-apply_matrix_pt">apply_matrix_pt</a>(M,&nbsp;(0,0))</tt></dd></dl>
+ <dl><dt><a name="-apply_matrix_pt"><strong>apply_matrix_pt</strong></a>((a, b, c, d, e, f), (x, y))</dt><dd><tt>Applies&nbsp;a&nbsp;matrix&nbsp;to&nbsp;a&nbsp;point.</tt></dd></dl>
+ <dl><dt><a name="-bbox2str"><strong>bbox2str</strong></a>((x0, y0, x1, y1))</dt></dl>
+ <dl><dt><a name="-choplist"><strong>choplist</strong></a>(n, seq)</dt><dd><tt>Groups&nbsp;every&nbsp;n&nbsp;elements&nbsp;of&nbsp;the&nbsp;list.</tt></dd></dl>
+ <dl><dt><a name="-create_bmp"><strong>create_bmp</strong></a>(data, bits, width, height)</dt><dd><tt>#&nbsp;create_bmp</tt></dd></dl>
+ <dl><dt><a name="-csort"><strong>csort</strong></a>(objs, key<font color="#909090">=&lt;function &lt;lambda&gt;&gt;</font>)</dt><dd><tt>Order-preserving&nbsp;sorting&nbsp;function.</tt></dd></dl>
+ <dl><dt><a name="-decode_text"><strong>decode_text</strong></a>(s)</dt><dd><tt>Decodes&nbsp;a&nbsp;PDFDocEncoding&nbsp;string&nbsp;to&nbsp;Unicode.</tt></dd></dl>
+ <dl><dt><a name="-drange"><strong>drange</strong></a>(v0, v1, d)</dt><dd><tt>Returns&nbsp;a&nbsp;discrete&nbsp;range.</tt></dd></dl>
+ <dl><dt><a name="-enc"><strong>enc</strong></a>(x, codec<font color="#909090">='ascii'</font>)</dt><dd><tt>Encodes&nbsp;a&nbsp;string&nbsp;for&nbsp;SGML/XML/HTML</tt></dd></dl>
+ <dl><dt><a name="-fsplit"><strong>fsplit</strong></a>(pred, objs)</dt><dd><tt>Split&nbsp;a&nbsp;list&nbsp;into&nbsp;two&nbsp;classes&nbsp;according&nbsp;to&nbsp;the&nbsp;predicate.</tt></dd></dl>
+ <dl><dt><a name="-get_bound"><strong>get_bound</strong></a>(pts)</dt><dd><tt>Compute&nbsp;a&nbsp;minimal&nbsp;rectangle&nbsp;that&nbsp;covers&nbsp;all&nbsp;the&nbsp;points.</tt></dd></dl>
+ <dl><dt><a name="-matrix2str"><strong>matrix2str</strong></a>((a, b, c, d, e, f))</dt></dl>
+ <dl><dt><a name="-mult_matrix"><strong>mult_matrix</strong></a>((a1, b1, c1, d1, e1, f1), (a0, b0, c0, d0, e0, f0))</dt><dd><tt>Returns&nbsp;the&nbsp;multiplication&nbsp;of&nbsp;two&nbsp;matrices.</tt></dd></dl>
+ <dl><dt><a name="-nunpack"><strong>nunpack</strong></a>(s, default<font color="#909090">=0</font>)</dt><dd><tt>Unpacks&nbsp;1&nbsp;to&nbsp;4&nbsp;byte&nbsp;integers&nbsp;(big&nbsp;endian).</tt></dd></dl>
+ <dl><dt><a name="-pick"><strong>pick</strong></a>(seq, func, maxobj<font color="#909090">=None</font>)</dt><dd><tt>Picks&nbsp;the&nbsp;<a href="__builtin__.html#object">object</a>&nbsp;obj&nbsp;where&nbsp;func(obj)&nbsp;has&nbsp;the&nbsp;highest&nbsp;value.</tt></dd></dl>
+ <dl><dt><a name="-translate_matrix"><strong>translate_matrix</strong></a>((a, b, c, d, e, f), (x, y))</dt><dd><tt>Translates&nbsp;a&nbsp;matrix&nbsp;by&nbsp;(x,y).</tt></dd></dl>
+ <dl><dt><a name="-uniq"><strong>uniq</strong></a>(objs)</dt><dd><tt>Eliminates&nbsp;duplicated&nbsp;elements.</tt></dd></dl>
+</td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#55aa55">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Data</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#55aa55"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><strong>INF</strong> = 9223372036854775807<br>
+<strong>MATRIX_IDENTITY</strong> = (1, 0, 0, 1, 0, 0)<br>
+<strong>PDFDocEncoding</strong> = u'<font color="#c040c0">\x00\x01\x02\x03\x04\x05\x06\x07\x08\t\n\x0b\x0c\r\x0e\x0f\x10\x11\x12\x13\x14\x15\x17\x17\u02d8\u02c7\u02c6\u02d9\u02dd\u02db\u02da\u02dc</font> !"#$%&amp;<font color="#c040c0">\'</font>()*+,-./...<font color="#c040c0">\xcf\xd0\xd1\xd2\xd3\xd4\xd5\xd6\xd7\xd8\xd9\xda\xdb\xdc\xdd\xde\xdf\xe0\xe1\xe2\xe3\xe4\xe5\xe6\xe7\xe8\xe9\xea\xeb\xec\xed\xee\xef\xf0\xf1\xf2\xf3\xf4\xf5\xf6\xf7\xf8\xf9\xfa\xfb\xfc\xfd\xfe\xff</font>'</td></tr></table>
+</body></html>
