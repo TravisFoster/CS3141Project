@@ -2,13 +2,15 @@
 
 import re
 import sys
+import copy
 import shutil
 import tempfile
+import itertools
 import fontforge
 from pdfminer.pdfparser import PDFParser, PDFDocument
 from pdfminer.pdfinterp import PDFResourceManager, PDFPageInterpreter
 from pdfminer.pdfdevice import PDFDevice
-from pdfminer.layout import LAParams, LTTextBox, LTChar
+from pdfminer.layout import LAParams, LTTextBox, LTChar, LTAnon
 from pdfminer.converter import PDFPageAggregator
 from PyQt4 import QtCore, QtGui
 
@@ -73,8 +75,7 @@ def insertFonts(fmap):
       idx = QtGui.QFontDatabase.addApplicationFont(tmpttf)
       fams = QtGui.QFontDatabase.applicationFontFamilies(idx)
       tfont = fams[0]
-    except None:
-      print('Font load from data failed.')
+    except AttributeError:
       tfont = fmap[font].fontname
       if len(tfont) > 7 and tfont[6] == '+':
         tfont = tfont[7:]
@@ -86,71 +87,61 @@ def drawPages(gfx, pages):
   b = QtGui.QBrush(QtCore.Qt.white)
   p = QtGui.QPen(QtGui.QBrush(QtCore.Qt.black), 1)
   p.setCosmetic(True)
-  for (page, fonts) in pages:
+  for page, fonts in pages:
     gfx.addRect(0, top, page.width, page.height, p, b)
     for obj in page._objs:
       if obj.is_empty():
         continue
       if isinstance(obj, LTTextBox):
         for line in obj._objs:
-          y = top + page.height - line.y1
-          boxes = buildText(line, fonts)
-          for box, left in boxes:
-            txt = gfx.addText('')
-            txt.setTextInteractionFlags(QtCore.Qt.TextEditorInteraction)
-            txt.setHtml(box)
-            txt.setDefaultTextColor(QtCore.Qt.black)
-            txt.setPos(left, y)
+          y = top + page.height
+          txt = gfx.addText('')
+          txt.setTextInteractionFlags(QtCore.Qt.TextEditorInteraction)
+          txt.setHtml(buildText(fixText(line, y), fonts))
+          txt.setDefaultTextColor(QtCore.Qt.black)
+          txt.setPos(line._objs[0].x0, y - line._objs[0].y1)
       else:
         y = top + page.height - obj.y1
         gfx.addRect(obj.x0, y, obj.width, obj.height, p, b)
     top += page.height
 
-def buildText(textbox, fonts):
-  boxes = []
+def fixText(textbox, y):
   text = []
-  left = None
-  font = None
-  size = None
-  for glyph in textbox._objs:
-    if len(glyph._text) <= 0:
-      continue
-    elif left == None:
-      left = glyph.x0
+  for index, glyph in enumerate(textbox._objs):
+    char = {'text': glyph._text}
     if isinstance(glyph, LTChar):
-      if glyph.fontname != font or glyph.size != size:
-        if len(text) != 0:
-          text.append(u'</span>')
-        text.append(u'<span style="font:')
-        text.append(u' ' + unicode(int(glyph.size)) + u'px')
-        text.append(u" '" + unicode(fonts[glyph.fontname]) + u"'")
-        text.append(u';">')
-        font = glyph.fontname
-        size = glyph.size
-      text.append(unicode(glyph._text))
+      char['font'] = glyph.fontname
+      char['size'] = glyph.size
+      char['xl'] = glyph.x0
+      char['xr'] = glyph.x1
+      char['y'] = y - glyph.y1
     else:
-      if glyph._text == u'\n':
-        text.append(u'<br />')
-      elif glyph._text == u' ':
-        text.append(u'&nbsp;')
-      elif glyph._text == u'\t':
-        while len(text) != 0 and text[-1] == u'<br />':
-          text.pop()
-        if len(text) != 0:
-          text.append(u'</span>')
-          boxes.append((unicode().join(text), left))
-        text = []
-        left = None
-        font = None
-        size = None
-      else:
-        text.append(unicode(glyph._text))
-  while len(text) != 0 and text[-1] == u'<br />':
-    text.pop()
-  if len(text) != 0:
-    text.append(u'</span>')
-    boxes.append((unicode().join(text), left))
-  return boxes
+      char['font'] = text[-1]['font']
+      char['size'] = text[-1]['size']
+      char['xl'] = text[-1]['xr']
+      char['xr'] = text[-1]['xr']
+      char['y'] = text[-1]['y']
+    text.append(char)
+  return text
+
+def buildText(textbox, fonts):
+  texts = []
+  lines = itertools.groupby(textbox, lambda x: (x['font'], x['size']))
+  for (fontname, size), rawline in lines:
+    line = list(rawline)
+    text = unicode().join(map(lambda x: x['text'], line))
+    fnt = QtGui.QFont(fonts[fontname])
+    fnt.setPixelSize(size)
+    tbox = QtGui.QFontMetrics(fnt).boundingRect(text)
+    tsize = size*size/tbox.height()
+    fnt.setPixelSize(tsize)
+    tbox = QtGui.QFontMetrics(fnt).boundingRect(text)
+    width = line[-1]['xr'] - line[0]['xl']
+    tspace = (width - tbox.width())/len(text)
+    texts.append(u'<span style="font: ' + unicode(int(tsize)) + u'px \''
+      + unicode(fonts[fontname]) + u'\'; character-spacing: '
+      + unicode(int(tspace*10)) + u'px;">' + unicode(text) + u'</span>')
+  return unicode().join(texts)
 
 if __name__ == '__main__':
   main()
