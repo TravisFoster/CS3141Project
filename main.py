@@ -1,126 +1,188 @@
 #!/usr/bin/python2
 
-import re
 import sys
 import copy
 import shutil
 import tempfile
 import itertools
 import fontforge
+from pdfminer.layout import *
+from pdfminer.pdffont import *
 from pdfminer.pdfparser import PDFParser, PDFDocument
 from pdfminer.pdfinterp import PDFResourceManager, PDFPageInterpreter
-from pdfminer.pdfdevice import PDFDevice
-from pdfminer.layout import LAParams, LTTextBox, LTChar, LTAnon
 from pdfminer.converter import PDFPageAggregator
+from pdfminer.pdfdevice import PDFDevice
 from PyQt4 import QtCore, QtGui
 
 def main():
+  tmp = tempfile.mkdtemp()
   app = QtGui.QApplication(sys.argv)
   w = QtGui.QMainWindow()
   w.resize(800, 600)
   w.setWindowTitle('CS3141 PDF Editor')
   gfx = QtGui.QGraphicsScene(w)
-  pages, tmps = initPDFMiner('Cminus.pdf')
-  drawPages(gfx, pages)
   gfxview = QtGui.QGraphicsView(gfx, w)
+  w.addToolBar(buildToolbar(w, gfx, gfxview, tmp))
   gfxview.setBackgroundBrush(QtGui.QBrush(QtCore.Qt.cyan))
-  gfxview.centerOn(0, 0)
   w.setCentralWidget(gfxview)
   w.showMaximized()
   ex = app.exec_()
-  for tmp in tmps:
-    shutil.rmtree(tmp, True)
+  shutil.rmtree(tmp, True)
   sys.exit(ex)
 
-def initPDFMiner(fname):
+def buildToolbar(w, gfx, gfxview, tmp):
+  toolbar = QtGui.QToolBar(w)
+  openl = lambda: actionOpen(w, gfx, gfxview, tmp)
+  toolbar.addAction(QtGui.QIcon.fromTheme('document-open'), 'Open', openl)
+  return toolbar
+
+def actionOpen(w, gfx, gfxview, tmp):
+  filename = QtGui.QFileDialog.getOpenFileName(w, 'Open PDF', '.')
+  if len(filename) > 0:
+    gfx.clear()
+    drawPages(gfx, initPDFMiner(filename, tmp))
+    gfxview.centerOn(0, 0)
+
+def initPDFMiner(fname, tmp):
   fp = open(fname, 'rb')
   par = PDFParser(fp)
   doc = PDFDocument()
   par.set_document(doc)
   doc.set_parser(par)
   doc.initialize()
-  if not doc.is_extractable:
-    raise PDFTextExtractionNotAllowed
+  if not doc.is_extractable: raise PDFTextExtractionNotAllowed
   rsr = PDFResourceManager()
   lap = LAParams()
   dev = PDFPageAggregator(rsr, laparams=lap)
   inter = PDFPageInterpreter(rsr, dev)
-  pages = []
-  tmps = []
+  pages, fonts = [], {}
   for page in doc.get_pages():
     inter.process_page(page)
-    fpage = dev.get_result()
-    ffont, ftmp = insertFonts(inter.fontmap)
-    pages.append((fpage, ffont))
-    tmps.extend(ftmp)
-  return pages, tmps
+    pages.append(dev.get_result())
+    insertFonts(inter.fontmap, fonts, tmp)
+  return pages, fonts
 
-def insertFonts(fmap):
-  fonts = {}
-  tmps = []
+def insertFonts(fmap, fonts, tmp):
   for font in fmap:
-    try:
-      newfont = re.sub(r'(?<=/FamilyName \()[^\)]*(?=\))',
-        fmap[font].fontname, fmap[font].fontfile.data, 1)
-      tmp = tempfile.mkdtemp()
-      tmps.append(tmp)
-      tmppfb = tmp + '/' + fmap[font].fontname + '.pfb'
+    if fmap[font].fontname in fonts: continue
+    if hasattr(fmap[font], 'fontfile'):
+      fntext = '~'
+      if isinstance(fmap[font], PDFTrueTypeFont): fntext = '~.ttf'
+      elif isinstance(fmap[font], PDFType1Font): fntext = '~.pfb'
+      else: print('Unsupported PDF font: ' + str(type(fmap[font])))
+      tmpfnt = tmp + '/' + fmap[font].fontname + fntext
       tmpttf = tmp + '/' + fmap[font].fontname + '.ttf'
-      fin = open(tmppfb, 'wb')
-      fin.write(newfont)
+      fin = open(tmpfnt, 'wb')
+      fin.write(fmap[font].fontfile.data)
       fin.close()
-      fout = fontforge.open(tmppfb)
+      fout = fontforge.open(tmpfnt)
+      fout.familyname = fmap[font].fontname
       fout.generate(tmpttf)
       fout.close()
       idx = QtGui.QFontDatabase.addApplicationFont(tmpttf)
       fams = QtGui.QFontDatabase.applicationFontFamilies(idx)
       tfont = fams[0]
-    except AttributeError:
+    else:
       tfont = fmap[font].fontname
-      if len(tfont) > 7 and tfont[6] == '+':
-        tfont = tfont[7:]
+      if len(tfont) > 7 and tfont[6] == '+': tfont = tfont[7:]
     fonts[fmap[font].fontname] = tfont
-  return fonts, tmps
 
-def drawPages(gfx, pages):
+def drawPages(gfx, (pages, fonts)):
   top = 0
   b = QtGui.QBrush(QtCore.Qt.white)
   p = QtGui.QPen(QtGui.QBrush(QtCore.Qt.black), 1)
   p.setCosmetic(True)
-  for page, fonts in pages:
+  for page in pages:
     gfx.addRect(0, top, page.width, page.height, p, b)
-    for obj in page._objs:
-      if obj.is_empty():
-        continue
-      if isinstance(obj, LTTextBox):
-        for line in obj._objs:
-          y = top + page.height
-          txt = gfx.addText('')
-          txt.setTextInteractionFlags(QtCore.Qt.TextEditorInteraction)
-          txt.setHtml(buildText(fixText(line, y), fonts))
-          txt.setDefaultTextColor(QtCore.Qt.black)
-          txt.setPos(line._objs[0].x0, y - line._objs[0].y1)
-      else:
-        y = top + page.height - obj.y1
-        gfx.addRect(obj.x0, y, obj.width, obj.height, p, b)
+    drawObjects(gfx, fonts, page._objs, 0, top + page.height)
     top += page.height
 
-def fixText(textbox, y):
+def drawObjects(gfx, fonts, objs, x, y):
+  for obj in objs: 
+    if isinstance(obj, LTRect):
+      brush = QtGui.QBrush()
+      pen = QtGui.QPen(QtGui.QBrush(QtCore.Qt.black), obj.linewidth)
+      gfx.addRect(x + obj.x0, y - obj.y1, obj.width, obj.height, pen, brush)
+    elif isinstance(obj, LTLine):
+      pen = QtGui.QPen(QtGui.QBrush(QtCore.Qt.black), obj.linewidth)
+      [(x1, y1), (x2, y2)] = obj.pts
+      gfx.addLine(x + x1, y - y1, x + x2, y - y2, pen)
+    #elif isinstance(obj, LTCurve):
+    elif isinstance(obj, LTTextBox):
+      texts = buildText(fixText(fixLineOrder(obj), y, fonts, obj.x0), fonts)
+      txt = gfx.addText('')
+      txt.setTextInteractionFlags(QtCore.Qt.TextEditorInteraction)
+      txt.setHtml(unicode().join(texts))
+      txt.setDefaultTextColor(QtCore.Qt.black)
+      txt.setPos(x + obj.x0, y - obj.y1)
+    elif isinstance(obj, LTImage):
+      img = QtGui.QImage()
+      img.loadFromData(obj.stream.rawdata)
+      pix = QtGui.QPixmap()
+      pix.convertFromImage(img)
+      pixmap = gfx.addPixmap(pix)
+      pixmap.setOffset(x + obj.x0, y - obj.y1)
+    elif isinstance(obj, LTFigure):
+      drawObjects(gfx, fonts, obj._objs, x, y)
+    else: print('Unsupported PDF object: ' + str(type(obj)))
+
+def fixLineOrder(textbox):
+  linesets = []
+  for line in sorted(textbox._objs, key=lambda x: -x.y1):
+    isset = False
+    for lineset in linesets:
+      if line.y1 - lineset[0][0] > line.height/2:
+        if lineset[0][0] > line.y0: lineset[0][0] = line.y0
+        lineset[1].append(line)
+        isset = True
+        break
+    if not isset: linesets.append(([line.y0, line.y1], [line]))
+  box = []
+  for lineset in linesets:
+    for line in sorted(lineset[1], key=lambda x: (x.x0 + x.x1)/2):
+      box.extend(line._objs)
+  return box
+
+def fixText(textbox, y, fonts, boxleft):
   text = []
-  for index, glyph in enumerate(textbox._objs):
-    char = {'text': glyph._text}
+  for index, glyph in enumerate(textbox):
+    char = {}
     if isinstance(glyph, LTChar):
       char['font'] = glyph.fontname
       char['size'] = glyph.size
       char['xl'] = glyph.x0
       char['xr'] = glyph.x1
       char['y'] = y - glyph.y1
+      if glyph._text == '<': char['text'] = '&lt;'
+      elif glyph._text == '>': char['text'] = '&gt;'
+      elif glyph._text == '&': char['text'] = '&amp;'
+      else: char['text'] = glyph._text
     else:
-      char['font'] = text[-1]['font']
-      char['size'] = text[-1]['size']
-      char['xl'] = text[-1]['xr']
-      char['xr'] = text[-1]['xr']
-      char['y'] = text[-1]['y']
+      try:
+        while not isinstance(textbox[index + 1], LTChar):
+          textbox.pop(index + 1)
+        prevc = textbox[index - 1]
+        nextc = textbox[index + 1]
+        if nextc.y1 - prevc.y0 > nextc.height/2:
+          char['font'] = prevc.fontname
+          char['size'] = prevc.size
+          char['xl'] = prevc.x1
+          char['xr'] = nextc.x0
+          char['y'] = y - prevc.y1
+          char['text'] = ''
+        else:
+          char['font'] = nextc.fontname
+          char['size'] = nextc.size
+          char['xl'] = boxleft
+          char['xr'] = nextc.x0
+          char['y'] = y - nextc.y1
+          char['text'] = '<br />'
+        font = QtGui.QFont(fonts[char['font']])
+        font.setPixelSize(char['size'])
+        space = QtGui.QFontMetrics(font).boundingRect(' ').width()
+        if space > 0:
+          char['text'] += '&nbsp;'*int((char['xr'] - char['xl'])/space)
+      except IndexError: continue
     text.append(char)
   return text
 
@@ -130,17 +192,11 @@ def buildText(textbox, fonts):
   for (fontname, size), rawline in lines:
     line = list(rawline)
     text = unicode().join(map(lambda x: x['text'], line))
-    fnt = QtGui.QFont(fonts[fontname])
-    fnt.setPixelSize(size)
-    tbox = QtGui.QFontMetrics(fnt).boundingRect(text)
-    tsize = size*size/tbox.height()
-    fnt.setPixelSize(tsize)
-    tbox = QtGui.QFontMetrics(fnt).boundingRect(text)
-    width = line[-1]['xr'] - line[0]['xl']
-    tspace = (width - tbox.width())/len(text)
+    font = QtGui.QFont(fonts[fontname])
+    font.setPixelSize(size)
+    tsize = (size*size)/(QtGui.QFontMetrics(font).boundingRect(text).height())
     texts.append(u'<span style="font: ' + unicode(int(tsize)) + u'px \''
-      + unicode(fonts[fontname]) + u'\'; character-spacing: '
-      + unicode(int(tspace*10)) + u'px;">' + unicode(text) + u'</span>')
+      + unicode(fonts[fontname]) + u'\';">' + unicode(text) + u'</span>')
   return unicode().join(texts)
 
 if __name__ == '__main__':
