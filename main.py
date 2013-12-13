@@ -1,9 +1,6 @@
 #!/usr/bin/python2
 
 import sys
-from window import EPDFWindow
+from win import PDFEditWindow
 
-if __name__ == '__main__':
-  with EPDFWindow(sys.argv) as win:
-    exitcode = win.show()
-  sys.exit(exitcode)
+if __name__ == '__main__': sys.exit(PDFEditWindow(sys.argv).show())
