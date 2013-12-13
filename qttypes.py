@@ -1,12 +1,15 @@
-from win import PropTree
+import win
 from reading import PDFStreamRead
 from filters import decodeStream
+
+def getProp(dic, tag, doc, keys, default):
+  pass
 
 class QtPDFDocument:
   def __init__(self, fname, docdict):
     self.parent = None
     self.ident = fname[1 + fname.rfind('/'):]
-    self.props = PropTree(self.getProps(docdict))
+    self.props = win.PropTree(self.getProps(docdict))
     self.child = []
     for index, child in enumerate(docdict['Root']['Pages']['Kids']):
       if child['Type'] == '/Page':
@@ -16,7 +19,7 @@ class QtPDFDocument:
 
   def getProps(self, ddict):
     props = {}
-    props['Version'] = ddict['Version']
+    props['Version'] = ddict['Root']['Version']
     props['Layout'] = ddict['Root']['PageLayout'] if 'PageLayout' in ddict['Root'] else '/SinglePage'
     props['Mode'] = ddict['Root']['PageMode'] if 'PageMode' in ddict['Root'] else '/UseNone'
     props['Language'] = ddict['Root']['Lang'] if 'Lang' in ddict['Root'] else ''

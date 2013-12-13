@@ -15,8 +15,6 @@ class PDFEditWindow(QtCore.QObject):
     w = QtGui.QMainWindow()
     w.resize(800, 600)
     w.setWindowTitle('CS3141 PDF Editor')
-    self.initActions(w)
-    self.status = w.statusBar()
     objdock = QtGui.QDockWidget('Objects', w)
     propdock = QtGui.QDockWidget('Properties', w)
     self.objview = QtGui.QTreeView(objdock)
@@ -33,12 +31,14 @@ class PDFEditWindow(QtCore.QObject):
     w.addDockWidget(QtCore.Qt.LeftDockWidgetArea, propdock)
     self.gfx = QtGui.QGraphicsScene(w)
     self.gfxview = QtGui.QGraphicsView(self.gfx, w)
+    self.initActions(w)
+    self.status = w.statusBar()
     w.setCentralWidget(self.gfxview)
     w.showMaximized()
     return self.app.exec_()
 
   def initActions(self, w):
-    self.propview.activated.connect(self.select)
+    self.objview.selectionModel().selectionChanged.connect(self.select)
     menu = w.menuBar()
     mfile = menu.addMenu('&File')
     aopen = mfile.addAction('&Open', lambda: self.openFile(w))
@@ -58,8 +58,11 @@ class PDFEditWindow(QtCore.QObject):
     self.docs[index:index] = children
     self.endInsert.emit()
 
-  def select(self, idx):
-    pass
+  def select(self, new, old):
+    idx = new.indexes()[0].internalPointer()
+    if hasattr(idx, 'props'): self.propmodel.dat = idx.props
+    else: self.propmodel.dat = self.propmodel.defaultdat
+    self.propview.reset()
 
 class PDFObjectModel(QtCore.QAbstractItemModel):
   def __init__(self, win, parent=None):
@@ -103,7 +106,8 @@ class PDFPropertiesModel(QtCore.QAbstractItemModel):
   def __init__(self, win, parent=None):
     QtCore.QAbstractItemModel.__init__(self, parent)
     self.win = win
-    self.dat = PropTree([])
+    self.defaultdat = PropTree([])
+    self.dat = self.defaultdat
 
   def index(self, row, column, parent=QtCore.QModelIndex()):
     if parent.isValid():
