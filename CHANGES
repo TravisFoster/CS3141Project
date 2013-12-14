@@ -1,0 +1,16 @@
+Version 1.0:
++added pdf file processing and displaying on screen
++added most common font recognitions
++added file saving/opening
++added image inserting
++added text inserting
+-removed text color picking
+-removed font selection (bugged)
+
+BUGS:
+-Images can't be deleted, work around is dragging it off the screen, only images present on the screen get saved into the output file.
+-Fonts can't be selected, only way is to paste text with the desired font already in it.
+-Previously saved files can't be edited, it loses the bounds on the text boxes.
+-Font recognition isn't perfect - font sizes and spacing is a bit off and some fonts can't be loaded
+-Some images are drawn at incorrect sizes
+-Quality loss on save since edited pdf is saved to image first

@@ -1,0 +1,30 @@
+TASKS
+---------
+Task 1) Test text and image deletion.
+	Image deletion does not work, workaround is dragging of screen
+	which will not get rendered into the file when it is saved into a pdf.
+
+Task 2) Test adding new fonts.
+	Failed, fonts can't be changed unless a new font text is copied
+	the copy paste buffer and pasted, then it can be changed to save
+	the font with the desired text
+
+Task 3) Test loading and saving of pdf
+	File saves fine, but text editing of a file previously saved from
+	this program, can't be edited again.
+	
+
+BUGS
+---------
+-Images can't be deleted, work around is dragging it off the screen, only images present on the screen get saved into the output file.
+-Fonts can't be selected, only way is to paste text with the desired font already in it.
+-Previously saved files can't be edited, it loses the bounds on the text boxes.
+-Font recognition isn't perfect - font sizes and spacing is a bit off and some fonts can't be loaded
+-Quality loss on save since edited pdf is saved to image first
+
+
+BUGS FIXED
+---------
++Images and text added to PDF don't disappear under document
++Scrollbar adjusts to current document
++Text and images are movable/editable again

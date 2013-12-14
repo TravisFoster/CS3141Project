@@ -1,0 +1,14 @@
+Dependencies
+--------------
+Python 2.7 http://www.python.org/download/releases/2.7/
+PyQT4  http://www.riverbankcomputing.com/software/pyqt/download
+Pdfminer - included in github
+fontforge http://fontforge.org/ then http://fontforge.org/python.html
+reportlab http://www.reportlab.com/software/opensource/
+
+Build Instructions
+--------------
+1. Install all prereqs from above
+2. Pull a fresh copy from https://github.com/TravisFoster/CS3141Project
+3. Open a new terminal window, browse to the directory with the project
+4. type python main.py
